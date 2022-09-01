@@ -219,17 +219,13 @@ export default function ItemsList() {
       <>
         <li>→ Info:</li> {infoMobile}{" "}
         <li className="infoItem">
-          <Link
-            className="popupWindowLinkButton"
-            style={{ cursor: "pointer" }}
-            to="/contact"
-          >
-            <span role="img" aria-label="e-mail">
-              📧
-            </span>{" "}
-            /Contact
-          </Link>
-        </li>{" "}
+      <button 
+        className="popupWindowLinkButton"
+        style={{ cursor: "pointer" }}
+        onClick={href => window.open("mailto:yashbhangale9@gmail.com")}
+        >📞 /Contact me </button>  
+        
+    </li>{" "}
         <li>→ Projects:</li>
         {projectsMobile} <li className="miniProject">→ Mini-Projects:</li>
       </>
