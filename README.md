@@ -1,8 +1,12 @@
 ��#� �p�o�r�t�f�o�l�i�o�
 �
 �
-
 /* src/markdown-pages/projects/your-project-name.md */
+
+
+#for projects
+
+```
 ---
 slug: "projects/country-quiz"
 nameOfClass: "projects-items"
@@ -21,3 +25,4 @@ techIcons: [
 ---
 
 The project description goes here.
+```
