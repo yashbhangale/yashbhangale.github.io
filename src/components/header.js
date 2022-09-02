@@ -26,10 +26,10 @@ const Header = ({ siteTitle }) => {
               }}
               onInit={typewriter => {
                 typewriter
-                  .typeString("Software Developer")
+                  .typeString("full stack Developer")
                   .pauseFor(2500)
                   .deleteAll()
-                  .typeString("Problem solver")
+                  .typeString("programmer")
                   .pauseFor(2500)
                   .deleteAll()
                   .typeString("Yash Bhangale")
