@@ -12,8 +12,7 @@ techIcons: [
         "html5",
         "css3",
         "tailwindcss",
-        "socket",
       ]
 ---
 
-The project description goes here.
+Basic react chat app made with socket.io, reactjs and tailwindcss 
