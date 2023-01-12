@@ -32,7 +32,7 @@ const SEO = ({ title, description, image, article }) => {
     >
      <meta name="title" content="Yash Bhangale - Portfolio">
 <meta name="description" content="learner | Explorer | Enthusiast  , Second Year Engineering Student ,Artificial technology and & Data Science at Datta meghe college of Engineering ">
-<meta name="keywords" content="Yash Bhangale , Yash, Yashbhangale,Bhangale yash">
+<meta name="keywords" content="Yash Bhangale, yash bhangale, bhangale yash,yash, yashuop,yashbhangale , Yash, Yashbhangale,Bhangale yash">
 <meta name="robots" content="index, follow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="English">
