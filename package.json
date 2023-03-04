@@ -1,9 +1,9 @@
 {
-  "name": "kielx-portfolio",
+  "name": "yash-portfolio",
   "private": true,
   "description": "Yash Bhangale software developer portfolio",
   "version": "0.1.0",
-  "author": "Yash Bhangale <kielx.dev@gmail.com>",
+  "author": "Yash Bhangale <yashbhangale9@gmail.com>",
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
