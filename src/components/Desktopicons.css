@@ -1,0 +1,30 @@
+/* DesktopIcons.css */
+.desktop-icons {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000; /* Adjust the z-index as needed */
+}
+
+.desktop-icon {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.desktop-icon img {
+  width: 50px; /* Adjust the icon width as needed */
+  height: 50px; /* Adjust the icon height as needed */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Add media query to hide icons on mobile devices */
+@media (max-width: 767px) {
+  .desktop-icons {
+    display: none;
+  }
+}

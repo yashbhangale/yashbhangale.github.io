@@ -5,6 +5,7 @@ import Seo from "../components/seo"
 import LsDisplay from "../components/LsDisplay"
 import Header from "../components/header"
 import MainComponent from "../components/MainComponent"
+import DesktopIcons from "../components/DesktopIcons"
 
 const IndexPage = () => (
   <>
@@ -16,6 +17,7 @@ const IndexPage = () => (
       </div>
     </Layout>
     <MainComponent />
+    <DesktopIcons />
   </>
 )
 
