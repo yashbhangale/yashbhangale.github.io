@@ -50,7 +50,7 @@ const Footer = () => {
           margin: "auto",
           fontSize: "xx-small",
           textAlign: "center",
-          paddingBottom: "10px",
+          paddingBottom: "50px",
         }}
       >
         ©2023 Yash Bhangale 

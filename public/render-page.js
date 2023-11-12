@@ -12994,24 +12994,24 @@ module.exports = withSideEffect;
 /***/ }),
 
 /***/ "react-dom/server":
-/*!*****************************************************************************!*\
-  !*** external "E:\\terminal-portfolio\\node_modules\\react-dom\\server.js" ***!
-  \*****************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** external "C:\\Users\\yashb\\OneDrive\\Desktop\\yashbhangale.github.io\\node_modules\\react-dom\\server.js" ***!
+  \******************************************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("E:\\terminal-portfolio\\node_modules\\react-dom\\server.js");
+module.exports = require("C:\\Users\\yashb\\OneDrive\\Desktop\\yashbhangale.github.io\\node_modules\\react-dom\\server.js");
 
 /***/ }),
 
 /***/ "react":
-/*!************************************************************************!*\
-  !*** external "E:\\terminal-portfolio\\node_modules\\react\\index.js" ***!
-  \************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** external "C:\\Users\\yashb\\OneDrive\\Desktop\\yashbhangale.github.io\\node_modules\\react\\index.js" ***!
+  \*************************************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("E:\\terminal-portfolio\\node_modules\\react\\index.js");
+module.exports = require("C:\\Users\\yashb\\OneDrive\\Desktop\\yashbhangale.github.io\\node_modules\\react\\index.js");
 
 /***/ }),
 

@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import LsDisplay from "../components/LsDisplay"
 import Header from "../components/header"
+import MainComponent from "../components/MainComponent"
 
 const IndexPage = () => (
   <>
@@ -14,6 +15,7 @@ const IndexPage = () => (
         <LsDisplay text="~ $ls -l" delay="natural"></LsDisplay>
       </div>
     </Layout>
+    <MainComponent />
   </>
 )
 
