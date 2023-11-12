@@ -6,10 +6,10 @@ module.exports = {
   siteMetadata: {
     title: `Yash Bhangale Portfolio`,
     titleTemplate: `%s | Yash Bhangale Portfolio`,
-    description: `Terminal -command-line themed portfolio featuring projects ranging from robust Gatsby PWA's, React APPs and FullStack Web APPs utilizing cloud platforms to simple HTML, CSS and JavaScript sites.`,
+    description: `Explore Yash Bhangale's portfolio — an engineering student, full-stack developer, and tech enthusiast. Discover my coding journey and innovative projects. Welcome to my digital space!`,
     author: `@yashbhangale`,
-    url: "https://geeksdirectory.com",
-    image: "/PortfolioSS-sm.png", // Path to your image you placed in the 'static' folder
+    url: "https://yashbhangale.github.io/",
+    image: "/yash.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@yashbhangale99",
   },
   plugins: [
