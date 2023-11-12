@@ -16,7 +16,21 @@ const Taskbar = () => {
 
   return (
     <div className="taskbar">
-      <button onClick={handleStartButtonClick}>Start</button>
+      <button
+  onClick={handleStartButtonClick}
+  style={{
+    backgroundColor: 'cyan', // Green background color
+    color:'black', // White text color
+    padding: '8px 12px', // Padding
+    borderRadius: '5px', // Rounded corners
+    cursor: 'pointer', // Cursor on hover
+    fontSize: '16px', // Font size
+    borderColor: 'blue',
+  }}
+>
+  Start
+</button>
+
       <div className="date-time">
         {currentTime}  / {formattedDate} 
       </div>

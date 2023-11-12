@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-page-template-js",
+    "path": "/projects/traffic-management-system",
+    "result": {"data":{"markdownRemark":{"html":"<h3>Overview</h3>\n<p>traffic-management-system\r\nrun main.py install modules from requirements.txt</p>\n<p>pip install -r requirements.txt\r\ncars on lane stock video link <a href=\"https://drive.google.com/file/d/1V7r13TIAzvX94UF5qQleDibUEZOADo86/view?usp=share_link\">https://drive.google.com/file/d/1V7r13TIAzvX94UF5qQleDibUEZOADo86/view?usp=share_link</a></p>","frontmatter":{"listName":"🚦 /traffic-management-system","nameOfClass":"projects-items","popupGithubLink":"https://github.com/yashbhangale/traffic-management-system","popupImageAlt":"App screenshot","popupImageSrc":"https://user-images.githubusercontent.com/68957369/226087884-32d5f249-8904-4776-9087-c5069536c445.gif","popupLiveLink":"#","techIcons":["python","pandas","opencv"],"title":"traffic-management-system","video":"false"}}},"pageContext":{"slug":"projects/traffic-management-system"}},
+    "staticQueryHashes": ["4202924991"]}
