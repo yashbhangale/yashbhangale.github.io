@@ -16,8 +16,8 @@ const IndexPage = () => (
         <LsDisplay text="~ $ls -l" delay="natural"></LsDisplay>
       </div>
     </Layout>
-    <MainComponent />
     <DesktopIcons />
+    <MainComponent />
   </>
 )
 
