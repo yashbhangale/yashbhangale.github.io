@@ -1,6 +1,6 @@
 // DesktopIcons.js
 import React from 'react';
-import './DesktopIcons.css';
+import '../styles/Desktopicons.css';
 
 const DesktopIcons = () => {
   return (
