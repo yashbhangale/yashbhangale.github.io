@@ -1,4 +1,4 @@
-/* DebianLoading.css */
+/* DebianLoading.css
 .debian-loading {
     display: flex;
     flex-direction: column;
@@ -26,4 +26,32 @@
   }
   
   /* Add additional styling as needed */
-  
+/* DebianLoading.css */
+.debian-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background for glass effect */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  border-radius: 10px; /* Optional: Adjust the border-radius for rounded corners */
+  padding: 20px; /* Optional: Add padding to the container */
+  color: #fff;
+}
+
+.debian-logo {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.loading-messages {
+  font-family: monospace;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.loading-message {
+  margin-bottom: 10px;
+}

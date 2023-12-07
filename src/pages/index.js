@@ -6,7 +6,6 @@ import Header from "../components/header"
 import MainComponent from "../components/MainComponent"
 import DesktopIcons from "../components/DesktopIcons"
 import Loading from "../components/Loading"  // Import the Loading component
-
 const IndexPage = () => (
   <>
     <Loading>

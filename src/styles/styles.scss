@@ -3,11 +3,13 @@
   --secondaryText: #ccc;
   --linkText: #047be3;
   --bg: #000000;
-  --windowBg: #29343295;
+  --windowBg: #222a28a8;
   --focusBg: hsl(254, 16%, 16%);
   --borderColor: black;
-  --windowBackgroundImageColor: rgba(7, 16, 39, 0.381);  
+  --windowBackgroundImageColor: rgba(0, 0, 0, 0.949);  
   --blurRadius: 13px;
+  --backgroundImage: url('https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Add the path to your image */
+ 
 }
 
 /* .light {
@@ -40,13 +42,14 @@
 
 html,
 body {
-  background-color: var(--bg);
+  
+    background-image: var(--backgroundImage);
   color: var(--secondaryText);
   font-size: 18px;
   line-height: 1.6;
   width: 100%;
   height: 100%;
-  transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out; 
 }
 
 .break {
@@ -96,12 +99,13 @@ p {
 
 .container {
   width: 100%;
-  min-height: 85%;
-  height: auto;
+  min-height: 65%;
+  height: 65%;
   margin: 3vh auto auto auto;
   display: flex;
   justify-content: left;
   align-items: left;
+  
 }
 
 .mainContainer {
@@ -112,6 +116,7 @@ p {
   display: grid;
   grid-template-rows: auto;
   max-width: 1280px;
+  
 }
 
 .hidden {

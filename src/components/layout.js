@@ -14,15 +14,15 @@ import Footer from "./Footer"
 import "winbox/dist/css/winbox.min.css"
 
 const Layout = ({ children }) => {
-  /* const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `) */
+//  const data = useStaticQuery(graphql`
+//     query SiteTitleQuery {
+//       site {
+//         siteMetadata {
+//           title
+//         }
+//       }
+//     }
+//   `) 
 
   return (
     <div className="mainContainer">

@@ -24,6 +24,13 @@
 }
 
 .LsDisplayWindow {
+/* From https://css.glass */
+// backdrop-filter: blur(16px) saturate(180%);
+// -webkit-backdrop-filter: blur(16px) saturate(180%);
+// background-color: rgba(17, 25, 40, 0.75);
+// border-radius: 12px;
+// border: 1px solid rgba(255, 255, 255, 0.125);
+
   border: 1px solid var(--borderColor);
   background-color: var(--windowBg);
   width: 95%;
@@ -34,7 +41,7 @@
   padding-bottom: 3vh;
   border-radius: var(--radius);
   transition: background-color 0.4s ease-in-out;
-  margin-bottom: 5vh;
+  margin-bottom: 1vh;
 
   h3 {
     padding: 10px;

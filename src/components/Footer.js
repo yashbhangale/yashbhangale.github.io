@@ -1,7 +1,4 @@
 import React from "react"
-import ReactDOM from "react-dom"
-//importing winbox https://github.com/nextapps-de/winbox/issues/1
-import WinBox from "winbox/src/js/winbox"
 import { Link } from "gatsby"
 
 const checkScreenWidthMobile = () => {
@@ -45,16 +42,18 @@ const Footer = () => {
           github
         </a>
       </div>
+
       <span
         style={{
           margin: "auto",
           fontSize: "xx-small",
           textAlign: "center",
-          paddingBottom: "50px",
+          paddingBottom: "150px",
         }}
-      >
+        >
         ©2023 Yash Bhangale 
       </span>
+
     </footer>
   )
 }
