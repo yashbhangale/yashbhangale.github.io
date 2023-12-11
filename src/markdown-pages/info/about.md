@@ -30,6 +30,6 @@ techIcons: [
 
 ## Yash Bhangale
 learner | Explorer | Enthusiast .<br>
-Second Year Engineering Student .<br>
+Third Year Engineering Student .<br>
 Artificial technology and & Data Science at Datta meghe college of Engineering ( Mumbai University).<br>
-Passionate about Frontend, Backend, Cloud Technologies, and everything tech-related.<br>
+Passionate about Devops, fullstack, Cloud Technologies, and everything tech-related.<br>
