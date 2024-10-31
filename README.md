@@ -1,10 +1,23 @@
-portfolio 
+## portfolio 
+
+### local development commands 
+```
+npm install
+npm run start
+```
 
 
-```
-sudo docker run --name myportfolio --network host myportfolio
-```
+### command to build docker image 
 
 ```
-sudo docker run --name myportfolio --network host yashuop/myportfolio
+docker build -t myportfolio .
 ```
+
+
+### Command to run inside Docker container
+
+```
+docker run -p 8500:8500 --name myportfolio -v /home/yash/code/yashbhangale.github.io:/app myportfolio
+```
+
+
