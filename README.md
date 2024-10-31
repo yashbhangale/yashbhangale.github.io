@@ -1,5 +1,5 @@
 ## portfolio 
-
+![alt text](/dumpimgs/image.png)
 ### local development commands 
 ```
 npm install
