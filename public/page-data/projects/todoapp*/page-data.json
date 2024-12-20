@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-page-template-js",
+    "path": "/projects/todoapp*",
+    "result": {"data":{"markdownRemark":{"html":"<h3>Overview</h3>\n<p>This is Simple to do app  made with react js and deployed on vercel.</p>","frontmatter":{"listName":"📝 /Todo app","nameOfClass":"projects-items","popupGithubLink":"https://github.com/yashbhangale/react-todo-app","popupImageAlt":"Shortly URL shortener screenshot","popupImageSrc":"todo-app.png","popupLiveLink":"http://react-todo-app-seven-bay.vercel.app/","techIcons":["react","html5","css3","tailwindcss"],"title":"Todo app","video":"false"}}},"pageContext":{"slug":"projects/todoapp*"}},
+    "staticQueryHashes": ["4202924991"]}

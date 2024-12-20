@@ -27,4 +27,4 @@ const LsDisplay = ({ text }) => {
   )
 }
 
-export default LsDisplay
+export default LsDisplay;

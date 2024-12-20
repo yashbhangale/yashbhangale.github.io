@@ -51,7 +51,7 @@ const Footer = () => {
           paddingBottom: "150px",
         }}
         >
-        ©2023 Yash Bhangale 
+        ©2024 Yash Bhangale 
       </span>
 
     </footer>

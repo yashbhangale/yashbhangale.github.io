@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-page-template-js",
+    "path": "/projects/websitetemplet",
+    "result": {"data":{"markdownRemark":{"html":"<h3>Overview</h3>\n<p>This is my first Project in web development.\r\nThis is super fast Website templet made with html 5 , css , javascript.</p>","frontmatter":{"listName":"🕸️ /website templet","nameOfClass":"projects-items","popupGithubLink":"https://github.com/yashbhangale/cyber-guy-website-template","popupImageAlt":"Shortly URL shortener screenshot","popupImageSrc":"https://user-images.githubusercontent.com/68957369/180611391-87a3c6e0-46fa-4c04-bd8e-4374605b2a44.png","popupLiveLink":"https://yashbhangale.github.io/cyber-guy-website-template/","techIcons":["html5","css3","javascript"],"title":"website templet (cyberguy)","video":"false"}}},"pageContext":{"slug":"projects/websitetemplet"}},
+    "staticQueryHashes": ["4202924991"]}

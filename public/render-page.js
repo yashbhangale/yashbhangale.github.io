@@ -12822,24 +12822,24 @@ module.exports = withSideEffect;
 /***/ }),
 
 /***/ "react-dom/server":
-/*!********************************************************!*\
-  !*** external "/app/node_modules/react-dom/server.js" ***!
-  \********************************************************/
+/*!*************************************************************************************!*\
+  !*** external "/home/yash/yashbhangale.github.io/node_modules/react-dom/server.js" ***!
+  \*************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/app/node_modules/react-dom/server.js");
+module.exports = require("/home/yash/yashbhangale.github.io/node_modules/react-dom/server.js");
 
 /***/ }),
 
 /***/ "react":
-/*!***************************************************!*\
-  !*** external "/app/node_modules/react/index.js" ***!
-  \***************************************************/
+/*!********************************************************************************!*\
+  !*** external "/home/yash/yashbhangale.github.io/node_modules/react/index.js" ***!
+  \********************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/app/node_modules/react/index.js");
+module.exports = require("/home/yash/yashbhangale.github.io/node_modules/react/index.js");
 
 /***/ }),
 
