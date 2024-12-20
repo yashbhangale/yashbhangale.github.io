@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  myportfolio:
+    image: myportfolio
+    container_name: myportfolio2
+    ports:
+      - "8500:8500"
+    volumes:
+      - /home/yash/yashbhangale.github.io:/app
