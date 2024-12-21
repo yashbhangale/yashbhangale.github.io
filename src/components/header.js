@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => {
               }}
               onInit={typewriter => {
                 typewriter
-                  .typeString("Devops")
+                  .typeString("Devops / cloud ")
                   .pauseFor(2500)
                   .deleteAll()
                   .typeString("Engineer")

@@ -27,4 +27,4 @@ const Loading = ({ children }) => {
   );
 };
 
-export default Loading
+export default Loading;
