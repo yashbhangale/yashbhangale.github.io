@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-page-template-js",
+    "path": "/projects/moviecatalogue",
+    "result": {"data":{"markdownRemark":{"html":"<h3>Overview</h3>\n<p>Simple movie catalouge made with omdb Api (from Rapid api), made with react js</p>","frontmatter":{"listName":"🎬 /Simple movie catalogue","nameOfClass":"projects-items","popupGithubLink":"https://github.com/yashbhangale/simple_movie_catalogue","popupImageAlt":"Shortly URL shortener screenshot","popupImageSrc":"https://user-images.githubusercontent.com/68957369/180611132-a10be743-34b5-4253-a09a-72bb433145ad.png","popupLiveLink":"https://github.com/yashbhangale/simple_movie_catalogue","techIcons":["react","html5","css3","webrtc"],"title":"Simple movie catalogue","video":"false"}}},"pageContext":{"slug":"projects/moviecatalogue"}},
+    "staticQueryHashes": ["4202924991"]}

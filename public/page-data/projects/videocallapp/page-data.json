@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-page-template-js",
+    "path": "/projects/videocallapp",
+    "result": {"data":{"markdownRemark":{"html":"<h3>Overview</h3>\n<p>This is simple WebRTC video chatting application, made with react</p>","frontmatter":{"listName":"📹 /video call app","nameOfClass":"projects-items","popupGithubLink":"https://github.com/yashbhangale/basic_video_chat_app","popupImageAlt":"Shortly URL shortener screenshot","popupImageSrc":"basicvideoapp.png","popupLiveLink":"https://simplevideocall.vercel.app/","techIcons":["react","html5","css3","webrtc"],"title":"video call app","video":"false"}}},"pageContext":{"slug":"projects/videocallapp"}},
+    "staticQueryHashes": ["4202924991"]}

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-page-template-js",
+    "path": "/mycertifications",
+    "result": {"data":{"markdownRemark":{"html":"<h1>Azure certifications</h1>\n<h2>AI 900 : Azure AI Fundamentals</h2>\n<br>\n<img src='../../images/ai900 certificate.png' style=\"max-width: 100%; height: auto; display: block; margin: 0 auto;\">\n<br>\n<h2>AZ 900 : Azure Fundamentals</h2>\n<br>\n<img src='../../images/az900.png' style=\"max-width: 100%; height: auto; display: block; margin: 0 auto;\">","frontmatter":{"listName":"☁️ /My Certifications","nameOfClass":null,"popupGithubLink":null,"popupImageAlt":null,"popupImageSrc":null,"popupLiveLink":null,"techIcons":null,"title":"My Certifications","video":"false"}}},"pageContext":{"slug":"/mycertifications"}},
+    "staticQueryHashes": ["4202924991"]}

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-page-template-js",
+    "path": "/projects/chatapp",
+    "result": {"data":{"markdownRemark":{"html":"<h3>Overview</h3>\n<p>React chat app made with socket.io</p>","frontmatter":{"listName":"💬 /react chat app","nameOfClass":"projects-items","popupGithubLink":"https://github.com/yashbhangale/react-chat-app","popupImageAlt":"Shortly URL shortener screenshot","popupImageSrc":"https://user-images.githubusercontent.com/68957369/180611287-56ed3d77-9e84-4082-8435-f6b0e3a8aaeb.png","popupLiveLink":"https://yashuopreactchat-app.herokuapp.com/","techIcons":["react","html5","css3"],"title":"react chat app","video":"false"}}},"pageContext":{"slug":"projects/chatapp"}},
+    "staticQueryHashes": ["4202924991"]}
