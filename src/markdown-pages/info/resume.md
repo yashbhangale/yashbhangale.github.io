@@ -8,7 +8,7 @@ title: "My resume"
 
 You can view the embedded PDF below:
 <br>
-<iframe src="./myresume.pdf" width="100%" height="8000px" style="border: none;"></iframe>
+<iframe src="./myresume.pdf" width="100%" height="600px" style="border: none;"></iframe>
 
 <div style="display: block; @media screen and (max-width: 768px) { display: none; }">
   <br>
