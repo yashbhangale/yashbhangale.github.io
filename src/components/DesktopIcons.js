@@ -37,7 +37,7 @@ const DesktopIcons = () => {
 
 
 <div className="desktop-icon">
-  <a href="https://x.com/yashbhangale99" target="_blank" rel="noopener noreferrer">
+  <a href="https://x.com/ttrubleshooter" target="_blank" rel="noopener noreferrer">
     <img src="https://www.freepnglogos.com/x-logo-twitter-transparent-logo-download-3.png" width={50} draggable="false" alt="Icon 2" />
   </a>
 </div>

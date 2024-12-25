@@ -5,12 +5,12 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Yash Bhangale Portfolio`,
-    titleTemplate: `%s | Yash Bhangale Portfolio`,
+    titleTemplate: `%s | Portfolio`,
     description: `Explore Yash Bhangale's portfolio — an engineering student, full-stack developer, and tech enthusiast. Discover my coding journey and innovative projects. Welcome to my digital space!`,
     author: `@yashbhangale`,
     url: "https://yashbhangale.github.io/",
     image: "/yash.jpg", // Path to your image you placed in the 'static' folder
-    twitterUsername: "@yashbhangale99",
+    twitterUsername: "@ttrubleshooter",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
