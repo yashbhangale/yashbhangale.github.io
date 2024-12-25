@@ -44,4 +44,3 @@ You can view the embedded PDF below:
   <br>
 </div>
 
-Alternatively, you can [download the PDF here](../../../static/myresume.pdf).
