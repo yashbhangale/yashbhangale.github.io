@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-page-template-js",
+    "path": "/projects/FusionLinux",
+    "result": {"data":{"markdownRemark":{"html":"<p>linux distribution for Artificial intelligence specific tasks,implemented single Gpu passthrough and multi GPU pass through to enhance AI workload performance, optimizing the distribution for virtualized and bare-metal environments.</p>\n<p>Built using the live-build tool, ensuring automation, scalability, and CI/CD pipelines for consistent OS builds and reliable deployments in both cloud and on-premise environments.</p>\n<p>Utilized Azure VPS to update applications, maintain the operating system, and test deployments, demonstrating expertise in\ncloud platforms.</p>","frontmatter":{"listName":"🐧/Fusion OS","nameOfClass":"projects-items","popupGithubLink":"https://github.com/yashbhangale/fusion","popupImageAlt":"App screenshot","popupImageSrc":"Fusion.png","popupLiveLink":null,"techIcons":["linux","jenkins","docker",""],"title":"Fusion Linux","video":"false"}}},"pageContext":{"slug":"projects/FusionLinux"}},
+    "staticQueryHashes": ["4202924991"]}
