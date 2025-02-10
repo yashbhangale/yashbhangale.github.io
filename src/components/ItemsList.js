@@ -209,7 +209,7 @@ export default function ItemsList() {
     return (
       <>
         <li>→ Info:</li> {info} {contactItem} <li>→ Projects:</li>
-        {projects} <li className="miniProject">→ Mini-Projects:</li>
+        {projects}
       </>
     )
   }

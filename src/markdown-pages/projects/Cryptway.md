@@ -1,7 +1,7 @@
 ---
 slug: "projects/Cryptway"
 added: "------"
-nameOfClass: "projects-items miniProjects"
+nameOfClass: "projects-items"
 title: "Cryptway"
 listName: "⚡ /Cryptway"
 video: "false"
