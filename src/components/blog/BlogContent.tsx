@@ -26,7 +26,7 @@ export function BlogContent({ content }: BlogContentProps) {
           p: ({ children }) => (
             <p className="mb-4 leading-7">{children}</p>
           ),
-          code: ({ inline, className, children, ...props }: any) => {
+          code: ({ inline, className, children, ...props }: React.ComponentProps<'code'> & { inline?: boolean }) => {
             if (inline) {
               return (
                 <code className="bg-muted px-1.5 py-0.5 rounded text-sm font-mono">
@@ -69,7 +69,7 @@ export function BlogContent({ content }: BlogContentProps) {
             {children}
           </a>
         ),
-        img: ({ src, alt }: any) => {
+        img: ({ src, alt }: React.ComponentProps<'img'>) => {
           if (!src || typeof src !== 'string') return null
           
           // Handle relative paths for blog images

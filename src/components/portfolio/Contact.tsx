@@ -11,7 +11,7 @@ export function Contact() {
           Get In Touch
         </h2>
         <p className="mx-auto max-w-[700px] text-muted-foreground text-lg">
-          I'm always interested in new opportunities and collaborations. Let's connect!
+          I&apos;m always interested in new opportunities and collaborations. Let&apos;s connect!
         </p>
       </div>
 
@@ -64,16 +64,16 @@ export function Contact() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Let's Work Together</CardTitle>
+            <CardTitle>Let&apos;s Work Together</CardTitle>
             <CardDescription>
               Interested in collaborating or have a project in mind?
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <p className="text-muted-foreground">
-              I'm currently available for DevOps internships and full-time opportunities. 
-              Whether you're looking to improve your infrastructure, implement CI/CD pipelines, 
-              or need expertise in cloud technologies, I'd love to hear about your project.
+              I&apos;m currently available for DevOps internships and full-time opportunities. 
+              Whether you&apos;re looking to improve your infrastructure, implement CI/CD pipelines, 
+              or need expertise in cloud technologies, I&apos;d love to hear about your project.
             </p>
             
             <div className="space-y-4">

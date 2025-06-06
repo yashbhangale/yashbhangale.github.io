@@ -63,7 +63,7 @@ export function LoadingScreen() {
             七転び八起き
           </h1>
           <p className="text-sm md:text-base text-muted-foreground italic">
-            "Nanakorobi yaoki"
+            &ldquo;Nanakorobi yaoki&rdquo;
           </p>
           <p className="text-xs md:text-sm text-muted-foreground">
             Fall seven times, rise eight times
