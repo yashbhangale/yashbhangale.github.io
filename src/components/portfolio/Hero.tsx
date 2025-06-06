@@ -2,57 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowDownIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { Mail, Download, Terminal, Code, Zap, Coffee, MapPin } from "lucide-react";
-import { useEffect, useState } from "react";
-
-const commands = [
-  { command: "whoami", response: "Yash Bhangale - DevOps Engineer & Full-Stack Developer" },
-  { command: "cat experience.txt", response: "1 year specializing in DevOps, cloud, and infrastructure" },
-  { command: "ls skills/", response: "Kubernetes  Docker  AWS  Azure  Python  React  Linux" },
-  { command: "git status", response: "On branch main - Ready for DevOps challenges!" },
-];
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { Mail, Code } from "lucide-react";
 
 export function Hero() {
-  const [currentCommand, setCurrentCommand] = useState(0);
-  const [typedText, setTypedText] = useState("");
-  const [showCursor, setShowCursor] = useState(true);
-  const [isTyping, setIsTyping] = useState(false);
-  const [showResponse, setShowResponse] = useState(false);
-
-  useEffect(() => {
-    const command = commands[currentCommand];
-    let index = 0;
-    setTypedText("");
-    setShowResponse(false);
-    setIsTyping(true);
-
-    const typeCommand = () => {
-      if (index < command.command.length) {
-        setTypedText(command.command.slice(0, index + 1));
-        index++;
-        setTimeout(typeCommand, 100);
-      } else {
-        setIsTyping(false);
-        setTimeout(() => {
-          setShowResponse(true);
-          setTimeout(() => {
-            setCurrentCommand((prev) => (prev + 1) % commands.length);
-          }, 2000);
-        }, 500);
-      }
-    };
-
-    const timer = setTimeout(typeCommand, 1000);
-    return () => clearTimeout(timer);
-  }, [currentCommand]);
-
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setShowCursor(prev => !prev);
-    }, 530);
-    return () => clearInterval(cursorInterval);
-  }, []);
 
   const scrollToContact = () => {
     const element = document.getElementById("contact");
@@ -85,7 +38,7 @@ export function Hero() {
             
             <div className="space-y-8">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-                Hey, I'm{" "}
+                Hey, I&apos;m{" "}
                 <span className="relative">
                   <span className="bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent">
                     Yash
@@ -136,7 +89,7 @@ export function Hero() {
                   <span className="text-muted-foreground mr-4 w-6">2</span>
                   <span className="ml-4 text-green-400">name</span>
                   <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">'Yash Bhangale'</span>
+                  <span className="text-orange-400 ml-2">&apos;Yash Bhangale&apos;</span>
                   <span className="text-muted-foreground">,</span>
                 </div>
                 
@@ -144,7 +97,7 @@ export function Hero() {
                   <span className="text-muted-foreground mr-4 w-6">3</span>
                   <span className="ml-4 text-green-400">role</span>
                   <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">'DevOps Engineer & Developer'</span>
+                  <span className="text-orange-400 ml-2">&apos;DevOps Engineer &amp; Developer&apos;</span>
                   <span className="text-muted-foreground">,</span>
                 </div>
                 
@@ -152,7 +105,7 @@ export function Hero() {
                   <span className="text-muted-foreground mr-4 w-6">4</span>
                   <span className="ml-4 text-green-400">skills</span>
                   <span className="text-muted-foreground">:</span>
-                  <span className="text-yellow-500 ml-2">['Kubernetes', 'AWS', 'Azure', 'Docker']</span>
+                  <span className="text-yellow-500 ml-2">[&apos;Kubernetes&apos;, &apos;AWS&apos;, &apos;Azure&apos;, &apos;Docker&apos;]</span>
                   <span className="text-muted-foreground">,</span>
                 </div>
                 
@@ -162,14 +115,14 @@ export function Hero() {
                   <span className="text-muted-foreground">:</span>
                   <span className="text-purple-400 ml-2">1</span>
                   <span className="text-muted-foreground">,</span>
-                  <span className="text-gray-500 ml-2">// years in DevOps</span>
+                                      <span className="text-gray-500 ml-2">{/* years in DevOps */}</span>
                 </div>
                 
                 <div className="flex">
                   <span className="text-muted-foreground mr-4 w-6">6</span>
                   <span className="ml-4 text-green-400">education</span>
                   <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">'B.Tech AI & Data Science'</span>
+                  <span className="text-orange-400 ml-2">&apos;B.Tech AI &amp; Data Science&apos;</span>
                   <span className="text-muted-foreground">,</span>
                 </div>
                 
@@ -177,7 +130,7 @@ export function Hero() {
                   <span className="text-muted-foreground mr-4 w-6">7</span>
                   <span className="ml-4 text-green-400">passion</span>
                   <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">'Building scalable infrastructure'</span>
+                  <span className="text-orange-400 ml-2">&apos;Building scalable infrastructure&apos;</span>
                 </div>
                 
                 <div className="flex">
@@ -215,13 +168,13 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
-            <Button 
+                          <Button 
               size="lg" 
               onClick={scrollToContact}
               className="w-full sm:w-auto bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Mail className="mr-2 h-4 w-4" />
-              Let's Connect
+              Let&apos;s Connect
             </Button>
             <Button 
               variant="outline" 

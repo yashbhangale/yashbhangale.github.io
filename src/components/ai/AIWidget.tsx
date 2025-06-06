@@ -13,7 +13,6 @@ import {
   UserIcon, 
   LoaderIcon, 
   SparklesIcon, 
-  MessageCircleIcon,
   XIcon,
   MinusIcon
 } from 'lucide-react'
@@ -56,7 +55,7 @@ export function AIWidget() {
   ])
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
-  const [typingMessageId, setTypingMessageId] = useState<string | null>(null)
+  const [, setTypingMessageId] = useState<string | null>(null)
   const [hasNewMessage, setHasNewMessage] = useState(false)
   const scrollAreaRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)

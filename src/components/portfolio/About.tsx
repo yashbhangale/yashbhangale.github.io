@@ -71,7 +71,7 @@ export function About() {
                   DevOps, cloud infrastructure, and building scalable systems.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  With 1 year of hands-on experience and multiple hackathon victories including Mumbai Hacks (world's largest Gen AI hackathon), 
+                  With 1 year of hands-on experience and multiple hackathon victories including Mumbai Hacks (world&apos;s largest Gen AI hackathon), 
                   I believe in creating technology that empowers developers and enhances system reliability.
                 </p>
               </div>
@@ -154,7 +154,7 @@ export function About() {
                   <Zap className="h-8 w-8 text-primary mx-auto" />
                   <p className="font-semibold">Mumbai Hacks</p>
                   <p className="text-2xl font-bold text-primary">1st</p>
-                  <p className="text-sm text-muted-foreground">World's largest Gen AI hackathon winner</p>
+                  <p className="text-sm text-muted-foreground">World&apos;s largest Gen AI hackathon winner</p>
                 </div>
                 <div className="space-y-2">
                   <Code className="h-8 w-8 text-primary mx-auto" />

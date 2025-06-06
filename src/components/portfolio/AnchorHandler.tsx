@@ -1,10 +1,8 @@
 'use client'
 
 import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
 
 export function AnchorHandler() {
-  const router = useRouter()
 
   useEffect(() => {
     // Handle anchor navigation when component mounts

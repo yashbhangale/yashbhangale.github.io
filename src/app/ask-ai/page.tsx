@@ -53,17 +53,17 @@ export default function AskAIPage() {
                 <div className="space-y-2">
                   <h4 className="font-medium">About Skills & Experience</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• "What programming languages does Yash know?"</li>
-                    <li>• "Tell me about Yash's experience with React"</li>
-                    <li>• "What projects has Yash worked on?"</li>
+                    <li>• &ldquo;What programming languages does Yash know?&rdquo;</li>
+                    <li>• &ldquo;Tell me about Yash&apos;s experience with React&rdquo;</li>
+                    <li>• &ldquo;What projects has Yash worked on?&rdquo;</li>
                   </ul>
                 </div>
                 <div className="space-y-2">
                   <h4 className="font-medium">General Questions</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• "Where is Yash located?"</li>
-                    <li>• "How can I contact Yash?"</li>
-                    <li>• "What is Yash's background?"</li>
+                    <li>• &ldquo;Where is Yash located?&rdquo;</li>
+                    <li>• &ldquo;How can I contact Yash?&rdquo;</li>
+                    <li>• &ldquo;What is Yash&apos;s background?&rdquo;</li>
                   </ul>
                 </div>
               </div>
