@@ -187,8 +187,15 @@ Keep responses brief, helpful, and professional. Mention contacting Yash directl
     setIsLoading(true)
 
     try {
+      const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY
+      console.log('Widget API Key available:', !!apiKey, 'Length:', apiKey?.length || 0)
+      
+      if (!apiKey) {
+        throw new Error('No API key found')
+      }
+
       const ai = new GoogleGenAI({ 
-        apiKey: process.env.NEXT_PUBLIC_GEMINI_API_KEY || ''
+        apiKey: apiKey
       })
 
       const response = await ai.models.generateContent({
