@@ -22,20 +22,20 @@ export function Hero() {
       {/* Modern gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/50" />
       <div className="absolute inset-0">
-                  <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-muted/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-muted/20 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-muted/30 rounded-full blur-3xl" />
       </div>
-      
+
       <div className="container relative mx-auto px-4 py-16">
         <div className="max-w-5xl mx-auto text-center space-y-12">
-          
+
           {/* Code block intro */}
           <div className="space-y-6">
             <Badge variant="outline" className="px-4 py-2 text-sm">
               <Code className="w-4 h-4 mr-2" />
-              DevOps Engineer & Developer
+              Software Engineer
             </Badge>
-            
+
             <div className="space-y-8">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
                 Hey, I&apos;m{" "}
@@ -46,13 +46,13 @@ export function Hero() {
                   <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-blue-600/20 blur-xl -z-10" />
                 </span>
               </h1>
-              
+
               <div className="max-w-3xl mx-auto">
                 <p className="text-xl sm:text-2xl text-muted-foreground leading-relaxed">
-                  I build reliable infrastructure with{" "}
-                  <span className="text-primary font-semibold">DevOps automation</span>,{" "}
-                  <span className="text-blue-600 font-semibold">cloud technologies</span>, and{" "}
-                  <span className="text-primary font-semibold">scalable systems</span>
+                  I build robust applications and scalable systems {" "}
+                  <span className="text-primary font-semibold">with a passion for </span>,{" "}
+                  <span className="text-blue-200 font-semibold"> backend engineering, cloud integration,</span>, and{" "}
+                  <span className="text-blue-200 font-semibold">performance optimization.</span>
                 </p>
               </div>
             </div>
@@ -75,7 +75,7 @@ export function Hero() {
                   Available for work
                 </Badge>
               </div>
-              
+
               <div className="p-6 font-mono text-sm text-left space-y-3">
                 <div className="flex">
                   <span className="text-muted-foreground mr-4 w-6">1</span>
@@ -84,7 +84,7 @@ export function Hero() {
                   <span className="text-muted-foreground ml-2">=</span>
                   <span className="text-yellow-500 ml-2">{"{"}</span>
                 </div>
-                
+
                 <div className="flex">
                   <span className="text-muted-foreground mr-4 w-6">2</span>
                   <span className="ml-4 text-green-400">name</span>
@@ -92,52 +92,78 @@ export function Hero() {
                   <span className="text-orange-400 ml-2">&apos;Yash Bhangale&apos;</span>
                   <span className="text-muted-foreground">,</span>
                 </div>
-                
+
                 <div className="flex">
                   <span className="text-muted-foreground mr-4 w-6">3</span>
                   <span className="ml-4 text-green-400">role</span>
                   <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">&apos;DevOps Engineer &amp; Developer&apos;</span>
+                  <span className="text-orange-400 ml-2">&apos;Software Engineer (Backend &amp; Cloud)&apos;</span>
                   <span className="text-muted-foreground">,</span>
                 </div>
-                
+
                 <div className="flex">
                   <span className="text-muted-foreground mr-4 w-6">4</span>
                   <span className="ml-4 text-green-400">skills</span>
                   <span className="text-muted-foreground">:</span>
-                  <span className="text-yellow-500 ml-2">[&apos;Kubernetes&apos;, &apos;AWS&apos;, &apos;Azure&apos;, &apos;Docker&apos;]</span>
+                  <span className="text-yellow-500 ml-2">[
+                    &apos;Linux&apos;,
+                    &apos;Bash&apos;,
+                    &apos;Jenkins&apos;,
+                    &apos;Terraform&apos;,
+                    &apos;KVM&apos;,
+                    &apos;Java&apos;,
+                    &apos;Python&apos;,
+                    &apos;SQL&apos;,
+                    &apos;Docker&apos;,
+                    &apos;Kubernetes&apos;,
+                    &apos;Git&apos;,
+                    &apos;CI/CD&apos;,
+                    &apos;Azure&apos;,
+                    &apos;AWS&apos;,
+                    &apos;Grafana&apos;,
+                    &apos;Prometheus&apos;
+                    &apos;n8n&apos;
+                    &apos;Node.js&apos;
+                    &apos;React&apos;
+                    &apos;Next.js&apos;
+                    &apos;TypeScript&apos;
+                    &apos;JavaScript&apos;
+                    &apos;HTML&apos;
+                    &apos;CSS&apos;
+                    &apos;PostgreSQL&apos;
+                    ]</span>
                   <span className="text-muted-foreground">,</span>
                 </div>
-                
+
                 <div className="flex">
                   <span className="text-muted-foreground mr-4 w-6">5</span>
                   <span className="ml-4 text-green-400">experience</span>
                   <span className="text-muted-foreground">:</span>
                   <span className="text-purple-400 ml-2">1</span>
                   <span className="text-muted-foreground">,</span>
-                                      <span className="text-gray-500 ml-2">{/* years in DevOps */}</span>
+                  <span className="text-gray-500 ml-2">{/* years in DevOps */}</span>
                 </div>
-                
+
                 <div className="flex">
                   <span className="text-muted-foreground mr-4 w-6">6</span>
                   <span className="ml-4 text-green-400">education</span>
                   <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">&apos;B.Tech AI &amp; Data Science&apos;</span>
+                  <span className="text-orange-400 ml-2">&apos;B.Tech AI &amp; Data Science</span><span className="text-blue-400">&nbsp;2025&apos;</span>
                   <span className="text-muted-foreground">,</span>
                 </div>
-                
+
                 <div className="flex">
                   <span className="text-muted-foreground mr-4 w-6">7</span>
                   <span className="ml-4 text-green-400">passion</span>
                   <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">&apos;Building scalable infrastructure&apos;</span>
+                  <span className="text-orange-400 ml-2">&apos;Building scalable and reliable infrastructure&apos;</span>
                 </div>
-                
+
                 <div className="flex">
                   <span className="text-muted-foreground mr-4 w-6">8</span>
                   <span className="text-yellow-500">{"}"}</span>
                 </div>
-                
+
                 <div className="pt-2 border-t border-border/50">
                   <div className="flex items-center">
                     <span className="text-muted-foreground mr-4 w-6">9</span>
@@ -168,17 +194,17 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
-                          <Button 
-              size="lg" 
+            <Button
+              size="lg"
               onClick={scrollToContact}
               className="w-full sm:w-auto bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Mail className="mr-2 h-4 w-4" />
               Let&apos;s Connect
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
+            <Button
+              variant="outline"
+              size="lg"
               onClick={scrollToProjects}
               className="w-full sm:w-auto border-2 hover:bg-primary/5 transition-all duration-300"
             >
