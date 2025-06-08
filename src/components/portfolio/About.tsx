@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Lightbulb, Heart, Zap, Coffee, Award, GraduationCap, MapPin, Database, Globe } from "lucide-react";
+import { Code, Lightbulb, Heart, Zap, Coffee, Award, GraduationCap, MapPin, Globe } from "lucide-react";
 
 const highlights = [
   {
@@ -73,7 +73,7 @@ export function About() {
                 <p className="text-muted-foreground leading-relaxed">
                   Today, I blend software engineering principles with infrastructure knowledge to deliver production-grade solutions. 
                   With 1 year of hands-on experience and multiple hackathon victories including Mumbai Hacks, 
-                  I'm passionate about creating scalable web applications and robust backend systems.
+                  I&apos;m passionate about creating scalable web applications and robust backend systems.
                 </p>
               </div>
               
