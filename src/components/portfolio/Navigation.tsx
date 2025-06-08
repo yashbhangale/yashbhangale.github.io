@@ -29,9 +29,14 @@ export function Navigation() {
     setIsDark(!isDark);
   };
 
-  const handleNavigation = (item: { id: string; label: string; href?: string }) => {
+  const handleNavigation = (item: { id: string; label: string; href?: string; external?: boolean }) => {
     if (item.href) {
-      router.push(item.href);
+      if (item.external) {
+        // Open external links in new tab
+        window.open(item.href, '_blank', 'noopener,noreferrer');
+      } else {
+        router.push(item.href);
+      }
     } else {
       // If we're on a blog page or ask-ai page, navigate back to home with the section anchor
       if (pathname.startsWith('/blog') || pathname.startsWith('/ask-ai')) {
@@ -52,6 +57,7 @@ export function Navigation() {
     { id: "experience", label: "Experience" },
     { id: "blog", label: "Blog", href: "/blog" },
     { id: "ask-ai", label: "Ask AI", href: "/ask-ai" },
+    { id: "resume", label: "Resume", href: "https://drive.google.com/file/d/1n-1y_jhFgNIF7MCfV0ktf_QFfucBD5cX/view", external: true },
     { id: "contact", label: "Contact" },
   ];
 
@@ -71,10 +77,20 @@ export function Navigation() {
               {navItems.map((item) => (
                 <NavigationMenuItem key={item.id}>
                   <NavigationMenuLink
-                    className="cursor-pointer px-4 py-2 text-sm font-medium transition-colors hover:text-primary"
+                    className={`cursor-pointer px-4 py-2 text-sm font-medium transition-all duration-300 hover:text-primary ${
+                      item.id === 'resume' 
+                        ? 'text-blue-400 relative animate-pulse hover:animate-none bg-blue-400/10 rounded-lg border border-blue-400/30 hover:bg-blue-400/20 hover:border-blue-400/50 hover:scale-105 hover:shadow-lg hover:shadow-blue-400/25' 
+                        : ''
+                    }`}
                     onClick={() => handleNavigation(item)}
                   >
                     {item.label}
+                    {item.id === 'resume' && (
+                      <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                      </span>
+                    )}
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}
@@ -111,10 +127,20 @@ export function Navigation() {
                   <Button
                     key={item.id}
                     variant="ghost"
-                    className="justify-start h-12 text-lg font-medium"
+                    className={`justify-start h-12 text-lg font-medium transition-all duration-300 ${
+                      item.id === 'resume' 
+                        ? 'text-blue-400 bg-blue-400/10 border border-blue-400/30 hover:bg-blue-400/20 hover:border-blue-400/50 animate-pulse hover:animate-none relative' 
+                        : ''
+                    }`}
                     onClick={() => handleNavigation(item)}
                   >
                     {item.label}
+                    {item.id === 'resume' && (
+                      <span className="absolute top-2 right-2 flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                      </span>
+                    )}
                   </Button>
                 ))}
                 <div className="border-t pt-4 mt-4">
@@ -133,6 +159,13 @@ export function Navigation() {
                       onClick={() => handleNavigation({ id: "projects", label: "Projects" })}
                     >
                       View Projects
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="w-full justify-start"
+                      onClick={() => handleNavigation({ id: "resume", label: "Resume", href: "https://drive.google.com/file/d/1n-1y_jhFgNIF7MCfV0ktf_QFfucBD5cX/view", external: true })}
+                    >
+                      My Resume
                     </Button>
                   </div>
                 </div>

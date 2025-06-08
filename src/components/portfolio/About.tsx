@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Lightbulb, Heart, Zap, Coffee, Music, GraduationCap, MapPin } from "lucide-react";
+import { Code, Lightbulb, Heart, Zap, Coffee, Award, GraduationCap, MapPin, Database, Globe } from "lucide-react";
 
 const highlights = [
   {
@@ -14,14 +14,14 @@ const highlights = [
     description: "Turning complex infrastructure challenges into automated solutions"
   },
   {
-    icon: Heart,
-    title: "Open Source Contributor",
-    description: "Building tools and distributions that help the developer community"
+    icon: Globe,
+    title: "Cloud Integration",
+    description: "Deploying and scaling applications using AWS, Azure, and containerization technologies"
   },
   {
     icon: Zap,
-    title: "Performance Focused",
-    description: "Optimizing CI/CD pipelines, monitoring, and system reliability"
+    title: "Performance Optimization",
+    description: "Optimizing application performance, API response times, and system reliability"
   }
 ];
 
@@ -41,10 +41,10 @@ export function About() {
             About Me
           </h2>
           <p className="mx-auto max-w-[800px] text-xl text-muted-foreground leading-relaxed">
-            A passionate developer specializing in{" "}
-            <span className="text-primary font-semibold">DevOps</span>,{" "}
-            <span className="text-purple-600 font-semibold">cloud technologies</span>, and{" "}
-            <span className="text-primary font-semibold">scalable infrastructure</span>
+            A backend-focused{" "}
+            <span className="text-primary font-semibold">Software Engineer</span> with a foundation in{" "}
+            <span className="text-purple-600 font-semibold">AI and DevOps</span>. I specialize in building reliable{" "}
+            <span className="text-primary font-semibold">web applications, APIs, and automation tools</span> that solve real-world problems.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export function About() {
                 <div>
                   <CardTitle className="text-2xl">My Journey</CardTitle>
                   <CardDescription className="text-base">
-                    From AI/DS student to DevOps specialist
+                    From AI → DevOps → Software Engineering
                   </CardDescription>
                 </div>
               </div>
@@ -67,12 +67,13 @@ export function About() {
               <div className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
                   Currently pursuing B.Tech in Artificial Intelligence and Data Science at Dattameghe College of Engineering 
-                  with a CGPA of 8.2. My journey started with curiosity about AI but evolved into a deep passion for 
-                  DevOps, cloud infrastructure, and building scalable systems.
+                  with a CGPA of 8.2. My journey started in AI, expanded into DevOps, and matured into full-stack software 
+                  development — especially backend systems and APIs.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  With 1 year of hands-on experience and multiple hackathon victories including Mumbai Hacks (world&apos;s largest Gen AI hackathon), 
-                  I believe in creating technology that empowers developers and enhances system reliability.
+                  Today, I blend software engineering principles with infrastructure knowledge to deliver production-grade solutions. 
+                  With 1 year of hands-on experience and multiple hackathon victories including Mumbai Hacks, 
+                  I'm passionate about creating scalable web applications and robust backend systems.
                 </p>
               </div>
               
@@ -115,7 +116,7 @@ export function About() {
                 <div>
                   <CardTitle className="text-2xl">My Approach</CardTitle>
                   <CardDescription className="text-base">
-                    Building reliable, scalable infrastructure
+                    Designing and developing scalable, secure software systems
                   </CardDescription>
                 </div>
               </div>
@@ -163,7 +164,7 @@ export function About() {
                   <p className="text-sm text-muted-foreground">National level competition finalist</p>
                 </div>
                 <div className="space-y-2">
-                  <Music className="h-8 w-8 text-primary mx-auto" />
+                  <Award className="h-8 w-8 text-primary mx-auto" />
                   <p className="font-semibold">Certifications</p>
                   <p className="text-2xl font-bold text-primary">4+</p>
                   <p className="text-sm text-muted-foreground">Azure & Kubernetes certifications</p>
@@ -181,9 +182,9 @@ export function About() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                 <div className="space-y-2">
                   <Coffee className="h-8 w-8 text-primary mx-auto" />
-                  <p className="font-semibold">Scripts Written</p>
-                  <p className="text-2xl font-bold text-primary">50+</p>
-                  <p className="text-sm text-muted-foreground">PowerShell and Bash automation scripts</p>
+                  <p className="font-semibold">Technologies</p>
+                  <p className="text-2xl font-bold text-primary">15+</p>
+                  <p className="text-sm text-muted-foreground">Frontend, backend, and cloud technologies</p>
                 </div>
                 <div className="space-y-2">
                   <Code className="h-8 w-8 text-primary mx-auto" />
@@ -192,10 +193,10 @@ export function About() {
                   <p className="text-sm text-muted-foreground">Creator of Nanite AI OS distribution</p>
                 </div>
                 <div className="space-y-2">
-                  <Music className="h-8 w-8 text-primary mx-auto" />
+                  <Globe className="h-8 w-8 text-primary mx-auto" />
                   <p className="font-semibold">Deployment Platform</p>
-                  <p className="text-2xl font-bold text-primary">K8s</p>
-                  <p className="text-sm text-muted-foreground">Kubernetes orchestration specialist</p>
+                  <p className="text-2xl font-bold text-primary">AWS / Azure Cloud and Sometimes I work in Digital Ocean too</p>
+                  <p className="text-sm text-muted-foreground">Cloud-native application deployment</p>
                 </div>
               </div>
             </div>
