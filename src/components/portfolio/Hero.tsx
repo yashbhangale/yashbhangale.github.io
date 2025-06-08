@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { Mail, Code } from "lucide-react";
+import { Mail, Code, FileText } from "lucide-react";
 
 export function Hero() {
 
@@ -49,9 +49,9 @@ export function Hero() {
 
               <div className="max-w-3xl mx-auto">
                 <p className="text-xl sm:text-2xl text-muted-foreground leading-relaxed">
-                  I build robust applications and scalable systems {" "}
-                  <span className="text-primary font-semibold">with a passion for </span>,{" "}
-                  <span className="text-blue-200 font-semibold"> backend engineering, cloud integration,</span>, and{" "}
+                  I build robust applications and scalable systems{" "}
+                  <span className="text-primary font-semibold">with a passion for</span>{" "}
+                  <span className="text-blue-200 font-semibold">backend engineering, cloud integration,</span> and{" "}
                   <span className="text-blue-200 font-semibold">performance optimization.</span>
                 </p>
               </div>
@@ -106,31 +106,30 @@ export function Hero() {
                   <span className="ml-4 text-green-400">skills</span>
                   <span className="text-muted-foreground">:</span>
                   <span className="text-yellow-500 ml-2">[
+                    &apos;Node.js&apos;,
+                    &apos;Python&apos;,
+                    &apos;React&apos;,
+                    &apos;Next.js&apos;,
+                    &apos;TypeScript&apos;,
+                    &apos;JavaScript&apos;,
+                    &apos;Java&apos;,
+                    &apos;PostgreSQL&apos;,
+                    &apos;AWS&apos;,
+                    &apos;Docker&apos;,
                     &apos;Linux&apos;,
+                    &apos;Git&apos;,
+                    &apos;CI/CD&apos;,
+                    &apos;Kubernetes&apos;,
+                    &apos;Azure&apos;,
+                    &apos;HTML&apos;,
+                    &apos;CSS&apos;,
+                    &apos;SQL&apos;,
                     &apos;Bash&apos;,
                     &apos;Jenkins&apos;,
                     &apos;Terraform&apos;,
-                    &apos;KVM&apos;,
-                    &apos;Java&apos;,
-                    &apos;Python&apos;,
-                    &apos;SQL&apos;,
-                    &apos;Docker&apos;,
-                    &apos;Kubernetes&apos;,
-                    &apos;Git&apos;,
-                    &apos;CI/CD&apos;,
-                    &apos;Azure&apos;,
-                    &apos;AWS&apos;,
                     &apos;Grafana&apos;,
-                    &apos;Prometheus&apos;
+                    &apos;Prometheus&apos;,
                     &apos;n8n&apos;
-                    &apos;Node.js&apos;
-                    &apos;React&apos;
-                    &apos;Next.js&apos;
-                    &apos;TypeScript&apos;
-                    &apos;JavaScript&apos;
-                    &apos;HTML&apos;
-                    &apos;CSS&apos;
-                    &apos;PostgreSQL&apos;
                     ]</span>
                   <span className="text-muted-foreground">,</span>
                 </div>
@@ -141,14 +140,14 @@ export function Hero() {
                   <span className="text-muted-foreground">:</span>
                   <span className="text-purple-400 ml-2">1</span>
                   <span className="text-muted-foreground">,</span>
-                  <span className="text-gray-500 ml-2">{/* years in DevOps */}</span>
+                  <span className="text-gray-500 ml-2">{/* years in software development */}</span>
                 </div>
 
                 <div className="flex">
                   <span className="text-muted-foreground mr-4 w-6">6</span>
                   <span className="ml-4 text-green-400">education</span>
                   <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">&apos;B.Tech AI &amp; Data Science</span><span className="text-blue-400">&nbsp;2025&apos;</span>
+                  <span className="text-orange-400 ml-2">&apos;B.Tech AI &amp; Data Science 2025&apos;</span>
                   <span className="text-muted-foreground">,</span>
                 </div>
 
@@ -156,7 +155,7 @@ export function Hero() {
                   <span className="text-muted-foreground mr-4 w-6">7</span>
                   <span className="ml-4 text-green-400">passion</span>
                   <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">&apos;Building scalable and reliable infrastructure&apos;</span>
+                  <span className="text-orange-400 ml-2">&apos;Building reliable backend systems and scalable applications&apos;</span>
                 </div>
 
                 <div className="flex">
@@ -179,21 +178,21 @@ export function Hero() {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 max-w-md mx-auto">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-primary">50+</div>
-              <div className="text-sm text-muted-foreground">Scripts</div>
+              <div className="text-2xl sm:text-3xl font-bold text-primary">12+</div>
+              <div className="text-sm text-muted-foreground">projects</div>
             </div>
             <div className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-primary">1</div>
-              <div className="text-sm text-muted-foreground">Year</div>
+              <div className="text-sm text-muted-foreground">Year Experience</div>
             </div>
             <div className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-primary">4+</div>
-              <div className="text-sm text-muted-foreground">Projects</div>
+              <div className="text-sm text-muted-foreground">Hackthons won</div>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
             <Button
               size="lg"
               onClick={scrollToContact}
@@ -211,25 +210,36 @@ export function Hero() {
               <Code className="mr-2 h-4 w-4" />
               View Projects
             </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full sm:w-auto border-2 hover:bg-primary/5 transition-all duration-300"
+              asChild
+            >
+              <a href="https://drive.google.com/file/d/1n-1y_jhFgNIF7MCfV0ktf_QFfucBD5cX/view" target="_blank" rel="noopener noreferrer">
+                <FileText className="mr-2 h-4 w-4" />
+                My Resume
+              </a>
+            </Button>
           </div>
 
           {/* Social Links */}
           <div className="flex gap-4 justify-center">
-            <Button variant="ghost" className="hover:bg-primary/10 transition-colors" asChild>
+            <Button variant="ghost" size="lg" className="hover:bg-primary/10 transition-colors" asChild>
               <a href="https://github.com/yashbhangale" target="_blank" rel="noopener noreferrer">
-                <GitHubLogoIcon className="h-5 w-5" />
+                <GitHubLogoIcon className="h-8 w-8" />
                 <span className="sr-only">GitHub</span>
               </a>
             </Button>
-            <Button variant="ghost" className="hover:bg-primary/10 transition-colors" asChild>
+            <Button variant="ghost" size="lg" className="hover:bg-primary/10 transition-colors" asChild>
               <a href="https://linkedin.com/in/yashbhangale" target="_blank" rel="noopener noreferrer">
-                <LinkedInLogoIcon className="h-5 w-5" />
+                <LinkedInLogoIcon className="h-8 w-8" />
                 <span className="sr-only">LinkedIn</span>
               </a>
             </Button>
-            <Button variant="ghost" className="hover:bg-primary/10 transition-colors" asChild>
+            <Button variant="ghost" size="lg" className="hover:bg-primary/10 transition-colors" asChild>
               <a href="mailto:yashbhangale9@gmail.com">
-                <Mail className="h-5 w-5" />
+                <Mail className="h-8 w-8" />
                 <span className="sr-only">Email</span>
               </a>
             </Button>
