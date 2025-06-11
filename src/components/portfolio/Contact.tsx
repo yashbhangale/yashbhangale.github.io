@@ -43,10 +43,10 @@ export function Contact() {
                 <div>
                   <p className="font-medium">Phone</p>
                   <a 
-                    href="tel:+918169362025" 
+                    href="tel:+918169362024" 
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +91 8169362025
+                    +91 8169362024
                   </a>
                 </div>
               </div>
@@ -98,7 +98,7 @@ export function Contact() {
                   </a>
                 </Button>
                 <Button variant="outline" size="sm" asChild>
-                  <a href="tel:+918169362025">
+                  <a href="tel:+918169362024">
                     <PhoneIcon className="h-4 w-4" />
                     <span className="sr-only">Phone</span>
                   </a>
