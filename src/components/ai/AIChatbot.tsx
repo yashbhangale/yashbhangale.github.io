@@ -56,7 +56,7 @@ PERSONAL INFO:
 
 CONTACT INFORMATION:
 - Email: yashbhangale9@gmail.com
-- Phone: +91 8169362025
+- Phone: +91 8169362024
 - LinkedIn: https://linkedin.com/in/yashbhangale
 - GitHub: https://github.com/yashbhangale
 
