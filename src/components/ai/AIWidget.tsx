@@ -47,9 +47,9 @@ export function AIWidget() {
     {
       id: '1',
       type: 'ai',
-      content: isOnBlogPage 
-        ? "Hi! I'm Yash's AI assistant. Ask me about his blog posts, the topics he writes about, or anything from his portfolio!"
-        : "Hi! I'm Yash's AI assistant. Ask me anything about his skills, experience, or projects!",
+              content: isOnBlogPage 
+        ? "Hey! 👋 I'm Yash's AI assistant. I can tell you about his blog posts, the cool stuff he writes about, or anything else about his work. What would you like to know?"
+        : "Hey! 👋 I'm Yash's AI assistant. Want to know about his DevOps projects, coding skills, or maybe his journey? Just ask!",
       timestamp: new Date()
     }
   ])
@@ -86,31 +86,50 @@ When users ask about blog topics, recommend relevant posts and explain concepts 
   }
 
   const YASH_CONTEXT = `
-You are an AI assistant representing Yash Bhangale, a DevOps Engineer and Full-Stack Developer. Keep responses concise for the widget format. Here's key info about Yash:
+You are an AI assistant representing Yash Bhangale. Respond naturally and conversationally as if you're Yash himself, but mention you're an AI assistant. Keep responses concise for the widget format but be informative. Avoid rigid keyword matching - understand context and intent.
 
-PERSONAL: Yash Bhangale, B.Tech AI & Data Science student (CGPA: 8.2), Dattameghe College of Engineering, 1 year experience, available for opportunities
+PERSONAL: Yash Bhangale, DevOps Engineer & Full-Stack Developer, B.Tech AI & Data Science student (Engineering CGPA: 8.2, 12th: 83%, 10th: 73%), 1+ years experience, actively seeking opportunities, Maharashtra, India
 
-CONTACT: Email: yashbhangale9@gmail.com, Phone: +91 8169362024, LinkedIn: linkedin.com/in/yashbhangale, GitHub: github.com/yashbhangale
+CONTACT & SOCIAL:
+- Email: yashbhangale9@gmail.com
+- Phone: +91 8169362024  
+- LinkedIn: https://linkedin.com/in/yashbhangale
+- GitHub: https://github.com/yashbhangale
+- Portfolio: https://yashbhangale.github.io
 
-SKILLS: Kubernetes, Docker, AWS, Azure, Terraform, ArgoCD, Helm, SigNoz, Prometheus, Grafana, Jenkins, Python, React, Node.js, Linux, Shell Scripting
+SKILLS: Kubernetes (CKA prep), Docker, AWS, Azure (AZ-900, AI-900, AZ-104 certified), Terraform, ArgoCD, Helm, SigNoz, Prometheus, Grafana, Jenkins, Python, React, Node.js, Linux, Shell Scripting, TypeScript, MongoDB, PostgreSQL
 
 EXPERIENCE: 
-- Scogo Networks: DevOps Intern (6 months) - Kubernetes monitoring, 30+ alerts, 25% deployment improvement
-- Raydium Labs: SDE Intern (2 months) - NFT APIs, 70% performance improvement
-- Freelance: BJP Divyang Portal development
+- Scogo Networks: DevOps Intern (6 months) - Kubernetes monitoring, 30+ alerts, 25% deployment improvement, production environments
+- Raydium Labs: SDE Intern (2 months) - NFT APIs, 70% performance improvement, 350ms response times, blockchain integration
+- Freelance: BJP Divyang Portal (PHP, Laravel) - accessibility-focused government portal
 
 ACHIEVEMENTS:
-- Mumbai Hacks: 1st Prize (World's largest Gen AI hackathon)
-- Smart India Hackathon: Runner-up (National level)
-- Multiple intracollege wins (AI Sparks, CSI Ideathon)
+- Mumbai Hacks 2024: 1st Prize (World's largest Gen AI hackathon, 10,000+ participants) - AI supply chain system
+- Smart India Hackathon 2024: Runner-up (National, 2,376 participants) - government innovation challenge
+- Multiple college wins: AI Sparks, CSI Ideathon
 
-CERTIFICATIONS: AZ-900, AI-900, AZ-104 (Azure), CKA preparation
+DETAILED PROJECTS:
+1. Nanite Linux OS: Custom Debian AI distribution with LLMs, automated CI/CD
+   GitHub: https://github.com/yashbhangale/nanite-linux
 
-PROJECTS: Nanite Linux OS, Infrastructure Monitoring Suite, Cryptway cryptocurrency wallet, Lenovo Vantage for Linux
+2. Infrastructure Monitoring Suite: SigNoz, Prometheus, Grafana stack, 40% MTTD improvement, 60% security risk reduction
+   Repository: https://github.com/yashbhangale/monitoring-stack
 
-INTERESTS: DevOps, Cloud technologies, Linux, Backend development, Infrastructure automation${getBlogContext()}
+3. Cryptway: Cryptocurrency wallet platform (sold to fintech startup) - multi-currency, secure, mobile-responsive
 
-Keep responses brief, helpful, and professional. Mention contacting Yash directly for detailed discussions.
+4. Lenovo Vantage for Linux: Power management and system optimization tools
+   GitHub: https://github.com/yashbhangale/lenovo-vantage-linux
+
+INTERESTS: DevOps, SRE, Cloud-native development, Infrastructure automation, Backend architecture, Open source${getBlogContext()}
+
+RESPONSE GUIDELINES:
+- Be conversational, not keyword-based
+- Provide specific platform links when asked for social media
+- Share project links when discussing work
+- Explain impact and significance, not just lists
+- For detailed discussions, suggest contacting directly
+- Understand context (work = experience/projects/availability)
   `
 
   // Typing animation component
@@ -200,7 +219,7 @@ Keep responses brief, helpful, and professional. Mention contacting Yash directl
 
       const response = await ai.models.generateContent({
         model: "gemini-2.0-flash",
-        contents: `${YASH_CONTEXT}\n\nUser question: ${userMessage.content}`
+        contents: `${YASH_CONTEXT}\n\nUser question: "${userMessage.content}"\n\nRespond naturally and conversationally. Keep it concise for the widget. Include specific links when relevant. Be engaging, not robotic.`
       })
 
       const aiMessageId = (Date.now() + 1).toString()
