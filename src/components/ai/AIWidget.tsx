@@ -18,6 +18,44 @@ import {
 } from 'lucide-react'
 import { GoogleGenAI } from '@google/genai'
 
+// Function to parse markdown links and convert them to JSX
+const parseMessageContent = (content: string) => {
+  // Regular expression to match markdown links [text](url)
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
+  const parts = []
+  let lastIndex = 0
+  let match
+
+  while ((match = linkRegex.exec(content)) !== null) {
+    // Add text before the link
+    if (match.index > lastIndex) {
+      parts.push(content.slice(lastIndex, match.index))
+    }
+    
+    // Add the clickable link
+    parts.push(
+      <a
+        key={match.index}
+        href={match[2]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors duration-200 font-medium text-xs"
+      >
+        {match[1]}
+      </a>
+    )
+    
+    lastIndex = match.index + match[0].length
+  }
+  
+  // Add remaining text after the last link
+  if (lastIndex < content.length) {
+    parts.push(content.slice(lastIndex))
+  }
+  
+  return parts.length > 0 ? parts : content
+}
+
 // Add blinking animation styles
 const blinkKeyframes = `
   @keyframes blink {
@@ -361,12 +399,12 @@ RESPONSE GUIDELINES:
                         } ${message.isTyping ? 'animate-pulse' : ''}`}
                       >
                         {message.content || message.isTyping ? (
-                          <p className="whitespace-pre-wrap break-words">
-                            {message.content}
+                          <div className="whitespace-pre-wrap break-words">
+                            {parseMessageContent(message.content)}
                             {message.isTyping && (
                               <span className="inline-block w-1 h-3 bg-current ml-1 animate-blink">|</span>
                             )}
-                          </p>
+                          </div>
                         ) : null}
                       </div>
 

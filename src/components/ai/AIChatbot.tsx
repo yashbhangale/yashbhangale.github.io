@@ -9,6 +9,44 @@ import { ScrollArea } from '@/components/ui/scroll-area'
 import { SendIcon, BotIcon, UserIcon, LoaderIcon, SparklesIcon } from 'lucide-react'
 import { GoogleGenAI } from '@google/genai'
 
+// Function to parse markdown links and convert them to JSX
+const parseMessageContent = (content: string) => {
+  // Regular expression to match markdown links [text](url)
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
+  const parts = []
+  let lastIndex = 0
+  let match
+
+  while ((match = linkRegex.exec(content)) !== null) {
+    // Add text before the link
+    if (match.index > lastIndex) {
+      parts.push(content.slice(lastIndex, match.index))
+    }
+    
+    // Add the clickable link
+    parts.push(
+      <a
+        key={match.index}
+        href={match[2]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors duration-200 font-medium"
+      >
+        {match[1]}
+      </a>
+    )
+    
+    lastIndex = match.index + match[0].length
+  }
+  
+  // Add remaining text after the last link
+  if (lastIndex < content.length) {
+    parts.push(content.slice(lastIndex))
+  }
+  
+  return parts.length > 0 ? parts : content
+}
+
 // Add blinking animation styles
 const blinkKeyframes = `
   @keyframes blink {
@@ -392,12 +430,12 @@ When responding:
                   } ${message.isTyping ? 'animate-pulse' : ''}`}
                 >
                   {message.content || message.isTyping ? (
-                    <p className="text-sm whitespace-pre-wrap break-words leading-relaxed">
-                      {message.content}
+                    <div className="text-sm whitespace-pre-wrap break-words leading-relaxed">
+                      {parseMessageContent(message.content)}
                       {message.isTyping && (
                         <span className="inline-block w-2 h-4 bg-current ml-1 animate-blink">|</span>
                       )}
-                    </p>
+                    </div>
                   ) : null}
                   <span className="text-xs opacity-70 mt-2 block">
                     {message.timestamp.toLocaleTimeString([], {
