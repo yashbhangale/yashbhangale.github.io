@@ -1,0 +1,28 @@
+{
+  "name": "Yash Bhangale - Software Engineer Portfolio",
+  "short_name": "Yash Bhangale",
+  "description": "Software Engineer specializing in backend development, cloud integration, and scalable applications",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "developer", "technology"],
+  "lang": "en-US",
+  "scope": "/",
+  "id": "yash-bhangale-portfolio"
+} 

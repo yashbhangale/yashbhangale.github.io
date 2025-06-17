@@ -6,13 +6,88 @@ import { AIWidget } from '@/components/ai/AIWidget'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { BookOpenIcon, PenIcon } from 'lucide-react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Blog | Yash Bhangale",
+  description: "Thoughts, tutorials, and insights about web development, backend engineering, cloud computing, and modern technologies by Yash Bhangale.",
+  keywords: [
+    "blog",
+    "web development",
+    "backend development", 
+    "cloud computing",
+    "programming tutorials",
+    "software engineering",
+    "tech insights",
+    "Node.js",
+    "Python",
+    "React",
+    "AWS",
+    "DevOps"
+  ],
+  openGraph: {
+    title: "Blog | Yash Bhangale",
+    description: "Thoughts, tutorials, and insights about web development, backend engineering, cloud computing, and modern technologies.",
+    url: "https://yashbhangale.github.io/blog",
+    siteName: "Yash Bhangale Portfolio",
+    images: [
+      {
+        url: "/og-blog.png",
+        width: 1200,
+        height: 630,
+        alt: "Yash Bhangale Blog - Web Development & Tech Insights",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Yash Bhangale",
+    description: "Thoughts, tutorials, and insights about web development, backend engineering, and cloud computing.",
+    images: ["/og-blog.png"],
+  },
+  alternates: {
+    canonical: "https://yashbhangale.github.io/blog",
+  },
+};
 
 export default function BlogPage() {
   const posts = getAllBlogPosts()
   const allTags = Array.from(new Set(posts.flatMap(post => post.tags)))
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Yash Bhangale Blog",
+    "description": "Thoughts, tutorials, and insights about web development, backend engineering, cloud computing, and modern technologies",
+    "url": "https://yashbhangale.github.io/blog",
+    "author": {
+      "@type": "Person",
+      "name": "Yash Bhangale",
+      "url": "https://yashbhangale.github.io"
+    },
+    "blogPost": posts.map(post => ({
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "description": post.description,
+      "url": `https://yashbhangale.github.io/blog/${post.slug}`,
+      "datePublished": post.date,
+      "author": {
+        "@type": "Person",
+        "name": post.author
+      },
+      "keywords": post.tags.join(", ")
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
       <Navigation />
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
