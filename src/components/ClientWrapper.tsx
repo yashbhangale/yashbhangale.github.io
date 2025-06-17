@@ -1,6 +1,6 @@
 "use client";
 
-import { LoadingScreen } from "./LoadingScreen";
+import { LoadingScreen, LoadingProvider } from "./LoadingScreen";
 
 interface ClientWrapperProps {
   children: React.ReactNode;
@@ -8,9 +8,9 @@ interface ClientWrapperProps {
 
 export function ClientWrapper({ children }: ClientWrapperProps) {
   return (
-    <>
+    <LoadingProvider>
       <LoadingScreen />
       {children}
-    </>
+    </LoadingProvider>
   );
 } 
