@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { Mail, Code, FileText } from "lucide-react";
-import Image from "next/image";
 
 export function Hero() {
 
@@ -29,21 +28,6 @@ export function Hero() {
 
       <div className="container relative mx-auto px-4 py-16">
         <div className="max-w-5xl mx-auto text-center space-y-12">
-
-          {/* Profile Image */}
-          <div className="flex justify-center">
-            <div className="relative">
-              <div className="absolute -inset-2 bg-gradient-to-r from-primary via-blue-600 to-primary rounded-full blur-lg opacity-30 animate-pulse"></div>
-              <Image
-                src="/resized.png"
-                alt="Yash Bhangale"
-                width={150}
-                height={150}
-                className="relative rounded-full border-4 border-background shadow-2xl"
-                priority
-              />
-            </div>
-          </div>
 
           {/* Code block intro */}
           <div className="space-y-6">
