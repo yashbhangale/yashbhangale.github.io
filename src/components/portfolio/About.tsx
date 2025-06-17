@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code, Lightbulb, Heart, Zap, Coffee, Award, GraduationCap, MapPin, Globe } from "lucide-react";
+import Image from "next/image";
 
 const highlights = [
   {
@@ -40,6 +41,22 @@ export function About() {
           <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
             About Me
           </h2>
+          
+          {/* Profile Image */}
+          <div className="flex justify-center mb-8">
+            <div className="relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-full blur-sm opacity-75 animate-pulse"></div>
+              <Image
+                src="/resized.png"
+                alt="Yash Bhangale"
+                width={120}
+                height={120}
+                className="relative rounded-full border-4 border-background shadow-xl"
+                priority
+              />
+            </div>
+          </div>
+          
           <p className="mx-auto max-w-[800px] text-xl text-muted-foreground leading-relaxed">
             A backend-focused{" "}
             <span className="text-primary font-semibold">Software Engineer</span> with a foundation in{" "}
