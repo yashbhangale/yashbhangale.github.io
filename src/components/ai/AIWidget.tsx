@@ -81,9 +81,6 @@ export function AIWidget() {
   const pathname = usePathname()
   const isOnBlogPage = pathname.startsWith('/blog')
   
-  // Don't render AI widget during loading
-  if (isLoading) return null;
-
   const [isOpen, setIsOpen] = useState(false)
   const [isMinimized, setIsMinimized] = useState(false)
   const [messages, setMessages] = useState<Message[]>(() => [
@@ -204,7 +201,7 @@ RULES: Keep responses short, provide links when relevant, suggest contacting for
         scrollElement.scrollTop = scrollElement.scrollHeight
       }
     }
-  }, [messages, isLoading])
+  }, [messages, isSending])
 
   useEffect(() => {
     if (isOpen) {
@@ -282,6 +279,9 @@ RULES: Keep responses short, provide links when relevant, suggest contacting for
       sendMessage()
     }
   }
+
+  // Don't render AI widget during loading (after all hooks are called)
+  if (isLoading) return null;
 
   if (!isOpen) {
     return (
