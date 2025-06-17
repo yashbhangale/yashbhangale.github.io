@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { MoonIcon, SunIcon, MenuIcon } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -57,6 +58,7 @@ export function Navigation() {
     { id: "experience", label: "Experience" },
     { id: "blog", label: "Blog", href: "/blog" },
     { id: "ask-ai", label: "Ask AI", href: "/ask-ai" },
+    { id: "notes", label: "Notes", href: "https://notes.hiremefor.cloud", external: true },
     { id: "resume", label: "Resume", href: "https://drive.google.com/file/d/1n-1y_jhFgNIF7MCfV0ktf_QFfucBD5cX/view", external: true },
     { id: "contact", label: "Contact" },
   ];
@@ -118,58 +120,60 @@ export function Navigation() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <SheetHeader>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] flex flex-col">
+              <SheetHeader className="flex-shrink-0">
                 <SheetTitle>Navigation</SheetTitle>
               </SheetHeader>
-              <div className="grid gap-4 py-6">
-                {navItems.map((item) => (
-                  <Button
-                    key={item.id}
-                    variant="ghost"
-                    className={`justify-start h-12 text-lg font-medium transition-all duration-300 ${
-                      item.id === 'resume' 
-                        ? 'text-blue-400 bg-blue-400/10 border border-blue-400/30 hover:bg-blue-400/20 hover:border-blue-400/50 animate-pulse hover:animate-none relative' 
-                        : ''
-                    }`}
-                    onClick={() => handleNavigation(item)}
-                  >
-                    {item.label}
-                    {item.id === 'resume' && (
-                      <span className="absolute top-2 right-2 flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                      </span>
-                    )}
-                  </Button>
-                ))}
-                <div className="border-t pt-4 mt-4">
-                  <p className="text-sm text-muted-foreground mb-4">Quick Actions</p>
-                  <div className="space-y-2">
+              <ScrollArea className="flex-1 -mx-6 px-6">
+                <div className="grid gap-4 py-6">
+                  {navItems.map((item) => (
                     <Button
-                      variant="outline"
-                      className="w-full justify-start"
-                      onClick={() => handleNavigation({ id: "contact", label: "Contact" })}
+                      key={item.id}
+                      variant="ghost"
+                      className={`justify-start h-12 text-lg font-medium transition-all duration-300 ${
+                        item.id === 'resume' 
+                          ? 'text-blue-400 bg-blue-400/10 border border-blue-400/30 hover:bg-blue-400/20 hover:border-blue-400/50 animate-pulse hover:animate-none relative' 
+                          : ''
+                      }`}
+                      onClick={() => handleNavigation(item)}
                     >
-                      Get in Touch
+                      {item.label}
+                      {item.id === 'resume' && (
+                        <span className="absolute top-2 right-2 flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                        </span>
+                      )}
                     </Button>
-                    <Button
-                      variant="outline"
-                      className="w-full justify-start"
-                      onClick={() => handleNavigation({ id: "projects", label: "Projects" })}
-                    >
-                      View Projects
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="w-full justify-start"
-                      onClick={() => handleNavigation({ id: "resume", label: "Resume", href: "https://drive.google.com/file/d/1n-1y_jhFgNIF7MCfV0ktf_QFfucBD5cX/view", external: true })}
-                    >
-                      My Resume
-                    </Button>
+                  ))}
+                  <div className="border-t pt-4 mt-4">
+                    <p className="text-sm text-muted-foreground mb-4">Quick Actions</p>
+                    <div className="space-y-2">
+                      <Button
+                        variant="outline"
+                        className="w-full justify-start"
+                        onClick={() => handleNavigation({ id: "contact", label: "Contact" })}
+                      >
+                        Get in Touch
+                      </Button>
+                      <Button
+                        variant="outline"
+                        className="w-full justify-start"
+                        onClick={() => handleNavigation({ id: "projects", label: "Projects" })}
+                      >
+                        View Projects
+                      </Button>
+                      <Button
+                        variant="outline"
+                        className="w-full justify-start"
+                        onClick={() => handleNavigation({ id: "resume", label: "Resume", href: "https://drive.google.com/file/d/1n-1y_jhFgNIF7MCfV0ktf_QFfucBD5cX/view", external: true })}
+                      >
+                        My Resume
+                      </Button>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </ScrollArea>
             </SheetContent>
           </Sheet>
         </div>
