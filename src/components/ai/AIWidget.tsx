@@ -17,6 +17,7 @@ import {
   MinusIcon
 } from 'lucide-react'
 import { GoogleGenAI } from '@google/genai'
+import { useLoading } from '@/components/LoadingScreen'
 
 // Function to parse markdown links and convert them to JSX
 const parseMessageContent = (content: string) => {
@@ -76,9 +77,13 @@ interface Message {
 }
 
 export function AIWidget() {
+  const { isLoading } = useLoading();
   const pathname = usePathname()
   const isOnBlogPage = pathname.startsWith('/blog')
   
+  // Don't render AI widget during loading
+  if (isLoading) return null;
+
   const [isOpen, setIsOpen] = useState(false)
   const [isMinimized, setIsMinimized] = useState(false)
   const [messages, setMessages] = useState<Message[]>(() => [
@@ -92,7 +97,7 @@ export function AIWidget() {
     }
   ])
   const [input, setInput] = useState('')
-  const [isLoading, setIsLoading] = useState(false)
+  const [isSending, setIsSending] = useState(false)
   const [, setTypingMessageId] = useState<string | null>(null)
   const [hasNewMessage, setHasNewMessage] = useState(false)
   const scrollAreaRef = useRef<HTMLDivElement>(null)
@@ -209,7 +214,7 @@ RULES: Keep responses short, provide links when relevant, suggest contacting for
   }, [isOpen])
 
   const sendMessage = async () => {
-    if (!input.trim() || isLoading) return
+    if (!input.trim() || isSending) return
 
     const userMessage: Message = {
       id: Date.now().toString(),
@@ -220,7 +225,7 @@ RULES: Keep responses short, provide links when relevant, suggest contacting for
 
     setMessages(prev => [...prev, userMessage])
     setInput('')
-    setIsLoading(true)
+    setIsSending(true)
 
     try {
       const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY
@@ -267,7 +272,7 @@ RULES: Keep responses short, provide links when relevant, suggest contacting for
       setMessages(prev => [...prev, errorMessage])
       await typeMessage(errorContent, errorMessageId)
     } finally {
-      setIsLoading(false)
+      setIsSending(false)
     }
   }
 
@@ -397,7 +402,7 @@ RULES: Keep responses short, provide links when relevant, suggest contacting for
                     </div>
                   ))}
 
-                  {isLoading && (
+                  {isSending && (
                     <div className="flex gap-2 justify-start animate-in slide-in-from-bottom-2">
                       <div className="flex-shrink-0">
                         <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center animate-pulse">
@@ -421,16 +426,16 @@ RULES: Keep responses short, provide links when relevant, suggest contacting for
                     onChange={(e) => setInput(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder={isOnBlogPage ? "Ask about blog posts..." : "Ask about Yash..."}
-                    disabled={isLoading}
+                    disabled={isSending}
                     className="flex-1 text-xs h-8"
                   />
                   <Button 
                     onClick={sendMessage} 
-                    disabled={!input.trim() || isLoading}
+                    disabled={!input.trim() || isSending}
                     size="sm"
                     className="h-8 w-8 p-0 shrink-0"
                   >
-                    {isLoading ? (
+                    {isSending ? (
                       <LoaderIcon className="h-3 w-3 animate-spin" />
                     ) : (
                       <SendIcon className="h-3 w-3" />

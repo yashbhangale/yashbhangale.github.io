@@ -1,11 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, createContext, useContext } from "react";
 import { motion } from "framer-motion";
 
-export function LoadingScreen() {
+// Create context for loading state
+const LoadingContext = createContext<{ isLoading: boolean }>({ isLoading: true });
+
+// Custom hook to use loading context
+export const useLoading = () => useContext(LoadingContext);
+
+// Loading Provider component
+export function LoadingProvider({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     // Check if this is the first visit
@@ -17,7 +23,40 @@ export function LoadingScreen() {
     }
 
     const startTime = Date.now();
-    const minDuration = 5000; // 5 seconds minimum
+    const minDuration = 3000; // 3 seconds minimum (reduced from 5000)
+
+    // Simulate loading progress
+    const interval = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      
+      if (elapsed >= minDuration) {
+        clearInterval(interval);
+        setTimeout(() => {
+          setIsLoading(false);
+          sessionStorage.setItem("hasVisited", "true");
+        }, 500);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <LoadingContext.Provider value={{ isLoading }}>
+      {children}
+    </LoadingContext.Provider>
+  );
+}
+
+export function LoadingScreen() {
+  const { isLoading } = useLoading();
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    if (!isLoading) return;
+
+    const startTime = Date.now();
+    const minDuration = 3000; // 3 seconds minimum
 
     // Simulate loading progress
     const interval = setInterval(() => {
@@ -27,10 +66,6 @@ export function LoadingScreen() {
         
         if (elapsed >= minDuration && prev >= 95) {
           clearInterval(interval);
-          setTimeout(() => {
-            setIsLoading(false);
-            sessionStorage.setItem("hasVisited", "true");
-          }, 500);
           return 100;
         }
         
@@ -40,13 +75,13 @@ export function LoadingScreen() {
     }, 100);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isLoading]);
 
   if (!isLoading) return null;
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 bg-background flex items-center justify-center"
+      className="fixed inset-0 z-[99999] bg-background flex items-center justify-center"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8 }}

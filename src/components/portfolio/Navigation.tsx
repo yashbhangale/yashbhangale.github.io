@@ -13,12 +13,17 @@ import { MoonIcon, SunIcon, MenuIcon } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
+import { useLoading } from "@/components/LoadingScreen";
 
 export function Navigation() {
+  const { isLoading } = useLoading();
   const [isDark, setIsDark] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
+
+  // Don't render navigation during loading
+  if (isLoading) return null;
 
   useEffect(() => {
     const isDarkMode = document.documentElement.classList.contains("dark");
