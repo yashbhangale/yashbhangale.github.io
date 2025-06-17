@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon } from 'lucide-react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { Metadata } from 'next'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -21,6 +22,59 @@ export async function generateStaticParams() {
   }))
 }
 
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+  const { slug } = await params
+  const post = getBlogPost(slug)
+
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+    }
+  }
+
+  return {
+    title: `${post.title} | Yash Bhangale`,
+    description: post.description || `Read ${post.title} - a blog post by ${post.author} about ${post.tags.join(', ')}.`,
+    keywords: [
+      ...post.tags,
+      post.author,
+      "blog post",
+      "tutorial",
+      "web development",
+      "programming",
+    ],
+    authors: [{ name: post.author }],
+    openGraph: {
+      title: post.title,
+      description: post.description || `Read ${post.title} - a blog post by ${post.author}`,
+      url: `https://yashbhangale.github.io/blog/${slug}`,
+      siteName: "Yash Bhangale Portfolio",
+      images: [
+        {
+          url: "/og-blog-post.png",
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+      type: "article",
+      publishedTime: post.date,
+      authors: [post.author],
+      tags: post.tags,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description || `Read ${post.title} - a blog post by ${post.author}`,
+      images: ["/og-blog-post.png"],
+      creator: "@yashbhangale",
+    },
+    alternates: {
+      canonical: `https://yashbhangale.github.io/blog/${slug}`,
+    },
+  }
+}
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params
   const post = getBlogPost(slug)
@@ -29,8 +83,42 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound()
   }
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.description,
+    "image": "https://yashbhangale.github.io/og-blog-post.png",
+    "url": `https://yashbhangale.github.io/blog/${slug}`,
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "author": {
+      "@type": "Person",
+      "name": post.author,
+      "url": "https://yashbhangale.github.io"
+    },
+    "publisher": {
+      "@type": "Person", 
+      "name": "Yash Bhangale",
+      "url": "https://yashbhangale.github.io"
+    },
+    "keywords": post.tags.join(", "),
+    "articleSection": "Technology",
+    "inLanguage": "en-US",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://yashbhangale.github.io/blog/${slug}`
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
       <Navigation />
       <div className="container mx-auto px-4 py-16">
         {/* Back Button */}
@@ -66,11 +154,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 
                 <div className="flex items-center gap-2">
                   <CalendarIcon className="h-4 w-4" />
-                  <span>{new Date(post.date).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                  })}</span>
+                  <time dateTime={post.date}>
+                    {new Date(post.date).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </time>
                 </div>
                 
                 <div className="flex items-center gap-2">

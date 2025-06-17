@@ -1,0 +1,19 @@
+# Robots.txt for yashbhangale.github.io
+# This file tells search engine crawlers which pages or files they can or can't request from your site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://yashbhangale.github.io/sitemap.xml
+
+# Disallow crawling of API routes (if any)
+Disallow: /api/
+
+# Allow crawling of important pages
+Allow: /blog/
+Allow: /blog/*
+Allow: /ask-ai/
+
+# Crawl delay (optional - helps prevent overwhelming the server)
+Crawl-delay: 1 
