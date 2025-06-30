@@ -11,7 +11,7 @@ const projects = [
     technologies: ["Linux Kernel", "Debian", "Bash", "Python", "Docker", "Azure", "Terraform", "KVM", "GitHub Actions"],
     liveUrl: "https://github.com/Project-Nanite",
     githubUrl: "https://github.com/Project-Nanite",
-    image: "/project1.jpg",
+    image: "/imgs/nanite.png",
     status: "Featured",
     stats: { stars: "Custom OS", users: "AI/ML", growth: "Production" },
     category: "Operating System",
@@ -28,7 +28,7 @@ const projects = [
     technologies: ["SigNoz", "Prometheus", "Grafana", "Trivy", "Kubernetes", "Docker", "Alerting", "Security"],
     liveUrl: "#",
     githubUrl: "#",
-    image: "/project2.jpg",
+    image: "/imgs/infrastructure monitoring suite.png",
     status: "Production",
     stats: { stars: "30+ Rules", users: "40% MTTD", growth: "60% Secure" },
     category: "DevOps",
@@ -45,7 +45,7 @@ const projects = [
     technologies: ["React", "Web3", "Smart Contracts", "Ethereum", "ERC-20", "Blockchain", "Fintech"],
     liveUrl: "https://cryptway.xyz",
     githubUrl: "#",
-    image: "/project3.jpg",
+    image: "/imgs/Cryptway.png",
     status: "Sold",
     stats: { stars: "Web3", users: "Fintech", growth: "Acquired" },
     category: "Blockchain",
@@ -62,7 +62,7 @@ const projects = [
     technologies: ["Linux", "System Programming", "Power Management", "Bash", "Python", "Hardware Interface"],
     liveUrl: "#",
     githubUrl: "https://github.com/yashbhangale/lenovo-vantage-features-for-linux",
-    image: "/project4.jpg",
+    image: "/imgs/Lenovo Vantage for Linux.png",
     status: "Open Source",
     stats: { stars: "Linux", users: "Lenovo", growth: "Community" },
     category: "System Tool",
@@ -71,6 +71,23 @@ const projects = [
       "Battery performance optimization tools",
       "System optimization utilities for Lenovo laptops",
       "Community-driven development and support"
+    ]
+  },
+  {
+    title: "SubmitMateAi - AI-powered Job Application SaaS",
+    description: "A SaaS platform that automates and optimizes the job application process using AI. Features advanced job search, smart job description analysis, resume builder and optimizer, one-click portfolio builder, cover letter and referral message generator, and an AI-powered chatbot for job search, research, and document optimization. Over 200+ users on the waiting list. Early access available.",
+    technologies: ["AI", "SaaS", "Resume Parsing", "Job Search", "Chatbot", "Automation", "Web App"],
+    liveUrl: "https://lnkd.in/eGzvzdUq",
+    githubUrl: "#",
+    image: "/imgs/submitmate.png",
+    status: "Beta",
+    stats: { stars: "200+ Waitlist", users: "Job Seekers", growth: "Launching Soon" },
+    category: "SaaS Platform",
+    achievements: [
+      "Advanced job search and smart job description analysis",
+      "Resume builder and optimizer for higher ATS scores",
+      "One-click portfolio builder with 100+ design styles",
+      "AI-powered chatbot for job search, research, and document optimization"
     ]
   }
 ];
