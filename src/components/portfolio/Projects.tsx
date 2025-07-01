@@ -1,59 +1,76 @@
-import React from "react";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award, Code2, ExternalLink, Github, Shield, Star, TrendingUp, Users, Zap } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLinkIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import { Star, Zap, Users, TrendingUp, Award, Shield, Code2 } from "lucide-react";
 
 const projects = [
   {
-    title: "K8s Workflow Automation & CI/CD Pipeline",
-    description: "Comprehensive Kubernetes workflow automation system with advanced CI/CD pipeline featuring Docker containerization, Helm charts, and automated deployment strategies. Integrated monitoring with Prometheus and Grafana for real-time performance tracking.",
-    technologies: ["Kubernetes", "Docker", "Jenkins", "Helm", "Prometheus", "Grafana", "GitOps"],
-    liveUrl: "#",
-    githubUrl: "https://github.com/yashbhangale/k8s-cicd-automation",
-    image: "/images/k8s-automation.png",
+    title: "Nanite - Linux Distribution for AI/ML Engineers",
+    description: "A Debian-based AI OS optimized for AI/ML workflows with integrated LLMs (LLaMA 3, Mistral), MCP agents, and n8n for AI-driven automation. Features cloud-ready VM templates and automated CI/CD builds.",
+    technologies: ["Linux Kernel", "Debian", "Bash", "Python", "Docker", "Azure", "Terraform", "KVM", "GitHub Actions"],
+    liveUrl: "https://github.com/Project-Nanite",
+    githubUrl: "https://github.com/Project-Nanite",
+    image: "/imgs/nanite.png",
     status: "Featured",
-    stats: { stars: "45", users: "DevOps Teams", growth: "Growing" },
-    category: "DevOps Automation",
+    stats: { stars: "Custom OS", users: "AI/ML", growth: "Production" },
+    category: "Operating System",
     achievements: [
-      "Reduced deployment time by 70% with automated pipelines",
-      "Implemented zero-downtime deployments with rolling updates",
-      "Enhanced system reliability with comprehensive monitoring",
-      "Streamlined developer workflows with GitOps practices"
+      "Automated system build with Bash/Python optimization",
+      "Cloud-ready VM templates on Azure using Terraform",
+      "CI/CD pipelines via Azure DevOps and GitHub Actions",
+      "Secure model updates and reproducible environments"
     ]
   },
   {
-    title: "AWS Infrastructure as Code (Terraform)",
-    description: "Production-ready AWS infrastructure automation using Terraform with multi-environment support, auto-scaling capabilities, and cost optimization strategies. Features VPC setup, EKS clusters, RDS databases, and comprehensive security configurations.",
-    technologies: ["Terraform", "AWS", "EKS", "RDS", "VPC", "Auto Scaling", "CloudWatch"],
+    title: "Infrastructure Monitoring & Vulnerability Scanning Suite",
+    description: "Comprehensive monitoring solution using SigNoz and Prometheus with automated vulnerability scanning. Features 30+ custom alerting rules and multiple dashboard types for system observability.",
+    technologies: ["SigNoz", "Prometheus", "Grafana", "Trivy", "Kubernetes", "Docker", "Alerting", "Security"],
     liveUrl: "#",
-    githubUrl: "https://github.com/yashbhangale/aws-terraform-infrastructure",
-    image: "/images/aws-terraform.png",
+    githubUrl: "#",
+    image: "/imgs/infrastructure monitoring suite.png",
     status: "Production",
-    stats: { stars: "38", users: "Cloud Engineers", growth: "Stable" },
-    category: "Cloud Infrastructure",
+    stats: { stars: "30+ Rules", users: "40% MTTD", growth: "60% Secure" },
+    category: "DevOps",
     achievements: [
-      "Automated infrastructure provisioning for multiple environments",
-      "Implemented cost-effective auto-scaling solutions",
-      "Enhanced security with AWS best practices",
-      "Reduced manual configuration errors by 90%"
+      "Configured 30+ custom alerting rules and 5 dashboard types",
+      "Improved system observability and reduced MTTD by 40%",
+      "Automated vulnerability scanning identifying 15+ high-severity issues",
+      "Reduced security risks by 60% through continuous monitoring"
     ]
   },
   {
-    title: "Monitoring & Alerting Stack",
-    description: "Complete observability solution combining Prometheus, Grafana, and ELK stack for comprehensive monitoring, logging, and alerting. Features custom dashboards, intelligent alerting rules, and performance optimization insights.",
-    technologies: ["Prometheus", "Grafana", "ELK Stack", "AlertManager", "Jaeger", "Custom Metrics"],
-    liveUrl: "#",
-    githubUrl: "https://github.com/yashbhangale/monitoring-stack",
-    image: "/images/monitoring-stack.png",
-    status: "Open Source",
-    stats: { stars: "67", users: "SRE Teams", growth: "Popular" },
-    category: "Monitoring & Observability",
+    title: "Cryptway - Cryptocurrency Wallet Platform",
+    description: "Secure cryptocurrency transaction wallet enabling transfers and swaps of Ethereum and ERC-20 tokens. Features integrated Web3 APIs, smart contract interaction, and complete product lifecycle management.",
+    technologies: ["React", "Web3", "Smart Contracts", "Ethereum", "ERC-20", "Blockchain", "Fintech"],
+    liveUrl: "https://cryptway.xyz",
+    githubUrl: "#",
+    image: "/imgs/Cryptway.png",
+    status: "Sold",
+    stats: { stars: "Web3", users: "Fintech", growth: "Acquired" },
+    category: "Blockchain",
     achievements: [
-      "Real-time system monitoring with 99.9% uptime visibility",
-      "Intelligent alerting reducing false positives by 85%",
-      "Custom performance dashboards for business metrics",
-      "Distributed tracing for microservices troubleshooting"
+      "Full product lifecycle from architecture to delivery",
+      "Secure Web3 API integration and smart contract interaction",
+      "Successfully sold platform to fintech startup",
+      "End-to-end ownership showcasing real-world impact"
+    ]
+  },
+  {
+    title: "Lenovo Vantage Features for Linux",
+    description: "Linux port of essential Lenovo Vantage features for power management, battery optimization, and system controls. Addresses the gap in official Linux support for Lenovo laptop management tools.",
+    technologies: ["Linux", "System Programming", "Power Management", "Bash", "Python", "Hardware Interface"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/yashbhangale/lenovo-vantage-features-for-linux",
+    image: "/imgs/Lenovo Vantage for Linux.png",
+    status: "Open Source",
+    stats: { stars: "Linux", users: "Lenovo", growth: "Community" },
+    category: "System Tool",
+    achievements: [
+      "Power management features tailored for Linux systems",
+      "Battery performance optimization tools",
+      "System optimization utilities for Lenovo laptops",
+      "Community-driven development and support"
     ]
   },
   {
@@ -62,7 +79,7 @@ const projects = [
     technologies: ["AI", "SaaS", "Resume Parsing", "Job Search", "Chatbot", "Automation", "Web App"],
     liveUrl: "https://lnkd.in/eGzvzdUq",
     githubUrl: "#",
-    image: "/images/submitmate.png",
+    image: "/imgs/submitmate.png",
     status: "Beta",
     stats: { stars: "200+ Waitlist", users: "Job Seekers", growth: "Launching Soon" },
     category: "SaaS Platform",
@@ -122,14 +139,8 @@ export function Projects() {
             return (
               <Card key={index} className="group relative overflow-hidden border-0 bg-gradient-to-br from-card to-card/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                 {/* Project Header */}
-                <div className="relative h-96 overflow-hidden rounded-t-2xl">
-                  {/* Project Image */}
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="relative h-48 bg-gradient-to-br from-primary/10 via-purple-500/10 to-primary/10 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   <div className="absolute top-4 left-4">
                     <Badge className={`${getStatusColor(project.status)} text-white border-0 shadow-lg flex items-center gap-1`}>
                       <StatusIcon className="h-3 w-3" />
@@ -217,7 +228,7 @@ export function Projects() {
                           rel="noopener noreferrer"
                           className="flex items-center justify-center gap-2"
                         >
-                          <ExternalLink className="h-4 w-4" />
+                          <ExternalLinkIcon className="h-4 w-4" />
                           {project.status === "Sold" ? "View Site" : "Live Demo"}
                         </a>
                       </Button>
@@ -235,7 +246,7 @@ export function Projects() {
                           rel="noopener noreferrer"
                           className="flex items-center justify-center gap-2"
                         >
-                          <Github className="h-4 w-4" />
+                          <GitHubLogoIcon className="h-4 w-4" />
                           View Code
                         </a>
                       </Button>
@@ -269,7 +280,7 @@ export function Projects() {
                 </p>
                 <Button className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90" asChild>
                   <a href="https://github.com/yashbhangale" target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
+                    <GitHubLogoIcon className="mr-2 h-4 w-4" />
                     Visit GitHub Profile
                   </a>
                 </Button>
