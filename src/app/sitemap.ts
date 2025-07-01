@@ -1,6 +1,9 @@
 import { MetadataRoute } from 'next'
 import { getAllBlogPosts } from '@/lib/blog'
 
+// Force static generation for static export
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://yashbhangale.github.io'
   
