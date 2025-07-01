@@ -11,7 +11,7 @@ const projects = [
     technologies: ["Linux Kernel", "Debian", "Bash", "Python", "Docker", "Azure", "Terraform", "KVM", "GitHub Actions"],
     liveUrl: "https://github.com/Project-Nanite",
     githubUrl: "https://github.com/Project-Nanite",
-    image: "/imgs/nanite.png",
+    image: "/images/nanite.png",
     status: "Featured",
     stats: { stars: "Custom OS", users: "AI/ML", growth: "Production" },
     category: "Operating System",
@@ -28,7 +28,7 @@ const projects = [
     technologies: ["SigNoz", "Prometheus", "Grafana", "Trivy", "Kubernetes", "Docker", "Alerting", "Security"],
     liveUrl: "#",
     githubUrl: "#",
-    image: "/imgs/infrastructure monitoring suite.png",
+    image: "/images/infrastructure monitoring suite.png",
     status: "Production",
     stats: { stars: "30+ Rules", users: "40% MTTD", growth: "60% Secure" },
     category: "DevOps",
@@ -45,7 +45,7 @@ const projects = [
     technologies: ["React", "Web3", "Smart Contracts", "Ethereum", "ERC-20", "Blockchain", "Fintech"],
     liveUrl: "https://cryptway.xyz",
     githubUrl: "#",
-    image: "/imgs/Cryptway.png",
+    image: "/images/cryptway.png",
     status: "Sold",
     stats: { stars: "Web3", users: "Fintech", growth: "Acquired" },
     category: "Blockchain",
@@ -62,7 +62,7 @@ const projects = [
     technologies: ["Linux", "System Programming", "Power Management", "Bash", "Python", "Hardware Interface"],
     liveUrl: "#",
     githubUrl: "https://github.com/yashbhangale/lenovo-vantage-features-for-linux",
-    image: "/imgs/Lenovo Vantage for Linux.png",
+    image: "/images/lenovo vantage for linux.png",
     status: "Open Source",
     stats: { stars: "Linux", users: "Lenovo", growth: "Community" },
     category: "System Tool",
@@ -79,7 +79,7 @@ const projects = [
     technologies: ["AI", "SaaS", "Resume Parsing", "Job Search", "Chatbot", "Automation", "Web App"],
     liveUrl: "https://lnkd.in/eGzvzdUq",
     githubUrl: "#",
-    image: "/imgs/submitmate.png",
+    image: "/images/submitmate.png",
     status: "Beta",
     stats: { stars: "200+ Waitlist", users: "Job Seekers", growth: "Launching Soon" },
     category: "SaaS Platform",
@@ -139,8 +139,14 @@ export function Projects() {
             return (
               <Card key={index} className="group relative overflow-hidden border-0 bg-gradient-to-br from-card to-card/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                 {/* Project Header */}
-                <div className="relative h-48 bg-gradient-to-br from-primary/10 via-purple-500/10 to-primary/10 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <div className="relative h-96 overflow-hidden rounded-t-2xl">
+                  {/* Project Image */}
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute top-4 left-4">
                     <Badge className={`${getStatusColor(project.status)} text-white border-0 shadow-lg flex items-center gap-1`}>
                       <StatusIcon className="h-3 w-3" />
