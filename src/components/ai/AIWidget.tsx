@@ -289,7 +289,7 @@ RULES: Keep responses short, provide links when relevant, suggest contacting for
         <Button
           onClick={() => setIsOpen(true)}
           size="lg"
-          className="h-12 px-4 sm:h-14 sm:px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 hover:scale-110 group whitespace-nowrap"
+          className="h-12 px-4 sm:h-14 sm:px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 hover:scale-110 group whitespace-nowrap"
         >
           <div className="relative flex items-center gap-2">
             <span className="text-xs sm:text-sm font-medium group-hover:scale-110 transition-transform">Ask AI</span>

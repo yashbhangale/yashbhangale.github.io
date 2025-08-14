@@ -96,9 +96,9 @@ const getStatusColor = (status: string) => {
   switch (status) {
     case "Featured": return "bg-gradient-to-r from-yellow-500 to-orange-500";
     case "Production": return "bg-gradient-to-r from-green-500 to-emerald-500";
-    case "Sold": return "bg-gradient-to-r from-purple-500 to-pink-500";
+            case "Sold": return "bg-gradient-to-r from-blue-500 to-pink-500";
     case "Open Source": return "bg-gradient-to-r from-blue-500 to-cyan-500";
-    default: return "bg-gradient-to-r from-primary to-purple-600";
+            default: return "bg-gradient-to-r from-primary to-blue-600";
   }
 };
 
@@ -128,7 +128,7 @@ export function Projects() {
           <p className="mx-auto max-w-[800px] text-xl text-muted-foreground leading-relaxed">
             Innovative solutions spanning{" "}
             <span className="text-primary font-semibold">DevOps automation</span>,{" "}
-            <span className="text-purple-600 font-semibold">infrastructure monitoring</span>, and{" "}
+                <span className="text-blue-600 font-semibold">infrastructure monitoring</span>, and{" "}
             <span className="text-primary font-semibold">system optimization</span>
           </p>
         </div>
@@ -139,7 +139,7 @@ export function Projects() {
             return (
               <Card key={index} className="group relative overflow-hidden border-0 bg-gradient-to-br from-card to-card/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                 {/* Project Header */}
-                <div className="relative h-48 bg-gradient-to-br from-primary/10 via-purple-500/10 to-primary/10 overflow-hidden">
+                <div className="relative h-48 bg-gradient-to-br from-primary/10 via-blue-500/10 to-primary/10 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   <div className="absolute top-4 left-4">
                     <Badge className={`${getStatusColor(project.status)} text-white border-0 shadow-lg flex items-center gap-1`}>
@@ -218,7 +218,7 @@ export function Projects() {
                   <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2">
                     {project.liveUrl !== "#" && (
                       <Button 
-                        className="flex-1 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 shadow-lg hover:shadow-xl transition-all duration-300" 
+                        className="flex-1 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 shadow-lg hover:shadow-xl transition-all duration-300" 
                         size="sm"
                         asChild
                       >
@@ -270,7 +270,7 @@ export function Projects() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <Card className="inline-block bg-gradient-to-r from-primary/5 via-purple-500/5 to-primary/5 border-0">
+                      <Card className="inline-block bg-gradient-to-r from-primary/5 via-blue-500/5 to-primary/5 border-0">
             <CardContent className="p-8">
               <div className="space-y-4">
                 <Zap className="h-12 w-12 text-primary mx-auto" />
@@ -278,7 +278,7 @@ export function Projects() {
                 <p className="text-muted-foreground max-w-md">
                   Explore my GitHub for more DevOps projects, automation scripts, and infrastructure solutions
                 </p>
-                <Button className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90" asChild>
+                <Button className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90" asChild>
                   <a href="https://github.com/yashbhangale" target="_blank" rel="noopener noreferrer">
                     <GitHubLogoIcon className="mr-2 h-4 w-4" />
                     Visit GitHub Profile

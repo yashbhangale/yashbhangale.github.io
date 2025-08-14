@@ -138,7 +138,7 @@ export function Hero() {
                   <span className="text-muted-foreground mr-4 w-6">5</span>
                   <span className="ml-4 text-green-400">experience</span>
                   <span className="text-muted-foreground">:</span>
-                  <span className="text-purple-400 ml-2">1</span>
+                  <span className="text-blue-400 ml-2">1</span>
                   <span className="text-muted-foreground">,</span>
                   <span className="text-gray-500 ml-2">{/* years in software development */}</span>
                 </div>
@@ -196,7 +196,7 @@ export function Hero() {
             <Button
               size="lg"
               onClick={scrollToContact}
-              className="w-full sm:w-auto bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="w-full sm:w-auto bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Mail className="mr-2 h-4 w-4" />
               Let&apos;s Connect

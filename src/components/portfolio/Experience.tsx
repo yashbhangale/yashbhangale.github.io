@@ -168,7 +168,7 @@ export function Experience() {
 
       {/* Certifications Section */}
       <div className="max-w-5xl mx-auto mt-16">
-        <Card className="bg-gradient-to-r from-primary/5 via-purple-500/5 to-primary/5 border-0">
+        <Card className="bg-gradient-to-r from-primary/5 via-blue-500/5 to-primary/5 border-0">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Certifications & Learning</CardTitle>
             <CardDescription>
