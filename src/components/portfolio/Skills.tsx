@@ -31,7 +31,7 @@ const skillCategories = {
 
 const certificationBadges = [
   { name: "AZ-900", color: "bg-blue-500" },
-  { name: "AI-900", color: "bg-purple-500" },
+          { name: "AI-900", color: "bg-blue-500" },
   { name: "AZ-104", color: "bg-green-500" },
   { name: "CKA Prep", color: "bg-orange-500" }
 ];
@@ -231,7 +231,7 @@ export function Skills() {
         </Tabs>
 
         {/* Skills Summary */}
-        <Card className="mt-8 bg-gradient-to-r from-primary/5 via-purple-500/5 to-primary/5 border-0">
+        <Card className="mt-8 bg-gradient-to-r from-primary/5 via-blue-500/5 to-primary/5 border-0">
           <CardContent className="p-6">
             <div className="text-center space-y-4">
               <h3 className="text-xl font-bold">Professional Summary</h3>

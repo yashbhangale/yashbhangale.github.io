@@ -45,7 +45,7 @@ export function About() {
           {/* Profile Image */}
           <div className="flex justify-center mb-8">
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-full blur-sm opacity-75 animate-pulse"></div>
+                              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-full blur-sm opacity-75 animate-pulse"></div>
               <Image
                 src="/resized.png"
                 alt="Yash Bhangale"
@@ -60,7 +60,7 @@ export function About() {
           <p className="mx-auto max-w-[800px] text-xl text-muted-foreground leading-relaxed">
             A backend-focused{" "}
             <span className="text-primary font-semibold">Software Engineer</span> with a foundation in{" "}
-            <span className="text-purple-600 font-semibold">AI and DevOps</span>. I specialize in building reliable{" "}
+                            <span className="text-blue-600 font-semibold">AI and DevOps</span>. I specialize in building reliable{" "}
             <span className="text-primary font-semibold">web applications, APIs, and automation tools</span> that solve real-world problems.
           </p>
         </div>
@@ -127,8 +127,8 @@ export function About() {
           <Card className="group hover:shadow-lg transition-all duration-300 border-0 bg-gradient-to-br from-card to-card/50">
             <CardHeader className="space-y-4">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-purple-500/10 rounded-lg">
-                  <Zap className="h-6 w-6 text-purple-600" />
+                <div className="p-2 bg-blue-500/10 rounded-lg">
+                  <Zap className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
                   <CardTitle className="text-2xl">My Approach</CardTitle>
@@ -163,7 +163,7 @@ export function About() {
         </div>
 
         {/* Achievements Section */}
-        <Card className="bg-gradient-to-r from-primary/5 via-purple-500/5 to-primary/5 border-0 mb-8">
+                    <Card className="bg-gradient-to-r from-primary/5 via-blue-500/5 to-primary/5 border-0 mb-8">
           <CardContent className="p-6 sm:p-8">
             <div className="text-center space-y-4 sm:space-y-6">
               <h3 className="text-xl sm:text-2xl font-bold">Recent Achievements</h3>
@@ -192,7 +192,7 @@ export function About() {
         </Card>
 
         {/* Fun Facts Section */}
-        <Card className="bg-gradient-to-r from-primary/5 via-purple-500/5 to-primary/5 border-0">
+                    <Card className="bg-gradient-to-r from-primary/5 via-blue-500/5 to-primary/5 border-0">
           <CardContent className="p-6 sm:p-8">
             <div className="text-center space-y-4 sm:space-y-6">
               <h3 className="text-xl sm:text-2xl font-bold">Fun Facts About Me</h3>
