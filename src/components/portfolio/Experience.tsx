@@ -76,22 +76,32 @@ const certifications = [
 
 export function Experience() {
   return (
-    <section id="experience" className="container mx-auto px-4 py-16">
+    <section 
+      id="experience" 
+      className="container mx-auto px-4 py-16"
+      itemScope
+      itemType="https://schema.org/Person"
+    >
       <div className="text-center mb-12">
         <Badge variant="outline" className="mb-4 px-3 py-1">
           Professional Journey
         </Badge>
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-          Experience & Education
+          DevOps Experience & Education
         </h2>
         <p className="mx-auto max-w-[700px] text-muted-foreground text-lg">
-          1 year of hands-on experience in DevOps, cloud technologies, and full-stack development
+          <span className="text-primary font-semibold">1+ years of hands-on experience</span> in DevOps engineering, cloud technologies, and infrastructure automation
         </p>
       </div>
 
       <div className="max-w-5xl mx-auto space-y-8">
         {workExperience.map((item, index) => (
-          <Card key={index} className="overflow-hidden border-l-4 border-l-primary/50 hover:border-l-primary transition-all duration-300 hover:shadow-lg">
+          <Card 
+            key={index} 
+            className="overflow-hidden border-l-4 border-l-primary/50 hover:border-l-primary transition-all duration-300 hover:shadow-lg"
+            itemScope
+            itemType={item.type === "work" ? "https://schema.org/WorkExperience" : "https://schema.org/EducationalOccupationalCredential"}
+          >
             <CardHeader>
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 mt-1">
@@ -104,12 +114,22 @@ export function Experience() {
                 <div className="flex-1 space-y-2">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2">
                     <div className="space-y-1">
-                      <CardTitle className="text-xl">{item.position}</CardTitle>
+                      <CardTitle className="text-xl" itemProp={item.type === "work" ? "jobTitle" : "name"}>
+                        {item.position}
+                      </CardTitle>
                       <CardDescription className="text-base font-medium flex items-center gap-2">
-                        {item.company}
+                        <span itemProp={item.type === "work" ? "worksFor" : "credentialCategory"}>{item.company}</span>
                         {item.website && (
                           <Badge variant="outline" className="text-xs">
-                            {item.website}
+                            <a 
+                              href={`https://${item.website}`} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              itemProp="url"
+                              aria-label={`Visit ${item.company} website`}
+                            >
+                              {item.website}
+                            </a>
                           </Badge>
                         )}
                       </CardDescription>
@@ -117,11 +137,11 @@ export function Experience() {
                     <div className="flex flex-col sm:flex-row gap-2 text-sm text-muted-foreground">
                       <div className="flex items-center gap-1">
                         <CalendarIcon className="h-4 w-4" />
-                        {item.period}
+                        <span itemProp="duration">{item.period}</span>
                       </div>
                       <div className="flex items-center gap-1">
                         <MapPinIcon className="h-4 w-4" />
-                        {item.location}
+                        <span itemProp="location">{item.location}</span>
                       </div>
                     </div>
                   </div>
@@ -130,7 +150,7 @@ export function Experience() {
             </CardHeader>
             
             <CardContent className="space-y-6">
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed" itemProp="description">
                 {item.description}
               </p>
               
@@ -140,7 +160,7 @@ export function Experience() {
                     <TrophyIcon className="h-4 w-4 text-primary" />
                     Key Achievements:
                   </h4>
-                  <ul className="space-y-2 ml-6">
+                  <ul className="space-y-2 ml-6" itemProp="accomplishment">
                     {item.achievements.map((achievement, idx) => (
                       <li key={idx} className="text-sm text-muted-foreground relative">
                         <span className="absolute -left-4 top-2 w-1 h-1 bg-primary rounded-full"></span>
@@ -155,7 +175,7 @@ export function Experience() {
                 <h4 className="font-semibold text-sm">Technologies & Tools:</h4>
                 <div className="flex flex-wrap gap-2">
                   {item.technologies.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs">
+                    <Badge key={tech} variant="secondary" className="text-xs" itemProp="skillsRequired">
                       {tech}
                     </Badge>
                   ))}
@@ -168,23 +188,28 @@ export function Experience() {
 
       {/* Certifications Section */}
       <div className="max-w-5xl mx-auto mt-16">
-                    <Card className="bg-gradient-to-r from-primary/5 via-blue-500/5 to-primary/5 border-0">
+        <Card className="bg-gradient-to-r from-primary/5 via-blue-500/5 to-primary/5 border-0">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl">Certifications & Learning</CardTitle>
+            <CardTitle className="text-2xl">Professional Certifications & Learning</CardTitle>
             <CardDescription>
-              Continuous learning and professional development in cloud technologies
+              Continuous professional development in cloud technologies and DevOps practices
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {certifications.map((cert, index) => (
-                <Card key={index} className="text-center p-4 hover:shadow-md transition-shadow">
+                <Card 
+                  key={index} 
+                  className="text-center p-4 hover:shadow-md transition-shadow"
+                  itemScope
+                  itemType="https://schema.org/EducationalOccupationalCredential"
+                >
                   <div className="space-y-2">
-                    <Badge variant="outline" className="text-lg font-bold">
+                    <Badge variant="outline" className="text-lg font-bold" itemProp="name">
                       {cert.name}
                     </Badge>
-                    <p className="text-sm font-medium">{cert.description}</p>
-                    <p className="text-xs text-muted-foreground">{cert.issuer}</p>
+                    <p className="text-sm font-medium" itemProp="description">{cert.description}</p>
+                    <p className="text-xs text-muted-foreground" itemProp="credentialCategory">{cert.issuer}</p>
                   </div>
                 </Card>
               ))}

@@ -1,0 +1,100 @@
+# .htaccess for hiremefor.cloud - SEO and Performance Optimization
+
+# Enable Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+</IfModule>
+
+# Cache Control for SEO
+<IfModule mod_expires.c>
+    ExpiresActive on
+    
+    # Images
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/avif "access plus 1 month"
+    
+    # Video
+    ExpiresByType video/mp4 "access plus 1 month"
+    ExpiresByType video/webm "access plus 1 month"
+    
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    
+    # HTML
+    ExpiresByType text/html "access plus 2 hours"
+    
+    # XML
+    ExpiresByType application/xml "access plus 1 day"
+    ExpiresByType text/xml "access plus 1 day"
+    
+    # Fonts
+    ExpiresByType application/font-woff "access plus 1 month"
+    ExpiresByType application/font-woff2 "access plus 1 month"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+    ExpiresByType application/x-font-ttf "access plus 1 month"
+</IfModule>
+
+# Security Headers for SEO
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "origin-when-cross-origin"
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), browsing-topics=()"
+</IfModule>
+
+# SEO Friendly URLs
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Remove trailing slashes
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{THE_REQUEST} /+([^?\s]*?)/?(\?[^\s]*)?[\s]
+    RewriteRule ^ /%1%2 [R=301,L]
+    
+    # Force HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Force www removal (customize based on your preference)
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+</IfModule>
+
+# Error Pages
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# File Protection
+<Files .htaccess>
+    order allow,deny
+    deny from all
+</Files>
+
+<Files robots.txt>
+    Header set Content-Type "text/plain"
+</Files>
+
+<Files sitemap.xml>
+    Header set Content-Type "application/xml"
+</Files>
+
+<Files manifest.json>
+    Header set Content-Type "application/manifest+json"
+</Files>

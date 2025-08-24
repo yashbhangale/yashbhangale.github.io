@@ -9,45 +9,49 @@ import { BookOpenIcon, PenIcon } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Blog | Yash Bhangale",
-  description: "Thoughts, tutorials, and insights about web development, backend engineering, cloud computing, and modern technologies by Yash Bhangale.",
+  title: "DevOps & Development Blog | Yash Bhangale",
+  description: "Expert insights, tutorials, and practical guides on DevOps, Kubernetes, AWS, Azure, CI/CD pipelines, infrastructure automation, and backend development by Yash Bhangale.",
   keywords: [
-    "blog",
-    "web development",
-    "backend development", 
-    "cloud computing",
+    "devops blog",
+    "kubernetes tutorials",
+    "aws guides",
+    "azure tutorials", 
+    "ci cd pipeline",
+    "infrastructure automation",
+    "backend development blog",
+    "cloud computing insights",
+    "docker tutorials",
+    "prometheus monitoring",
+    "argocd deployment",
+    "terraform automation",
     "programming tutorials",
-    "software engineering",
+    "software engineering blog",
     "tech insights",
-    "Node.js",
-    "Python",
-    "React",
-    "AWS",
-    "DevOps"
+    "hire devops engineer"
   ],
   openGraph: {
-    title: "Blog | Yash Bhangale",
-    description: "Thoughts, tutorials, and insights about web development, backend engineering, cloud computing, and modern technologies.",
-    url: "https://yashbhangale.github.io/blog",
-    siteName: "Yash Bhangale Portfolio",
+    title: "DevOps & Development Blog | Yash Bhangale",
+    description: "Expert insights, tutorials, and practical guides on DevOps, Kubernetes, AWS, Azure, CI/CD pipelines, and infrastructure automation.",
+    url: "https://hiremefor.cloud/blog",
+    siteName: "Hire Yash Bhangale - DevOps Expert",
     images: [
       {
         url: "/og-blog.png",
         width: 1200,
         height: 630,
-        alt: "Yash Bhangale Blog - Web Development & Tech Insights",
+        alt: "Yash Bhangale DevOps Blog - Kubernetes, AWS, Azure Tutorials",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog | Yash Bhangale",
-    description: "Thoughts, tutorials, and insights about web development, backend engineering, and cloud computing.",
+    title: "DevOps & Development Blog | Yash Bhangale",
+    description: "Expert DevOps tutorials covering Kubernetes, AWS, Azure, CI/CD pipelines, and infrastructure automation.",
     images: ["/og-blog.png"],
   },
   alternates: {
-    canonical: "https://yashbhangale.github.io/blog",
+    canonical: "https://hiremefor.cloud/blog",
   },
 };
 
@@ -58,25 +62,53 @@ export default function BlogPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "Yash Bhangale Blog",
-    "description": "Thoughts, tutorials, and insights about web development, backend engineering, cloud computing, and modern technologies",
-    "url": "https://yashbhangale.github.io/blog",
+    "name": "Yash Bhangale DevOps & Development Blog",
+    "description": "Expert insights, tutorials, and practical guides on DevOps, Kubernetes, AWS, Azure, CI/CD pipelines, infrastructure automation, and backend development",
+    "url": "https://hiremefor.cloud/blog",
     "author": {
       "@type": "Person",
       "name": "Yash Bhangale",
-      "url": "https://yashbhangale.github.io"
+      "url": "https://hiremefor.cloud",
+      "jobTitle": "DevOps Engineer",
+      "knowsAbout": ["Kubernetes", "AWS", "Azure", "DevOps", "Backend Development", "CI/CD"]
     },
+    "publisher": {
+      "@type": "Person",
+      "name": "Yash Bhangale"
+    },
+    "inLanguage": "en-US",
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "DevOps",
+        "description": "Development and Operations practices"
+      },
+      {
+        "@type": "Thing",
+        "name": "Kubernetes",
+        "description": "Container orchestration platform"
+      },
+      {
+        "@type": "Thing",
+        "name": "Cloud Computing",
+        "description": "AWS and Azure cloud platforms"
+      }
+    ],
     "blogPost": posts.map(post => ({
       "@type": "BlogPosting",
       "headline": post.title,
       "description": post.description,
-      "url": `https://yashbhangale.github.io/blog/${post.slug}`,
+      "url": `https://hiremefor.cloud/blog/${post.slug}`,
       "datePublished": post.date,
       "author": {
         "@type": "Person",
         "name": post.author
       },
-      "keywords": post.tags.join(", ")
+      "keywords": post.tags.join(", "),
+      "about": post.tags.map(tag => ({
+        "@type": "Thing",
+        "name": tag
+      }))
     }))
   };
 
@@ -94,10 +126,10 @@ export default function BlogPage() {
         <div className="text-center space-y-6 mb-16">
           <div className="flex items-center justify-center gap-2">
             <BookOpenIcon className="h-8 w-8 text-primary" />
-            <h1 className="text-4xl md:text-5xl font-bold">Blog</h1>
+            <h1 className="text-4xl md:text-5xl font-bold">DevOps & Development Blog</h1>
           </div>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Thoughts, tutorials, and insights about web development, technology, and more.
+            Expert insights, tutorials, and practical guides on <span className="text-primary font-semibold">Kubernetes</span>, <span className="text-blue-600 font-semibold">AWS</span>, <span className="text-primary font-semibold">Azure</span>, <span className="text-blue-600 font-semibold">CI/CD pipelines</span>, and <span className="text-primary font-semibold">infrastructure automation</span>.
           </p>
         </div>
 

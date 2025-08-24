@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { ExternalLinkIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Star, Zap, Users, TrendingUp, Award, Shield, Code2 } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
   {
@@ -62,7 +63,7 @@ const projects = [
     technologies: ["Linux", "System Programming", "Power Management", "Bash", "Python", "Hardware Interface"],
     liveUrl: "#",
     githubUrl: "https://github.com/yashbhangale/lenovo-vantage-features-for-linux",
-    image: "/imgs/Lenovo Vantage for Linux.png",
+    image: "#",
     status: "Open Source",
     stats: { stars: "Linux", users: "Lenovo", growth: "Community" },
     category: "System Tool",
@@ -114,60 +115,79 @@ const getStatusIcon = (status: string) => {
 
 export function Projects() {
   return (
-    <section id="projects" className="relative py-24">
+    <section 
+      id="projects" 
+      className="relative py-24"
+      itemScope
+      itemType="https://schema.org/Person"
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/20 to-transparent" />
       
       <div className="container relative mx-auto px-4">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 px-3 py-1">
-            My Work
+            Portfolio Showcase
           </Badge>
           <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            Featured Projects
+            DevOps & Development Projects
           </h2>
           <p className="mx-auto max-w-[800px] text-xl text-muted-foreground leading-relaxed">
             Innovative solutions spanning{" "}
-            <span className="text-primary font-semibold">DevOps automation</span>,{" "}
-            <span className="text-blue-600 font-semibold">infrastructure monitoring</span>, and{" "}
-            <span className="text-primary font-semibold">system optimization</span>
+            <span className="text-primary font-semibold">infrastructure automation</span>,{" "}
+            <span className="text-blue-600 font-semibold">cloud orchestration</span>, and{" "}
+            <span className="text-primary font-semibold">scalable system architecture</span>
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-8 lg:grid-cols-2 px-8">
           {projects.map((project, index) => {
             const StatusIcon = getStatusIcon(project.status);
             return (
-              <Card key={index} className="group relative overflow-hidden border-0 bg-gradient-to-br from-card to-card/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                {/* Project Header */}
-                <div className="relative h-48 bg-gradient-to-br from-primary/10 via-blue-500/10 to-primary/10 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                  <div className="absolute top-4 left-4">
+              <Card 
+                key={index} 
+                className="group relative overflow-hidden border-0 bg-gradient-to-br from-card to-card/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                itemScope
+                itemType="https://schema.org/CreativeWork"
+              >
+                {/* Project Image */}
+                <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-muted/10 to-muted/30">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} - ${project.description.slice(0, 50)}...`}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    itemProp="image"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  
+                  <div className="absolute top-4 left-4 z-10">
                     <Badge className={`${getStatusColor(project.status)} text-white border-0 shadow-lg flex items-center gap-1`}>
                       <StatusIcon className="h-3 w-3" />
-                      {project.status}
+                      <span itemProp="status">{project.status}</span>
                     </Badge>
                   </div>
-                  <div className="absolute top-4 right-4">
-                    <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">
+                  <div className="absolute top-4 right-4 z-10">
+                    <Badge variant="secondary" className="bg-background/90 backdrop-blur-sm" itemProp="genre">
                       {project.category}
                     </Badge>
                   </div>
                   
                   {/* Project Stats */}
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="flex justify-between items-center text-sm text-white/80">
-                      <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-1">
-                          <Star className="h-4 w-4" />
-                          <span>{project.stats.stars}</span>
+                  <div className="absolute bottom-4 left-4 right-4 z-10">
+                    <div className="flex justify-between items-center text-sm text-white">
+                      <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-1 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
+                          <Star className="h-3 w-3" />
+                          <span className="font-medium text-xs">{project.stats.stars}</span>
                         </div>
-                        <div className="flex items-center gap-1">
-                          <Users className="h-4 w-4" />
-                          <span>{project.stats.users}</span>
+                        <div className="flex items-center gap-1 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
+                          <Users className="h-3 w-3" />
+                          <span className="font-medium text-xs">{project.stats.users}</span>
                         </div>
-                        <div className="flex items-center gap-1">
-                          <TrendingUp className="h-4 w-4" />
-                          <span>{project.stats.growth}</span>
+                        <div className="flex items-center gap-1 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
+                          <TrendingUp className="h-3 w-3" />
+                          <span className="font-medium text-xs">{project.stats.growth}</span>
                         </div>
                       </div>
                     </div>
@@ -176,10 +196,10 @@ export function Projects() {
                 
                 <CardHeader className="space-y-4">
                   <div className="space-y-2">
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    <CardTitle className="text-xl group-hover:text-primary transition-colors" itemProp="name">
                       {project.title}
                     </CardTitle>
-                    <CardDescription className="text-base leading-relaxed">
+                    <CardDescription className="text-base leading-relaxed" itemProp="description">
                       {project.description}
                     </CardDescription>
                   </div>
@@ -192,7 +212,7 @@ export function Projects() {
                       <Award className="h-4 w-4 text-primary" />
                       Key Achievements:
                     </h4>
-                    <ul className="space-y-1">
+                    <ul className="space-y-1" itemProp="achievements">
                       {project.achievements.slice(0, 2).map((achievement, idx) => (
                         <li key={idx} className="text-xs text-muted-foreground flex items-start gap-2">
                           <span className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></span>
@@ -207,7 +227,12 @@ export function Projects() {
                     <h4 className="font-semibold text-sm">Technologies:</h4>
                     <div className="flex flex-wrap gap-1.5">
                       {project.technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary" className="text-xs px-2 py-1 hover:bg-primary/10 transition-colors">
+                        <Badge 
+                          key={tech} 
+                          variant="secondary" 
+                          className="text-xs px-2 py-1 hover:bg-primary/10 transition-colors"
+                          itemProp="keywords"
+                        >
                           {tech}
                         </Badge>
                       ))}
@@ -227,6 +252,8 @@ export function Projects() {
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="flex items-center justify-center gap-2"
+                          itemProp="url"
+                          aria-label={`View ${project.title} live demo`}
                         >
                           <ExternalLinkIcon className="h-4 w-4" />
                           {project.status === "Sold" ? "View Site" : "Live Demo"}
@@ -245,6 +272,8 @@ export function Projects() {
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="flex items-center justify-center gap-2"
+                          itemProp="codeRepository"
+                          aria-label={`View ${project.title} source code on GitHub`}
                         >
                           <GitHubLogoIcon className="h-4 w-4" />
                           View Code
@@ -257,6 +286,7 @@ export function Projects() {
                         className="flex-1 border-2" 
                         size="sm"
                         disabled
+                        aria-label={`${project.title} coming soon`}
                       >
                         Coming Soon
                       </Button>
@@ -274,14 +304,18 @@ export function Projects() {
             <CardContent className="p-8">
               <div className="space-y-4">
                 <Zap className="h-12 w-12 text-primary mx-auto" />
-                <h3 className="text-2xl font-bold">Want to see more?</h3>
+                <h3 className="text-2xl font-bold">Want to see more DevOps projects?</h3>
                 <p className="text-muted-foreground max-w-md">
-                  Explore my GitHub for more DevOps projects, automation scripts, and infrastructure solutions
+                  Explore my GitHub for more infrastructure automation, monitoring solutions, and cloud deployment projects
                 </p>
-                <Button className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90" asChild>
+                <Button 
+                  className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90" 
+                  asChild
+                  aria-label="Visit Yash Bhangale's GitHub profile for more projects"
+                >
                   <a href="https://github.com/yashbhangale" target="_blank" rel="noopener noreferrer">
                     <GitHubLogoIcon className="mr-2 h-4 w-4" />
-                    Visit GitHub Profile
+                    Explore GitHub Portfolio
                   </a>
                 </Button>
               </div>

@@ -1,19 +1,44 @@
-# Robots.txt for yashbhangale.github.io
+# Robots.txt for hiremefor.cloud
 # This file tells search engine crawlers which pages or files they can or can't request from your site
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://yashbhangale.github.io/sitemap.xml
+Sitemap: https://hiremefor.cloud/sitemap.xml
 
 # Disallow crawling of API routes (if any)
 Disallow: /api/
 
-# Allow crawling of important pages
+# Allow crawling of important sections
+Allow: /#about
+Allow: /#skills  
+Allow: /#projects
+Allow: /#experience
+Allow: /#contact
 Allow: /blog/
 Allow: /blog/*
 Allow: /ask-ai/
 
 # Crawl delay (optional - helps prevent overwhelming the server)
-Crawl-delay: 1 
+Crawl-delay: 1
+
+# Additional directives for SEO optimization
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot  
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: / 

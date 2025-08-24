@@ -1,7 +1,7 @@
 {
-  "name": "Yash Bhangale - Software Engineer Portfolio",
-  "short_name": "Yash Bhangale",
-  "description": "Software Engineer specializing in backend development, cloud integration, and scalable applications",
+  "name": "Hire Yash Bhangale - Expert DevOps Engineer & Backend Developer",
+  "short_name": "Hire Yash Bhangale",
+  "description": "Hire Yash Bhangale, a skilled DevOps Engineer and Backend Developer specializing in Kubernetes, AWS, Azure, CI/CD pipelines, and infrastructure automation. Available for remote work.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
@@ -21,8 +21,18 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": ["portfolio", "developer", "technology"],
+  "categories": ["portfolio", "developer", "technology", "devops", "backend"],
   "lang": "en-US",
   "scope": "/",
-  "id": "yash-bhangale-portfolio"
+  "id": "yash-bhangale-devops-portfolio",
+  "keywords": ["hire devops engineer", "kubernetes expert", "aws specialist", "backend developer", "ci cd pipelines", "infrastructure automation"],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Yash Bhangale - DevOps Engineer Portfolio Homepage"
+    }
+  ]
 } 
