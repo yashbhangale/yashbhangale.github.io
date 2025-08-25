@@ -63,7 +63,7 @@ const projects = [
     technologies: ["Linux", "System Programming", "Power Management", "Bash", "Python", "Hardware Interface"],
     liveUrl: "#",
     githubUrl: "https://github.com/yashbhangale/lenovo-vantage-features-for-linux",
-    image: "#",
+    image: "/imgs/lenovo-vantage-features-for-linux.png",
     status: "Open Source",
     stats: { stars: "Linux", users: "Lenovo", growth: "Community" },
     category: "System Tool",
