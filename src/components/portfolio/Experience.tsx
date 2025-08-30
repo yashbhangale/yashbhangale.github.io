@@ -4,6 +4,21 @@ import { CalendarIcon, BuildingIcon, GraduationCapIcon, MapPinIcon, TrophyIcon }
 
 const workExperience = [
   {
+    company: "Trellin (Stealth AI Startup, Sweden)",
+    position: "Founding Engineer (Contract)",
+    period: "June 2025 – August 2025",
+    location: "½ Remote",
+    description: "Led technical architecture and development for a stealth AI startup, delivering a comprehensive SaaS CRM with AI-driven analytics in under 4 weeks.",
+    achievements: [
+      "Secured $5,000 in Azure Startup Credits and architected scalable cloud infrastructure, reducing projected hosting and deployment costs by 100% in the MVP phase",
+      "Built a SaaS CRM module (React, Node.js, PostgreSQL) with Gmail API integration for customer interaction logging",
+      "Developed an AI-driven customer analytics module using LangChain, Azure OpenAI, pgvector, and Supabase to detect churn/upsell opportunities via Retrieval-Augmented Generation (RAG)",
+      "Delivered a functional MVP in under 4 weeks, integrating Conversational AI and Model Context Protocol for advanced client interaction workflow"
+    ],
+    technologies: ["React", "Node.js", "PostgreSQL", "Azure", "LangChain", "OpenAI", "pgvector", "Supabase", "Gmail API", "AI/ML", "SaaS", "CRM"],
+    type: "work"
+  },
+  {
     company: "Asynk",
     position: "Software Engineer",
     period: "September 2024 – December 2024",
