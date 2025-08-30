@@ -4,6 +4,20 @@ import { CalendarIcon, BuildingIcon, GraduationCapIcon, MapPinIcon, TrophyIcon }
 
 const workExperience = [
   {
+    company: "Asynk",
+    position: "Software Engineer",
+    period: "September 2024 – December 2024",
+    location: "Mumbai",
+    description: "Designed and delivered the backend system for a travel agency and deployed a client-facing web application on Azure, handling full architecture, deployment, and scalability.",
+    achievements: [
+      "Designed and delivered the backend system for a travel agency using Django and Render",
+      "Designed and deployed a client-facing web application on Azure",
+      "Handled full architecture, deployment, and scalability requirements"
+    ],
+    technologies: ["Django", "Render", "Azure", "Backend Development", "Web Application", "Architecture Design"],
+    type: "work"
+  },
+  {
     company: "Scogo Networks",
     position: "DevOps Intern",
     period: "6 months",
