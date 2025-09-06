@@ -116,10 +116,10 @@ export function Experience() {
           Professional Journey
         </Badge>
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-          DevOps Experience & Education
+          Professional Experience & Education
         </h2>
         <p className="mx-auto max-w-[700px] text-muted-foreground text-lg">
-          <span className="text-primary font-semibold">1+ years of hands-on experience</span> in DevOps engineering, cloud technologies, and infrastructure automation
+          <span className="text-primary font-semibold">1+ years of hands-on experience</span> in full-stack development, product engineering, and startup environments
         </p>
       </div>
 

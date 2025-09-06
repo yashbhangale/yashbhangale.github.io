@@ -5,27 +5,27 @@ import { Code, Lightbulb, Heart, Zap, Coffee, Award, GraduationCap, MapPin, Glob
 const highlights = [
   {
     icon: Code,
-    title: "DevOps & Cloud Advocate",
-    description: "Specializing in Kubernetes, AWS, Azure, and cloud-native solutions"
+    title: "Full-Stack Builder",
+    description: "Building end-to-end applications from frontend to backend with modern technologies"
   },
   {
     icon: Lightbulb,
-    title: "Problem Solver",
-    description: "Turning complex infrastructure challenges into automated solutions"
+    title: "Product Engineer",
+    description: "Turning ideas into scalable products that solve real-world problems"
   },
   {
     icon: Globe,
-    title: "Cloud Integration",
-    description: "Deploying and scaling applications using AWS, Azure, and containerization technologies"
+    title: "Startup Enthusiast",
+    description: "Passionate about building MVPs, rapid prototyping, and scaling early-stage products"
   },
   {
     icon: Zap,
-    title: "Performance Optimization",
-    description: "Optimizing application performance, API response times, and system reliability"
+    title: "Technical Generalist",
+    description: "Versatile engineer comfortable across the entire technology stack"
   }
 ];
 
-const interests = ["DevOps ⚙️", "Cloud ☁️", "Linux 🐧", "Backend 🔧", "Open Source 🚀", "Hackathons 🏆"];
+const interests = ["Full-Stack Development 🚀", "Product Building 🏗️", "Startups 💡", "Open Source 🌟", "Hackathons 🏆", "Problem Solving 🧠"];
 
 export function About() {
   return (
@@ -73,10 +73,10 @@ export function About() {
             className="mx-auto max-w-[800px] text-xl text-muted-foreground leading-relaxed"
             itemProp="description"
           >
-            A DevOps-focused{" "}
-            <span className="text-primary font-semibold" itemProp="jobTitle">Software Engineer</span> with expertise in{" "}
-            <span className="text-blue-600 font-semibold">infrastructure automation and cloud technologies</span>. I specialize in building reliable{" "}
-            <span className="text-primary font-semibold">Kubernetes clusters, CI/CD pipelines, and scalable cloud applications</span> that solve complex infrastructure challenges.
+            A passionate{" "}
+            <span className="text-primary font-semibold" itemProp="jobTitle">Software Engineer & Builder</span> who loves creating{" "}
+            <span className="text-blue-600 font-semibold">end-to-end products and solutions</span>. I specialize in turning ideas into reality through{" "}
+            <span className="text-primary font-semibold">full-stack development, rapid prototyping, and scalable applications</span> that make a real impact.
           </p>
         </div>
 
@@ -88,9 +88,9 @@ export function About() {
                   <Heart className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <CardTitle className="text-2xl">My DevOps Journey</CardTitle>
+                  <CardTitle className="text-2xl">My Engineering Journey</CardTitle>
                   <CardDescription className="text-base">
-                    From AI Studies → DevOps Expertise → Full-Stack Engineering
+                    From AI Studies → Full-Stack Development → Product Building
                   </CardDescription>
                 </div>
               </div>
@@ -99,14 +99,14 @@ export function About() {
               <div className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
                   Currently pursuing <span itemProp="alumniOf">B.Tech in Artificial Intelligence and Data Science at Dattameghe College of Engineering</span> 
-                  with a CGPA of 8.2. My journey evolved from AI fundamentals to DevOps mastery, focusing on 
-                  infrastructure automation, monitoring, and cloud-native development.
+                  with a CGPA of 8.2. My journey evolved from AI fundamentals to full-stack development, focusing on 
+                  building complete products and solving real-world problems through technology.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Today, I combine software engineering principles with advanced DevOps practices to deliver 
-                  production-grade solutions. With <span itemProp="experienceLevel">1+ years of hands-on experience</span> and multiple hackathon victories including 
+                  Today, I combine software engineering principles with product thinking to deliver 
+                  end-to-end solutions. With <span itemProp="experienceLevel">1+ years of hands-on experience</span> and multiple hackathon victories including 
                   <span itemProp="award">Mumbai Hacks (1st place)</span> and <span itemProp="award">Smart India Hackathon (Runner-up)</span>, 
-                  I&apos;m passionate about creating scalable infrastructure and robust monitoring systems.
+                  I&apos;m passionate about building products that make a difference and scaling them from idea to market.
                 </p>
               </div>
               
@@ -155,18 +155,18 @@ export function About() {
                   <Zap className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
-                  <CardTitle className="text-2xl">My DevOps Approach</CardTitle>
+                  <CardTitle className="text-2xl">My Building Philosophy</CardTitle>
                   <CardDescription className="text-base">
-                    Designing and automating scalable, secure infrastructure systems
+                    Creating user-centric products with clean code and scalable architecture
                   </CardDescription>
                 </div>
               </div>
             </CardHeader>
             <CardContent className="space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                I specialize in <span itemProp="knowsAbout">Kubernetes orchestration</span>, <span itemProp="knowsAbout">CI/CD pipeline optimization</span>, 
-                and <span itemProp="knowsAbout">infrastructure automation</span>. My experience spans container management, 
-                cloud deployment strategies, and comprehensive monitoring solutions using industry-leading tools.
+                I specialize in <span itemProp="knowsAbout">full-stack development</span>, <span itemProp="knowsAbout">rapid prototyping</span>, 
+                and <span itemProp="knowsAbout">product engineering</span>. My experience spans web applications, mobile development, 
+                API design, and scaling products from MVP to production using modern technologies and best practices.
               </p>
               
               <div className="grid gap-4">
@@ -206,9 +206,9 @@ export function About() {
                 </div>
                 <div className="space-y-2" itemProp="hasCredential" itemScope itemType="https://schema.org/EducationalOccupationalCredential">
                   <Award className="h-8 w-8 text-primary mx-auto" />
-                  <p className="font-semibold" itemProp="credentialCategory">Cloud Certifications</p>
-                  <p className="text-2xl font-bold text-primary">4+</p>
-                  <p className="text-sm text-muted-foreground" itemProp="about">Azure & Kubernetes certifications</p>
+                  <p className="font-semibold" itemProp="credentialCategory">Products Built</p>
+                  <p className="text-2xl font-bold text-primary">10+</p>
+                  <p className="text-sm text-muted-foreground" itemProp="about">Full-stack applications & MVPs</p>
                 </div>
               </div>
             </div>
@@ -223,21 +223,21 @@ export function About() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                 <div className="space-y-2">
                   <Coffee className="h-8 w-8 text-primary mx-auto" />
-                  <p className="font-semibold">DevOps Technologies</p>
-                  <p className="text-2xl font-bold text-primary">15+</p>
-                  <p className="text-sm text-muted-foreground">Kubernetes, Docker, AWS, Azure, CI/CD tools</p>
+                  <p className="font-semibold">Full-Stack Technologies</p>
+                  <p className="text-2xl font-bold text-primary">20+</p>
+                  <p className="text-sm text-muted-foreground">React, Node.js, Python, TypeScript, Next.js</p>
                 </div>
                 <div className="space-y-2">
                   <Code className="h-8 w-8 text-primary mx-auto" />
-                  <p className="font-semibold">Preferred Platform</p>
-                  <p className="text-2xl font-bold text-primary">Linux</p>
-                  <p className="text-sm text-muted-foreground">Creator of Nanite AI OS distribution</p>
+                  <p className="font-semibold">Development Focus</p>
+                  <p className="text-2xl font-bold text-primary">Product</p>
+                  <p className="text-sm text-muted-foreground">Building scalable applications & MVPs</p>
                 </div>
                 <div className="space-y-2">
                   <Globe className="h-8 w-8 text-primary mx-auto" />
-                  <p className="font-semibold">Cloud Platforms</p>
-                  <p className="text-2xl font-bold text-primary">Multi-Cloud</p>
-                  <p className="text-sm text-muted-foreground">AWS, Azure, Digital Ocean expertise</p>
+                  <p className="font-semibold">Deployment & Scale</p>
+                  <p className="text-2xl font-bold text-primary">Cloud-Native</p>
+                  <p className="text-sm text-muted-foreground">AWS, Azure, Docker, Kubernetes expertise</p>
                 </div>
               </div>
             </div>

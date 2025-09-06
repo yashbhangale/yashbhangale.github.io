@@ -49,24 +49,111 @@ export function Skills() {
           Technical Expertise
         </Badge>
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-          DevOps & Development Skills
+          Full-Stack & Product Skills
         </h2>
         <p className="mx-auto max-w-[700px] text-muted-foreground text-lg">
-          Comprehensive expertise in <span className="text-primary font-semibold">DevOps automation</span>, <span className="text-blue-600 font-semibold">cloud technologies</span>, and <span className="text-primary font-semibold">modern development practices</span>
+          Comprehensive expertise in <span className="text-primary font-semibold">full-stack development</span>, <span className="text-blue-600 font-semibold">product engineering</span>, and <span className="text-primary font-semibold">rapid prototyping</span>
         </p>
       </div>
 
       <div className="max-w-5xl mx-auto">
-        <Tabs defaultValue="devops" className="w-full">
+        <Tabs defaultValue="frontend" className="w-full">
           <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6 h-auto">
+            <TabsTrigger value="frontend" className="text-xs sm:text-sm">Frontend</TabsTrigger>
+            <TabsTrigger value="backend" className="text-xs sm:text-sm">Backend</TabsTrigger>
             <TabsTrigger value="devops" className="text-xs sm:text-sm">DevOps</TabsTrigger>
             <TabsTrigger value="cloud" className="text-xs sm:text-sm">Cloud</TabsTrigger>
-            <TabsTrigger value="backend" className="text-xs sm:text-sm">Backend</TabsTrigger>
-            <TabsTrigger value="frontend" className="text-xs sm:text-sm">Frontend</TabsTrigger>
             <TabsTrigger value="databases" className="text-xs sm:text-sm">Databases</TabsTrigger>
             <TabsTrigger value="tools" className="text-xs sm:text-sm">Tools</TabsTrigger>
           </TabsList>
           
+          <TabsContent value="frontend">
+            <Card>
+              <CardHeader>
+                <CardTitle>Frontend Development & User Experience</CardTitle>
+                <CardDescription>
+                  Modern web technologies for building responsive, interactive, and accessible user interfaces
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {skillCategories.frontend.map((skill) => (
+                    <Badge key={skill} variant="secondary" className="hover:bg-primary/10 transition-colors" itemProp="knowsAbout">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="mt-6 p-4 bg-muted/30 rounded-lg">
+                  <h4 className="font-semibold mb-2">Notable Frontend Implementations:</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• <strong>Cryptway</strong> - Cryptocurrency wallet with Web3 integration</li>
+                    <li>• <strong>BJP Divyang Portal</strong> - Government compliance and accessibility</li>
+                    <li>• <strong>NFT marketplace optimization</strong> - 70% reduction in redundant API calls</li>
+                    <li>• <strong>Responsive design</strong> - Mobile-first approach with Tailwind CSS</li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          
+          <TabsContent value="backend">
+            <Card>
+              <CardHeader>
+                <CardTitle>Backend Development & System Programming</CardTitle>
+                <CardDescription>
+                  Server-side programming, API development, scripting, and system administration expertise
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {skillCategories.backend.map((skill) => (
+                    <Badge key={skill} variant="secondary" className="hover:bg-primary/10 transition-colors" itemProp="knowsAbout">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="mt-6 p-4 bg-muted/30 rounded-lg">
+                  <h4 className="font-semibold mb-2">Key Backend Projects:</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• <strong>Nanite Linux Distribution</strong> - Debian-based AI OS with automated builds</li>
+                    <li>• <strong>API performance optimization</strong> - Reduced response time from 3s to 350ms</li>
+                    <li>• <strong>Smart contract optimization</strong> - 20% reduction in gas fees</li>
+                    <li>• <strong>Microservices architecture</strong> - Scalable backend systems design</li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          
+          <TabsContent value="backend">
+            <Card>
+              <CardHeader>
+                <CardTitle>Backend Development & System Programming</CardTitle>
+                <CardDescription>
+                  Server-side programming, API development, scripting, and system administration expertise
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {skillCategories.backend.map((skill) => (
+                    <Badge key={skill} variant="secondary" className="hover:bg-primary/10 transition-colors" itemProp="knowsAbout">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="mt-6 p-4 bg-muted/30 rounded-lg">
+                  <h4 className="font-semibold mb-2">Key Backend Projects:</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• <strong>Nanite Linux Distribution</strong> - Debian-based AI OS with automated builds</li>
+                    <li>• <strong>API performance optimization</strong> - Reduced response time from 3s to 350ms</li>
+                    <li>• <strong>Smart contract optimization</strong> - 20% reduction in gas fees</li>
+                    <li>• <strong>Microservices architecture</strong> - Scalable backend systems design</li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
           <TabsContent value="devops">
             <Card>
               <CardHeader>
@@ -128,64 +215,6 @@ export function Skills() {
                     <h4 className="font-semibold text-orange-700 dark:text-orange-300 mb-2">AWS Services</h4>
                     <p className="text-sm text-muted-foreground">EC2, S3, Lambda, CloudFormation, EKS, Auto Scaling</p>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-          
-          <TabsContent value="backend">
-            <Card>
-              <CardHeader>
-                <CardTitle>Backend Development & System Programming</CardTitle>
-                <CardDescription>
-                  Server-side programming, API development, scripting, and system administration expertise
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {skillCategories.backend.map((skill) => (
-                    <Badge key={skill} variant="secondary" className="hover:bg-primary/10 transition-colors" itemProp="knowsAbout">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-                <div className="mt-6 p-4 bg-muted/30 rounded-lg">
-                  <h4 className="font-semibold mb-2">Key Backend Projects:</h4>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• <strong>Nanite Linux Distribution</strong> - Debian-based AI OS with automated builds</li>
-                    <li>• <strong>API performance optimization</strong> - Reduced response time from 3s to 350ms</li>
-                    <li>• <strong>Smart contract optimization</strong> - 20% reduction in gas fees</li>
-                    <li>• <strong>Microservices architecture</strong> - Scalable backend systems design</li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value="frontend">
-            <Card>
-              <CardHeader>
-                <CardTitle>Frontend Development & Web Technologies</CardTitle>
-                <CardDescription>
-                  Modern web technologies for building responsive, interactive, and accessible user interfaces
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {skillCategories.frontend.map((skill) => (
-                    <Badge key={skill} variant="secondary" className="hover:bg-primary/10 transition-colors" itemProp="knowsAbout">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-                <div className="mt-6 p-4 bg-muted/30 rounded-lg">
-                  <h4 className="font-semibold mb-2">Notable Frontend Implementations:</h4>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• <strong>Cryptway</strong> - Cryptocurrency wallet with Web3 integration</li>
-                    <li>• <strong>BJP Divyang Portal</strong> - Government compliance and accessibility</li>
-                    <li>• <strong>NFT marketplace optimization</strong> - 70% reduction in redundant API calls</li>
-                    <li>• <strong>Responsive design</strong> - Mobile-first approach with Tailwind CSS</li>
-                  </ul>
                 </div>
               </CardContent>
             </Card>
@@ -257,7 +286,7 @@ export function Skills() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
                 <div className="space-y-2" itemProp="hasOccupation" itemScope itemType="https://schema.org/Occupation">
                   <h4 className="font-semibold" itemProp="name">Focus Areas</h4>
-                  <p className="text-muted-foreground" itemProp="skills">DevOps Automation, Cloud Architecture, Backend Development</p>
+                  <p className="text-muted-foreground" itemProp="skills">Full-Stack Development, Product Engineering, Rapid Prototyping</p>
                 </div>
                 <div className="space-y-2">
                   <h4 className="font-semibold">Experience Level</h4>

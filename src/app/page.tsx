@@ -26,18 +26,18 @@ export default function Home() {
       "@type": "ImageObject",
       "url": "https://hiremefor.cloud/yash-bhangale.webm",
       "contentUrl": "https://hiremefor.cloud/yash-bhangale.mp4",
-      "caption": "Yash Bhangale - DevOps Engineer and Backend Developer"
+      "caption": "Yash Bhangale - Software Engineer and Product Builder"
     },
-    "jobTitle": ["DevOps Engineer", "Backend Developer", "Software Engineer"],
-    "description": "Expert DevOps Engineer and Backend Developer specializing in Kubernetes, AWS, Azure, CI/CD pipelines, infrastructure automation, and cloud-native solutions. Mumbai Hackathon winner with 1+ years of hands-on experience.",
+    "jobTitle": ["Software Engineer", "Full-Stack Developer", "Product Builder"],
+    "description": "Passionate Software Engineer and Product Builder specializing in full-stack development, rapid prototyping, and scalable applications. Mumbai Hackathon winner with 1+ years of hands-on experience building end-to-end solutions.",
     "worksFor": {
       "@type": "Organization",
       "name": "Freelance",
-      "description": "Available for hire as DevOps Engineer and Backend Developer"
+      "description": "Available for hire as Software Engineer and Product Builder"
     },
     "hasOccupation": {
       "@type": "Occupation",
-      "name": "DevOps Engineer",
+      "name": "Software Engineer",
       "occupationLocation": {
         "@type": "Place",
         "name": "Remote",
@@ -48,58 +48,58 @@ export default function Home() {
         }
       },
       "skills": [
-        "Kubernetes",
-        "Docker", 
-        "AWS",
-        "Azure",
-        "CI/CD Pipelines",
-        "Infrastructure Automation",
-        "SigNoz",
-        "Prometheus",
-        "Grafana",
-        "ArgoCD",
-        "Helm",
-        "Terraform",
+        "Full-Stack Development",
+        "Product Engineering",
+        "Rapid Prototyping",
+        "React",
         "Node.js",
         "Python",
-        "React",
-        "DevOps",
-        "Cloud Native Solutions",
-        "Infrastructure Monitoring"
+        "TypeScript",
+        "Next.js",
+        "AWS",
+        "Azure",
+        "Docker",
+        "Kubernetes",
+        "CI/CD Pipelines",
+        "API Development",
+        "Database Design",
+        "System Architecture",
+        "Startup Experience",
+        "MVP Development"
       ],
       "responsibilities": [
-        "Kubernetes cluster monitoring and management",
-        "CI/CD pipeline optimization",
-        "Infrastructure automation and security scanning",
-        "Cloud architecture and deployment",
-        "Performance optimization and monitoring"
+        "Full-stack application development and deployment",
+        "Product architecture and system design",
+        "Rapid prototyping and MVP development",
+        "API development and integration",
+        "Database design and optimization"
       ]
     },
     "knowsAbout": [
       {
         "@type": "Thing",
-        "name": "Kubernetes",
-        "description": "Container orchestration and cluster management"
+        "name": "Full-Stack Development",
+        "description": "End-to-end application development across frontend and backend"
       },
       {
         "@type": "Thing", 
-        "name": "AWS",
-        "description": "Amazon Web Services cloud platform"
+        "name": "Product Engineering",
+        "description": "Building scalable products from concept to market"
       },
       {
         "@type": "Thing",
-        "name": "Azure",
-        "description": "Microsoft Azure cloud platform"
+        "name": "Rapid Prototyping",
+        "description": "Fast iteration and MVP development for startups"
       },
       {
         "@type": "Thing",
-        "name": "DevOps",
-        "description": "Development and Operations practices"
+        "name": "React",
+        "description": "Modern frontend development with React ecosystem"
       },
       {
         "@type": "Thing",
-        "name": "CI/CD",
-        "description": "Continuous Integration and Continuous Deployment"
+        "name": "Node.js",
+        "description": "Server-side JavaScript development and API creation"
       }
     ],
     "alumniOf": {
@@ -141,8 +141,8 @@ export default function Home() {
     "@type": "WebSite",
     "@id": "https://hiremefor.cloud/#website",
     "url": "https://hiremefor.cloud",
-    "name": "Hire Yash Bhangale - DevOps Engineer & Backend Developer",
-    "description": "Professional portfolio of Yash Bhangale, expert DevOps Engineer and Backend Developer available for hire. Specializing in Kubernetes, AWS, Azure, and cloud-native solutions.",
+    "name": "Hire Yash Bhangale - Software Engineer & Product Builder",
+    "description": "Professional portfolio of Yash Bhangale, passionate Software Engineer and Product Builder available for hire. Specializing in full-stack development, rapid prototyping, and scalable applications.",
     "publisher": {
       "@id": "https://hiremefor.cloud/#person"
     },

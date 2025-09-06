@@ -38,7 +38,7 @@ export function Hero() {
           <div className="space-y-6">
             <Badge variant="outline" className="px-4 py-2 text-sm">
               <Code className="w-4 h-4 mr-2" />
-              <span itemProp="jobTitle">DevOps Engineer & Backend Developer</span>
+              <span itemProp="jobTitle">Software Engineer & Product Builder</span>
             </Badge>
 
             <div className="space-y-8">
@@ -63,10 +63,10 @@ export function Hero() {
                   className="text-xl sm:text-2xl text-muted-foreground leading-relaxed"
                   itemProp="description"
                 >
-                  I build robust applications and scalable systems{" "}
+                  I build end-to-end products and scalable applications{" "}
                   <span className="text-primary font-semibold">with expertise in</span>{" "}
-                  <span className="text-blue-200 font-semibold">Kubernetes, AWS, Azure, CI/CD pipelines,</span> and{" "}
-                  <span className="text-blue-200 font-semibold">infrastructure automation.</span>
+                  <span className="text-blue-200 font-semibold">full-stack development, rapid prototyping,</span> and{" "}
+                  <span className="text-blue-200 font-semibold">product engineering.</span>
                 </p>
               </div>
             </div>
@@ -82,7 +82,7 @@ export function Hero() {
                     <div className="w-3 h-3 rounded-full bg-yellow-400/60" />
                     <div className="w-3 h-3 rounded-full bg-green-400/60" />
                   </div>
-                  <span className="text-sm text-muted-foreground font-mono ml-2">devops-engineer.js</span>
+                  <span className="text-sm text-muted-foreground font-mono ml-2">software-engineer.js</span>
                 </div>
                 <Badge variant="secondary" className="text-xs">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2" />
@@ -94,7 +94,7 @@ export function Hero() {
                 <div className="flex">
                   <span className="text-muted-foreground mr-4 w-6">1</span>
                   <span className="text-blue-500">const</span>
-                  <span className="text-white ml-2">devopsEngineer</span>
+                  <span className="text-white ml-2">softwareEngineer</span>
                   <span className="text-muted-foreground ml-2">=</span>
                   <span className="text-yellow-500 ml-2">{"{"}</span>
                 </div>
@@ -111,7 +111,7 @@ export function Hero() {
                   <span className="text-muted-foreground mr-4 w-6">3</span>
                   <span className="ml-4 text-green-400">role</span>
                   <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">&apos;DevOps Engineer &amp; Backend Developer&apos;</span>
+                  <span className="text-orange-400 ml-2">&apos;Software Engineer &amp; Product Builder&apos;</span>
                   <span className="text-muted-foreground">,</span>
                 </div>
 
@@ -120,32 +120,32 @@ export function Hero() {
                   <span className="ml-4 text-green-400">specialization</span>
                   <span className="text-muted-foreground">:</span>
                   <span className="text-yellow-500 ml-2">[
-                    &apos;Kubernetes&apos;,
-                    &apos;Docker&apos;,
-                    &apos;AWS&apos;,
-                    &apos;Azure&apos;,
-                    &apos;CI/CD&apos;,
-                    &apos;Infrastructure Automation&apos;,
-                    &apos;SigNoz&apos;,
-                    &apos;Prometheus&apos;,
-                    &apos;ArgoCD&apos;,
-                    &apos;Terraform&apos;
+                    &apos;Full-Stack Development&apos;,
+                    &apos;Product Engineering&apos;,
+                    &apos;Rapid Prototyping&apos;,
+                    &apos;React&apos;,
+                    &apos;Node.js&apos;,
+                    &apos;TypeScript&apos;,
+                    &apos;Next.js&apos;,
+                    &apos;API Development&apos;,
+                    &apos;Database Design&apos;,
+                    &apos;MVP Development&apos;
                     ]</span>
                   <span className="text-muted-foreground">,</span>
                 </div>
 
                 <div className="flex">
                   <span className="text-muted-foreground mr-4 w-6">5</span>
-                  <span className="ml-4 text-green-400">backendSkills</span>
+                  <span className="ml-4 text-green-400">frontendSkills</span>
                   <span className="text-muted-foreground">:</span>
                   <span className="text-yellow-500 ml-2">[
-                    &apos;Node.js&apos;,
-                    &apos;Python&apos;,
                     &apos;React&apos;,
                     &apos;Next.js&apos;,
                     &apos;TypeScript&apos;,
-                    &apos;PostgreSQL&apos;,
-                    &apos;API Development&apos;
+                    &apos;Tailwind CSS&apos;,
+                    &apos;Web3&apos;,
+                    &apos;Responsive Design&apos;,
+                    &apos;UI/UX&apos;
                     ]</span>
                   <span className="text-muted-foreground">,</span>
                 </div>
@@ -156,14 +156,14 @@ export function Hero() {
                   <span className="text-muted-foreground">:</span>
                   <span className="text-blue-400 ml-2">&apos;1+ years&apos;</span>
                   <span className="text-muted-foreground">,</span>
-                  <span className="text-gray-500 ml-2">{/* DevOps & Backend Development */}</span>
+                  <span className="text-gray-500 ml-2">{/* Full-Stack & Product Development */}</span>
                 </div>
 
                 <div className="flex">
                   <span className="text-muted-foreground mr-4 w-6">7</span>
                   <span className="ml-4 text-green-400">achievements</span>
                   <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">&apos;Mumbai Hackathon Winner, SIH Finalist&apos;</span>
+                  <span className="text-orange-400 ml-2">&apos;Mumbai Hacks Winner, 10+ Products Built&apos;</span>
                   <span className="text-muted-foreground">,</span>
                 </div>
 
@@ -183,7 +183,7 @@ export function Hero() {
                   <div className="flex items-center">
                     <span className="text-muted-foreground mr-4 w-6">10</span>
                     <span className="text-blue-500">export default</span>
-                    <span className="text-white ml-2">devopsEngineer</span>
+                    <span className="text-white ml-2">softwareEngineer</span>
                     <span className="bg-white/20 w-2 h-5 ml-1 animate-pulse" />
                   </div>
                 </div>
@@ -194,15 +194,15 @@ export function Hero() {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 max-w-md mx-auto">
             <div className="text-center" itemProp="award">
-              <div className="text-2xl sm:text-3xl font-bold text-primary">15+</div>
-              <div className="text-sm text-muted-foreground">successful projects</div>
+              <div className="text-2xl sm:text-3xl font-bold text-primary">10+</div>
+              <div className="text-sm text-muted-foreground">products built</div>
             </div>
             <div className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-primary">1+</div>
               <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center" itemProp="award">
-              <div className="text-2xl sm:text-3xl font-bold text-primary">5+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-primary">2</div>
               <div className="text-sm text-muted-foreground">Hackathons won</div>
             </div>
           </div>

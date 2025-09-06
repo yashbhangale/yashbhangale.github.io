@@ -129,13 +129,13 @@ export function Projects() {
             Portfolio Showcase
           </Badge>
           <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            DevOps & Development Projects
+            Products & Projects Built
           </h2>
           <p className="mx-auto max-w-[800px] text-xl text-muted-foreground leading-relaxed">
-            Innovative solutions spanning{" "}
-            <span className="text-primary font-semibold">infrastructure automation</span>,{" "}
-            <span className="text-blue-600 font-semibold">cloud orchestration</span>, and{" "}
-            <span className="text-primary font-semibold">scalable system architecture</span>
+            Diverse solutions spanning{" "}
+            <span className="text-primary font-semibold">full-stack applications</span>,{" "}
+            <span className="text-blue-600 font-semibold">product development</span>, and{" "}
+            <span className="text-primary font-semibold">startup MVPs</span>
           </p>
         </div>
 
@@ -304,9 +304,9 @@ export function Projects() {
             <CardContent className="p-8">
               <div className="space-y-4">
                 <Zap className="h-12 w-12 text-primary mx-auto" />
-                <h3 className="text-2xl font-bold">Want to see more DevOps projects?</h3>
+                <h3 className="text-2xl font-bold">Want to see more products I've built?</h3>
                 <p className="text-muted-foreground max-w-md">
-                  Explore my GitHub for more infrastructure automation, monitoring solutions, and cloud deployment projects
+                  Explore my GitHub for more full-stack applications, startup projects, and innovative solutions
                 </p>
                 <Button 
                   className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90" 
