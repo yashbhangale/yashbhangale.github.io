@@ -13,10 +13,8 @@ import { MoonIcon, SunIcon, MenuIcon } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { useLoading } from "@/components/LoadingScreen";
 
 export function Navigation() {
-  const { isLoading } = useLoading();
   const [isDark, setIsDark] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
@@ -64,9 +62,6 @@ export function Navigation() {
     { id: "resume", label: "Resume", href: "https://drive.google.com/file/d/1n-1y_jhFgNIF7MCfV0ktf_QFfucBD5cX/view", external: true },
     { id: "contact", label: "Contact" },
   ];
-
-  // Don't render navigation during loading (after all hooks are called)
-  if (isLoading) return null;
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">

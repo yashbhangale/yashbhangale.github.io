@@ -17,7 +17,6 @@ import {
   MinusIcon
 } from 'lucide-react'
 import { GoogleGenAI } from '@google/genai'
-import { useLoading } from '@/components/LoadingScreen'
 
 // Function to parse markdown links and convert them to JSX
 const parseMessageContent = (content: string) => {
@@ -77,7 +76,6 @@ interface Message {
 }
 
 export function AIWidget() {
-  const { isLoading } = useLoading();
   const pathname = usePathname()
   const isOnBlogPage = pathname.startsWith('/blog')
   
@@ -279,9 +277,6 @@ RULES: Keep responses short, provide links when relevant, suggest contacting for
       sendMessage()
     }
   }
-
-  // Don't render AI widget during loading (after all hooks are called)
-  if (isLoading) return null;
 
   if (!isOpen) {
     return (
