@@ -56,7 +56,7 @@ export function LoadingScreen() {
     if (!isLoading) return;
 
     const startTime = Date.now();
-    const minDuration = 3000; // 3 seconds minimum
+    const minDuration = 1000; // 3 seconds minimum
 
     // Simulate loading progress
     const interval = setInterval(() => {
@@ -158,4 +158,5 @@ export function LoadingScreen() {
       </div>
     </motion.div>
   );
+
 } 
