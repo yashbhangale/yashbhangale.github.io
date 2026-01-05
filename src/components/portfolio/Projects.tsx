@@ -304,7 +304,7 @@ export function Projects() {
             <CardContent className="p-8">
               <div className="space-y-4">
                 <Zap className="h-12 w-12 text-primary mx-auto" />
-                <h3 className="text-2xl font-bold">Want to see more products I've built?</h3>
+                <h3 className="text-2xl font-bold">Want to see more products I&apos;ve built?</h3>
                 <p className="text-muted-foreground max-w-md">
                   Explore my GitHub for more full-stack applications, startup projects, and innovative solutions
                 </p>
