@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DevOps & Development Blog | Yash Bhangale",
     description: "Expert insights, tutorials, and practical guides on DevOps, Kubernetes, AWS, Azure, CI/CD pipelines, and infrastructure automation.",
-    url: "https://hiremefor.cloud/blog",
+    url: "https://yashbhangale.site/blog",
     siteName: "Hire Yash Bhangale - DevOps Expert",
     images: [
       {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     images: ["/og-blog.png"],
   },
   alternates: {
-    canonical: "https://hiremefor.cloud/blog",
+    canonical: "https://yashbhangale.site/blog",
   },
 };
 
@@ -64,11 +64,11 @@ export default function BlogPage() {
     "@type": "Blog",
     "name": "Yash Bhangale DevOps & Development Blog",
     "description": "Expert insights, tutorials, and practical guides on DevOps, Kubernetes, AWS, Azure, CI/CD pipelines, infrastructure automation, and backend development",
-    "url": "https://hiremefor.cloud/blog",
+    "url": "https://yashbhangale.site/blog",
     "author": {
       "@type": "Person",
       "name": "Yash Bhangale",
-      "url": "https://hiremefor.cloud",
+      "url": "https://yashbhangale.site",
       "jobTitle": "DevOps Engineer",
       "knowsAbout": ["Kubernetes", "AWS", "Azure", "DevOps", "Backend Development", "CI/CD"]
     },
@@ -98,7 +98,7 @@ export default function BlogPage() {
       "@type": "BlogPosting",
       "headline": post.title,
       "description": post.description,
-      "url": `https://hiremefor.cloud/blog/${post.slug}`,
+      "url": `https://yashbhangale.site/blog/${post.slug}`,
       "datePublished": post.date,
       "author": {
         "@type": "Person",

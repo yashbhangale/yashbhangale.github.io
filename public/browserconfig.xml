@@ -9,7 +9,7 @@
             <TileColor>#000000</TileColor>
         </tile>
         <notification>
-            <polling-uri src="https://hiremefor.cloud"/>
+            <polling-uri src="https://yashbhangale.site"/>
             <frequency>30</frequency>
             <cycle>1</cycle>
         </notification>

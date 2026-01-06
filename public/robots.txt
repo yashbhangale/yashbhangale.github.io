@@ -1,11 +1,11 @@
-# Robots.txt for hiremefor.cloud
+# Robots.txt for yashbhangale.site
 # This file tells search engine crawlers which pages or files they can or can't request from your site
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://hiremefor.cloud/sitemap.xml
+Sitemap: https://yashbhangale.site/sitemap.xml
 
 # Disallow crawling of API routes (if any)
 Disallow: /api/

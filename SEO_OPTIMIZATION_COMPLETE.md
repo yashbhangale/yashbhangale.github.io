@@ -1,4 +1,4 @@
-# SEO Optimization Checklist for hiremefor.cloud
+# SEO Optimization Checklist for yashbhangale.site
 
 ## ✅ COMPLETED OPTIMIZATIONS
 
@@ -10,7 +10,7 @@
 - [x] Configured language and region targeting
 
 ### 2. **Domain & Branding**
-- [x] Changed domain references to `hiremefor.cloud`
+- [x] Changed domain references to `yashbhangale.site`
 - [x] Updated all internal links and references
 - [x] Optimized brand messaging for hiring intent
 - [x] Enhanced call-to-action buttons for conversion
@@ -129,7 +129,7 @@
 
 ## 🚀 NEXT STEPS
 
-1. **Deploy to hiremefor.cloud domain**
+1. **Deploy to yashbhangale.site domain**
 2. **Submit sitemap to Google Search Console**
 3. **Verify domain ownership across platforms**
 4. **Set up Google Analytics tracking**

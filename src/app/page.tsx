@@ -13,7 +13,7 @@ export default function Home() {
   const personStructuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://hiremefor.cloud/#person",
+    "@id": "https://yashbhangale.site/#person",
     "name": "Yash Bhangale",
     "alternateName": ["Yash", "YashBhangale"],
     "givenName": "Yash",
@@ -21,11 +21,11 @@ export default function Home() {
     "gender": "Male",
     "email": "yashbhangale9@gmail.com",
     "telephone": "+91-8169362024",
-    "url": "https://hiremefor.cloud",
+    "url": "https://yashbhangale.site",
     "image": {
       "@type": "ImageObject",
-      "url": "https://hiremefor.cloud/yash-bhangale.webm",
-      "contentUrl": "https://hiremefor.cloud/yash-bhangale.mp4",
+      "url": "https://yashbhangale.site/yash-bhangale.webm",
+      "contentUrl": "https://yashbhangale.site/yash-bhangale.mp4",
       "caption": "Yash Bhangale - Software Engineer and Product Builder"
     },
     "jobTitle": ["Software Engineer", "Full-Stack Developer", "Product Builder"],
@@ -139,12 +139,12 @@ export default function Home() {
   const websiteStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://hiremefor.cloud/#website",
-    "url": "https://hiremefor.cloud",
+    "@id": "https://yashbhangale.site/#website",
+    "url": "https://yashbhangale.site",
     "name": "Hire Yash Bhangale - Software Engineer & Product Builder",
     "description": "Professional portfolio of Yash Bhangale, passionate Software Engineer and Product Builder available for hire. Specializing in full-stack development, rapid prototyping, and scalable applications.",
     "publisher": {
-      "@id": "https://hiremefor.cloud/#person"
+      "@id": "https://yashbhangale.site/#person"
     },
     "inLanguage": "en-US",
     "copyrightYear": "2025",
@@ -152,7 +152,7 @@ export default function Home() {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://hiremefor.cloud/?q={search_term_string}"
+        "urlTemplate": "https://yashbhangale.site/?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -166,37 +166,37 @@ export default function Home() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://hiremefor.cloud"
+        "item": "https://yashbhangale.site"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "About",
-        "item": "https://hiremefor.cloud/#about"
+        "item": "https://yashbhangale.site/#about"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Skills",
-        "item": "https://hiremefor.cloud/#skills"
+        "item": "https://yashbhangale.site/#skills"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Projects",
-        "item": "https://hiremefor.cloud/#projects"
+        "item": "https://yashbhangale.site/#projects"
       },
       {
         "@type": "ListItem",
         "position": 5,
         "name": "Experience",
-        "item": "https://hiremefor.cloud/#experience"
+        "item": "https://yashbhangale.site/#experience"
       },
       {
         "@type": "ListItem",
         "position": 6,
         "name": "Contact",
-        "item": "https://hiremefor.cloud/#contact"
+        "item": "https://yashbhangale.site/#contact"
       }
     ]
   };

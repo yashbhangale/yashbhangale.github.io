@@ -44,12 +44,12 @@ export const metadata: Metadata = {
     "smart india hackathon finalist",
     "remote devops engineer",
     "freelance cloud engineer",
-    "hiremefor.cloud",
+    "yashbhangale.site",
     "full stack developer india",
     "bangalore devops engineer",
     "mumbai backend developer"
   ],
-  authors: [{ name: "Yash Bhangale", url: "https://hiremefor.cloud" }],
+  authors: [{ name: "Yash Bhangale", url: "https://yashbhangale.site" }],
   creator: "Yash Bhangale",
   publisher: "Yash Bhangale",
   classification: "Technology Portfolio",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: true,
   },
-  metadataBase: new URL("https://hiremefor.cloud"),
+  metadataBase: new URL("https://yashbhangale.site"),
   alternates: {
     canonical: "/",
     languages: {
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "profile",
     locale: "en_US",
-    url: "https://hiremefor.cloud",
+    url: "https://yashbhangale.site",
     title: "Hire Yash Bhangale | Expert DevOps Engineer & Backend Developer",
     description: "Hire a skilled DevOps Engineer with 1+ years experience in Kubernetes, AWS, Azure, CI/CD pipelines, and infrastructure automation. Mumbai Hackathon winner available for remote work.",
     siteName: "Hire Yash Bhangale - DevOps & Cloud Specialist",
@@ -155,7 +155,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="canonical" href="https://hiremefor.cloud" />
+        <link rel="canonical" href="https://yashbhangale.site" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />

@@ -58,7 +58,7 @@ export function Navigation() {
     { id: "experience", label: "Experience" },
     { id: "blog", label: "Blog", href: "/blog" },
     { id: "ask-ai", label: "Ask AI", href: "/ask-ai" },
-    { id: "notes", label: "Notes", href: "https://notes.hiremefor.cloud", external: true },
+    { id: "notes", label: "Notes", href: "https://notes.yashbhangale.site", external: true },
     { id: "resume", label: "Resume", href: "https://drive.google.com/file/d/1n-1y_jhFgNIF7MCfV0ktf_QFfucBD5cX/view", external: true },
     { id: "contact", label: "Contact" },
   ];

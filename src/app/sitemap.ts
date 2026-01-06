@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { getAllBlogPosts } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NETLIFY ? `https://${process.env.URL}` : 'https://hiremefor.cloud'
+  const baseUrl = process.env.NETLIFY ? `https://${process.env.URL}` : 'https://yashbhangale.site'
   
   // Get all blog posts
   const posts = getAllBlogPosts()
