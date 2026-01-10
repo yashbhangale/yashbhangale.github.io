@@ -216,7 +216,7 @@ export function Hero() {
               aria-label="Contact Yash Bhangale for hiring opportunities"
             >
               <Mail className="mr-2 h-4 w-4" />
-              Hire Me Now
+              Hire Me
             </Button>
             <Button
               variant="outline"
