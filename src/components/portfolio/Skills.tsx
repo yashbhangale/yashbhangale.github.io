@@ -57,12 +57,12 @@ export function Skills() {
       </div>
 
       <div className="max-w-5xl mx-auto">
-        <Tabs defaultValue="frontend" className="w-full">
+        <Tabs defaultValue="cloud" className="w-full">
           <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6 h-auto">
-            <TabsTrigger value="frontend" className="text-xs sm:text-sm">Frontend</TabsTrigger>
-            <TabsTrigger value="backend" className="text-xs sm:text-sm">Backend</TabsTrigger>
-            <TabsTrigger value="devops" className="text-xs sm:text-sm">DevOps</TabsTrigger>
             <TabsTrigger value="cloud" className="text-xs sm:text-sm">Cloud</TabsTrigger>
+            <TabsTrigger value="devops" className="text-xs sm:text-sm">DevOps</TabsTrigger>
+            <TabsTrigger value="backend" className="text-xs sm:text-sm">Backend</TabsTrigger>
+            <TabsTrigger value="frontend" className="text-xs sm:text-sm">Frontend</TabsTrigger>
             <TabsTrigger value="databases" className="text-xs sm:text-sm">Databases</TabsTrigger>
             <TabsTrigger value="tools" className="text-xs sm:text-sm">Tools</TabsTrigger>
           </TabsList>
@@ -96,35 +96,8 @@ export function Skills() {
             </Card>
           </TabsContent>
           
-          <TabsContent value="backend">
-            <Card>
-              <CardHeader>
-                <CardTitle>Backend Development & System Programming</CardTitle>
-                <CardDescription>
-                  Server-side programming, API development, scripting, and system administration expertise
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {skillCategories.backend.map((skill) => (
-                    <Badge key={skill} variant="secondary" className="hover:bg-primary/10 transition-colors" itemProp="knowsAbout">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-                <div className="mt-6 p-4 bg-muted/30 rounded-lg">
-                  <h4 className="font-semibold mb-2">Key Backend Projects:</h4>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• <strong>Nanite Linux Distribution</strong> - Debian-based AI OS with automated builds</li>
-                    <li>• <strong>API performance optimization</strong> - Reduced response time from 3s to 350ms</li>
-                    <li>• <strong>Smart contract optimization</strong> - 20% reduction in gas fees</li>
-                    <li>• <strong>Microservices architecture</strong> - Scalable backend systems design</li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
           
+
           <TabsContent value="backend">
             <Card>
               <CardHeader>
@@ -286,7 +259,7 @@ export function Skills() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
                 <div className="space-y-2" itemProp="hasOccupation" itemScope itemType="https://schema.org/Occupation">
                   <h4 className="font-semibold" itemProp="name">Focus Areas</h4>
-                  <p className="text-muted-foreground" itemProp="skills">Full-Stack Development, Product Engineering, Rapid Prototyping</p>
+                  <p className="text-muted-foreground" itemProp="skills">Cloud Architecture, DevSecOps, Infrastructure Automation</p>
                 </div>
                 <div className="space-y-2">
                   <h4 className="font-semibold">Experience Level</h4>

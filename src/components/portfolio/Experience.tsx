@@ -4,6 +4,20 @@ import { CalendarIcon, BuildingIcon, GraduationCapIcon, MapPinIcon, TrophyIcon }
 
 const workExperience = [
   {
+    company: "OneTure Technology",
+    position: "Cloud / DevOps Engineer",
+    period: "November 2025 – Present",
+    location: "Remote",
+    description: "Working as a Cloud / DevOps Engineer focusing on AWS infrastructure and DevSecOps practices to ensure secure and scalable cloud deployments.",
+    achievements: [
+      "Managing and optimizing AWS cloud infrastructure for high availability and scalability",
+      "Implementing DevSecOps pipelines to integrate security into the CI/CD workflow",
+      "Automating infrastructure provisioning and deployment processes using Infrastructure as Code (IaC)"
+    ],
+    technologies: ["AWS", "DevSecOps", "CI/CD", "Terraform", "Docker", "Kubernetes", "Security"],
+    type: "work"
+  },
+  {
     company: "Trellin (Stealth AI Startup, Sweden)",
     position: "Founding Engineer (Contract)",
     period: "June 2025 – August 2025",

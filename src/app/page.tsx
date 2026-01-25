@@ -26,18 +26,18 @@ export default function Home() {
       "@type": "ImageObject",
       "url": "https://yashbhangale.site/yash-bhangale.webm",
       "contentUrl": "https://yashbhangale.site/yash-bhangale.mp4",
-      "caption": "Yash Bhangale - Software Engineer and Product Builder"
+      "caption": "Yash Bhangale - Cloud / DevOps Engineer"
     },
-    "jobTitle": ["Software Engineer", "Full-Stack Developer", "Product Builder"],
-    "description": "Passionate Software Engineer and Product Builder specializing in full-stack development, rapid prototyping, and scalable applications. Mumbai Hackathon winner with 1+ years of hands-on experience building end-to-end solutions.",
+    "jobTitle": ["Cloud Engineer", "DevOps Engineer", "Software Engineer"],
+    "description": "Passionate Cloud / DevOps Engineer specializing in AWS infrastructure, DevSecOps pipelines, and automation. Mumbai Hackathon winner with 1+ years of hands-on experience building secure and scalable solutions.",
     "worksFor": {
       "@type": "Organization",
-      "name": "Freelance",
-      "description": "Available for hire as Software Engineer and Product Builder"
+      "name": "OneTure Technology",
+      "description": "Cloud / DevOps Engineer"
     },
     "hasOccupation": {
       "@type": "Occupation",
-      "name": "Software Engineer",
+      "name": "Cloud / DevOps Engineer",
       "occupationLocation": {
         "@type": "Place",
         "name": "Remote",
@@ -48,31 +48,24 @@ export default function Home() {
         }
       },
       "skills": [
-        "Full-Stack Development",
-        "Product Engineering",
-        "Rapid Prototyping",
-        "React",
-        "Node.js",
-        "Python",
-        "TypeScript",
-        "Next.js",
-        "AWS",
-        "Azure",
+        "AWS Cloud",
+        "DevSecOps",
+        "Infrastructure as Code",
+        "Terraform",
         "Docker",
         "Kubernetes",
         "CI/CD Pipelines",
-        "API Development",
-        "Database Design",
-        "System Architecture",
-        "Startup Experience",
-        "MVP Development"
+        "Cloud Architecture",
+        "System Administration",
+        "Python",
+        "Bash Scripting"
       ],
       "responsibilities": [
-        "Full-stack application development and deployment",
-        "Product architecture and system design",
-        "Rapid prototyping and MVP development",
-        "API development and integration",
-        "Database design and optimization"
+        "Cloud infrastructure management and optimization",
+        "DevSecOps pipeline implementation",
+        "Infrastructure automation using IaC",
+        "Container orchestration and management",
+        "Security compliance and monitoring"
       ]
     },
     "knowsAbout": [
@@ -141,8 +134,8 @@ export default function Home() {
     "@type": "WebSite",
     "@id": "https://yashbhangale.site/#website",
     "url": "https://yashbhangale.site",
-    "name": "Hire Yash Bhangale - Software Engineer & Product Builder",
-    "description": "Professional portfolio of Yash Bhangale, passionate Software Engineer and Product Builder available for hire. Specializing in full-stack development, rapid prototyping, and scalable applications.",
+    "name": "Hire Yash Bhangale - Cloud / DevOps Engineer",
+    "description": "Professional portfolio of Yash Bhangale, passionate Cloud / DevOps Engineer available for hire. Specializing in AWS, DevSecOps, and Infrastructure Automation.",
     "publisher": {
       "@id": "https://yashbhangale.site/#person"
     },

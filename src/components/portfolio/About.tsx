@@ -5,8 +5,8 @@ import { Code, Lightbulb, Heart, Zap, Coffee, Award, GraduationCap, MapPin, Glob
 const highlights = [
   {
     icon: Code,
-    title: "Full-Stack Builder",
-    description: "Building end-to-end applications from frontend to backend with modern technologies"
+    title: "Cloud / DevOps Engineer",
+    description: "Designing and managing scalable cloud infrastructure and secure CI/CD pipelines"
   },
   {
     icon: Lightbulb,
@@ -15,8 +15,8 @@ const highlights = [
   },
   {
     icon: Globe,
-    title: "Startup Enthusiast",
-    description: "Passionate about building MVPs, rapid prototyping, and scaling early-stage products"
+    title: "Cloud Architect",
+    description: "Architecting resilient and high-availability cloud solutions on AWS and Azure"
   },
   {
     icon: Zap,
@@ -25,7 +25,7 @@ const highlights = [
   }
 ];
 
-const interests = ["Full-Stack Development 🚀", "Product Building 🏗️", "Startups 💡", "Open Source 🌟", "Hackathons 🏆", "Problem Solving 🧠"];
+const interests = ["Cloud Computing ☁️", "DevSecOps 🔒", "Infrastructure as Code 🏗️", "Open Source 🌟", "Hackathons 🏆", "Problem Solving 🧠"];
 
 export function About() {
   return (
@@ -74,9 +74,9 @@ export function About() {
             itemProp="description"
           >
             A passionate{" "}
-            <span className="text-primary font-semibold" itemProp="jobTitle">Software Engineer & Builder</span> who loves creating{" "}
-            <span className="text-blue-600 font-semibold">end-to-end products and solutions</span>. I specialize in turning ideas into reality through{" "}
-            <span className="text-primary font-semibold">full-stack development, rapid prototyping, and scalable applications</span> that make a real impact.
+            <span className="text-primary font-semibold" itemProp="jobTitle">Cloud / DevOps Engineer</span> who loves building{" "}
+            <span className="text-blue-600 font-semibold">secure and scalable infrastructure</span>. I specialize in automating workflows and optimizing cloud environments through{" "}
+            <span className="text-primary font-semibold">DevSecOps practices, Infrastructure as Code, and Cloud Architecture</span>.
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export function About() {
                 <div>
                   <CardTitle className="text-2xl">My Engineering Journey</CardTitle>
                   <CardDescription className="text-base">
-                    From AI Studies → Full-Stack Development → Product Building
+                    From AI Studies → Full-Stack Development → Cloud / DevOps Engineering
                   </CardDescription>
                 </div>
               </div>
@@ -99,14 +99,14 @@ export function About() {
               <div className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
                   Currently pursuing <span itemProp="alumniOf">B.Tech in Artificial Intelligence and Data Science at Dattameghe College of Engineering</span> 
-                  with a CGPA of 8.2. My journey evolved from AI fundamentals to full-stack development, focusing on 
-                  building complete products and solving real-world problems through technology.
+                  with a CGPA of 8.2. My journey evolved from AI fundamentals to full-stack development, and now to 
+                  Cloud and DevOps engineering, focusing on building robust infrastructure.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Today, I combine software engineering principles with product thinking to deliver 
-                  end-to-end solutions. With <span itemProp="experienceLevel">1+ years of hands-on experience</span> and multiple hackathon victories including 
+                  Today, I combine software engineering principles with cloud architecture to deliver 
+                  scalable solutions. With <span itemProp="experienceLevel">1+ years of hands-on experience</span> and multiple hackathon victories including 
                   <span itemProp="award">Mumbai Hacks (1st place)</span> and <span itemProp="award">Smart India Hackathon (Runner-up)</span>, 
-                  I&apos;m passionate about building products that make a difference and scaling them from idea to market.
+                  I&apos;m passionate about automating and securing the software delivery lifecycle.
                 </p>
               </div>
               
