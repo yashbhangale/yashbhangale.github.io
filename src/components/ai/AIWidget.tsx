@@ -16,7 +16,7 @@ import {
   XIcon,
   MinusIcon
 } from 'lucide-react'
-import { GoogleGenAI } from '@google/genai'
+// Use server-side proxy at `/api/genai` instead of importing Gemini on client
 
 // Function to parse markdown links and convert them to JSX
 const parseMessageContent = (content: string) => {
@@ -223,24 +223,24 @@ RULES: Keep responses short, provide links when relevant, suggest contacting for
     setIsSending(true)
 
     try {
-      const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY
-      console.log('Widget API Key available:', !!apiKey, 'Length:', apiKey?.length || 0)
-      
-      if (!apiKey) {
-        throw new Error('No API key found')
+      const payload = {
+        question: userMessage.content,
+        context: YASH_CONTEXT
       }
 
-      const ai = new GoogleGenAI({ 
-        apiKey: apiKey
+      const res = await fetch('/api/genai', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       })
 
-      const response = await ai.models.generateContent({
-        model: "gemini-2.0-flash",
-        contents: `${YASH_CONTEXT}\n\nUser question: "${userMessage.content}"\n\nRespond in 1-2 sentences maximum. Be very brief and direct. Widget format requires short answers.`
-      })
+      if (!res.ok) {
+        throw new Error('GenAI proxy request failed')
+      }
 
+      const data = await res.json()
       const aiMessageId = (Date.now() + 1).toString()
-      const aiContent = response.text || "I'm sorry, I couldn't process that request. Please try asking something else!"
+      const aiContent = data?.text || "I'm sorry, I couldn't process that request. Please try asking something else!"
       
       const aiMessage: Message = {
         id: aiMessageId,

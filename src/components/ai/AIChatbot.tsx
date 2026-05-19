@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { SendIcon, BotIcon, UserIcon, LoaderIcon, SparklesIcon } from 'lucide-react'
-import { GoogleGenAI } from '@google/genai'
+// Server-side proxy will handle Gemini API calls
 
 // Function to parse markdown links and convert them to JSX
 const parseMessageContent = (content: string) => {
@@ -188,24 +188,26 @@ RESPONSE RULES:
     setIsLoading(true)
 
     try {
-      const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY
-      console.log('API Key available:', !!apiKey, 'Length:', apiKey?.length || 0)
-      
-      if (!apiKey) {
-        throw new Error('No API key found')
+      // Send user's question to the server-side proxy route which uses the
+      // server-only `GEMINI_API_KEY`. This keeps secrets off the client.
+      const payload = {
+        question: userMessage.content,
+        context: YASH_CONTEXT
       }
 
-      const ai = new GoogleGenAI({ 
-        apiKey: apiKey
+      const res = await fetch('/api/genai', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       })
 
-      const response = await ai.models.generateContent({
-        model: "gemini-2.0-flash",
-        contents: `${YASH_CONTEXT}\n\nUser question: "${userMessage.content}"\n\nRespond in 2-3 sentences maximum. Be direct and concise. Include relevant links when asked. Don't repeat information unless specifically requested.`
-      })
+      if (!res.ok) {
+        throw new Error('GenAI proxy request failed')
+      }
 
+      const data = await res.json()
       const aiMessageId = (Date.now() + 1).toString()
-      const aiContent = response.text || "I'm sorry, I couldn't process that request. Please try asking something else about Yash!"
+      const aiContent = data?.text || "I'm sorry, I couldn't process that request. Please try asking something else about Yash!"
       
       // Add empty message first, then type it
       const aiMessage: Message = {

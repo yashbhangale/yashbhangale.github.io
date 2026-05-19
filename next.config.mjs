@@ -1,20 +1,17 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  // Configuration optimized for deployment and SEO
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   trailingSlash: false,
+
   images: {
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
-  
-  // SEO and Performance optimizations
+
   compress: true,
   poweredByHeader: false,
 
-  // Custom headers for SEO and security
   async headers() {
     return [
       {
@@ -97,7 +94,6 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // Redirects for SEO optimization
   async redirects() {
     return [
       {
@@ -113,7 +109,6 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // Experimental features for better performance
   experimental: {
     optimizeCss: true,
     optimizeServerReact: true,
