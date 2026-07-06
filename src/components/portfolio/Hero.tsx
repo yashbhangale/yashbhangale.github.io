@@ -1,9 +1,10 @@
-"use client";
+  "use client";
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { Mail, Code, FileText } from "lucide-react";
+import { HomelabShowcase } from "@/components/portfolio/HomelabShowcase";
 
 export function Hero() {
 
@@ -36,10 +37,9 @@ export function Hero() {
 
           {/* Code block intro */}
           <div className="space-y-6">
-            {/* Role Badge */}
             <Badge variant="outline" className="px-4 py-2 text-sm">
               <Code className="w-4 h-4 mr-2" />
-              <span itemProp="jobTitle">Cloud / DevOps Engineer</span>
+              <span itemProp="jobTitle">Software Engineer & Product Builder</span>
             </Badge>
 
             <div className="space-y-8">
@@ -64,130 +64,17 @@ export function Hero() {
                   className="text-xl sm:text-2xl text-muted-foreground leading-relaxed"
                   itemProp="description"
                 >
-                  I architect scalable cloud infrastructure and secure DevOps pipelines{" "}
+                  I build end-to-end products and scalable applications{" "}
                   <span className="text-primary font-semibold">with expertise in</span>{" "}
-                  <span className="text-blue-200 font-semibold">AWS, DevSecOps,</span> and{" "}
-                  <span className="text-blue-200 font-semibold">Cloud Automation.</span>
+                  <span className="text-blue-200 font-semibold">full-stack development, rapid prototyping,</span> and{" "}
+                  <span className="text-blue-200 font-semibold">product engineering.</span>
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Code snippet style showcase */}
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-card border rounded-lg overflow-hidden shadow-lg">
-              <div className="bg-muted/50 px-4 py-2 border-b flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="flex gap-1">
-                    <div className="w-3 h-3 rounded-full bg-red-400/60" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-400/60" />
-                    <div className="w-3 h-3 rounded-full bg-green-400/60" />
-                  </div>
-                  <span className="text-sm text-muted-foreground font-mono ml-2">software-engineer.js</span>
-                </div>
-                <Badge variant="secondary" className="text-xs">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2" />
-                  Available for hire
-                </Badge>
-              </div>
-
-              <div className="p-6 font-mono text-sm text-left space-y-3">
-                <div className="flex">
-                  <span className="text-muted-foreground mr-4 w-6">1</span>
-                  <span className="text-blue-500">const</span>
-                  <span className="text-white ml-2">cloudDevOpsEngineer</span>
-                  <span className="text-muted-foreground ml-2">=</span>
-                  <span className="text-yellow-500 ml-2">{"{"}</span>
-                </div>
-
-                <div className="flex">
-                  <span className="text-muted-foreground mr-4 w-6">2</span>
-                  <span className="ml-4 text-green-400">name</span>
-                  <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">&apos;Yash Bhangale&apos;</span>
-                  <span className="text-muted-foreground">,</span>
-                </div>
-
-                <div className="flex">
-                  <span className="text-muted-foreground mr-4 w-6">3</span>
-                  <span className="ml-4 text-green-400">role</span>
-                  <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">&apos;Cloud / DevOps Engineer&apos;</span>
-                  <span className="text-muted-foreground">,</span>
-                </div>
-
-                <div className="flex">
-                  <span className="text-muted-foreground mr-4 w-6">4</span>
-                  <span className="ml-4 text-green-400">specialization</span>
-                  <span className="text-muted-foreground">:</span>
-                  <span className="text-yellow-500 ml-2">[
-                    &apos;AWS Cloud&apos;,
-                    &apos;DevSecOps&apos;,
-                    &apos;Infrastructure as Code&apos;,
-                    &apos;CI/CD Automation&apos;,
-                    &apos;Kubernetes&apos;,
-                    &apos;Docker&apos;,
-                    &apos;Terraform&apos;,
-                    &apos;System Architecture&apos;
-                    ]</span>
-                  <span className="text-muted-foreground">,</span>
-                </div>
-
-                <div className="flex">
-                  <span className="text-muted-foreground mr-4 w-6">5</span>
-                  <span className="ml-4 text-green-400">cloudSkills</span>
-                  <span className="text-muted-foreground">:</span>
-                  <span className="text-yellow-500 ml-2">[
-                    &apos;AWS&apos;,
-                    &apos;Azure&apos;,
-                    &apos;Linux&apos;,
-                    &apos;Bash/Python&apos;,
-                    &apos;Monitoring&apos;,
-                    &apos;Security&apos;
-                    ]</span>
-                  <span className="text-muted-foreground">,</span>
-                </div>
-
-                <div className="flex">
-                  <span className="text-muted-foreground mr-4 w-6">6</span>
-                  <span className="ml-4 text-green-400">experience</span>
-                  <span className="text-muted-foreground">:</span>
-                  <span className="text-blue-400 ml-2">&apos;1+ years&apos;</span>
-                  <span className="text-muted-foreground">,</span>
-                  <span className="text-gray-500 ml-2">{/* Cloud & DevOps Engineering */}</span>
-                </div>
-
-                <div className="flex">
-                  <span className="text-muted-foreground mr-4 w-6">7</span>
-                  <span className="ml-4 text-green-400">currentFocus</span>
-                  <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">&apos;DevSecOps & AWS Architecture&apos;</span>
-                  <span className="text-muted-foreground">,</span>
-                </div>
-
-                <div className="flex">
-                  <span className="text-muted-foreground mr-4 w-6">8</span>
-                  <span className="ml-4 text-green-400">availability</span>
-                  <span className="text-muted-foreground">:</span>
-                  <span className="text-orange-400 ml-2">&apos;Open for remote opportunities&apos;</span>
-                </div>
-
-                <div className="flex">
-                  <span className="text-muted-foreground mr-4 w-6">9</span>
-                  <span className="text-yellow-500">{"}"}</span>
-                </div>
-
-                <div className="pt-2 border-t border-border/50">
-                  <div className="flex items-center">
-                    <span className="text-muted-foreground mr-4 w-6">10</span>
-                    <span className="text-blue-500">export default</span>
-                    <span className="text-white ml-2">cloudDevOpsEngineer</span>
-                    <span className="bg-white/20 w-2 h-5 ml-1 animate-pulse" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Interactive homelab architecture showcase */}
+          <HomelabShowcase />
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 max-w-md mx-auto">
