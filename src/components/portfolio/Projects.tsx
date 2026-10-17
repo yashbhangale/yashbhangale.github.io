@@ -7,6 +7,24 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "Enterprise AWS Landing Zone",
+    description: "Designed and implemented an end-to-end AWS landing zone for one of India’s largest supermarket chains. Built a secure multi-account cloud foundation spanning security, centralized logging and configuration, backups, shared infrastructure, and isolated Dev, UAT, and Production workloads, with centralized cost and billing management.",
+    technologies: ["AWS", "Terraform", "AWS Organizations", "Control Tower", "IAM Identity Center", "SCPs", "CloudTrail", "AWS Config", "Security Hub", "GuardDuty", "AWS Backup", "Transit Gateway", "Cost Explorer", "AWS Budgets"],
+    liveUrl: "#",
+    githubUrl: "#",
+    image: "/imgs/aws-landing-zone-architecture.png",
+    architecture: true,
+    status: "Delivered",
+    stats: { stars: "Multi-Account", users: "Dev / UAT / Prod", growth: "Terraform" },
+    category: "Cloud Infrastructure",
+    achievements: [
+      "Established dedicated security, log archive / CloudTrail, configuration, backup, and workload accounts with organizational guardrails",
+      "Provisioned isolated Dev, UAT, and Production environments using Terraform for consistent, repeatable infrastructure",
+      "Applied security best practices through least-privilege access, centralized audit trails, configuration monitoring, and threat detection",
+      "Implemented backup and disaster recovery foundations alongside centralized billing, budgets, tagging, and cost visibility"
+    ]
+  },
+  {
     title: "Nanite - Linux Distribution for AI/ML Engineers",
     description: "A Debian-based AI OS optimized for AI/ML workflows with integrated LLMs (LLaMA 3, Mistral), MCP agents, and n8n for AI-driven automation. Features cloud-ready VM templates and automated CI/CD builds.",
     technologies: ["Linux Kernel", "Debian", "Bash", "Python", "Docker", "Azure", "Terraform", "KVM", "GitHub Actions"],
@@ -96,6 +114,7 @@ const projects = [
 const getStatusColor = (status: string) => {
   switch (status) {
     case "Featured": return "bg-gradient-to-r from-yellow-500 to-orange-500";
+    case "Delivered": return "bg-gradient-to-r from-orange-500 to-amber-500";
     case "Production": return "bg-gradient-to-r from-green-500 to-emerald-500";
     case "Sold": return "bg-gradient-to-r from-blue-500 to-pink-500";
     case "Open Source": return "bg-gradient-to-r from-blue-500 to-cyan-500";
@@ -106,6 +125,7 @@ const getStatusColor = (status: string) => {
 const getStatusIcon = (status: string) => {
   switch (status) {
     case "Featured": return Award;
+    case "Delivered": return Shield;
     case "Production": return Shield;
     case "Sold": return TrendingUp;
     case "Open Source": return Code2;
@@ -133,6 +153,7 @@ export function Projects() {
           </h2>
           <p className="mx-auto max-w-[800px] text-xl text-muted-foreground leading-relaxed">
             Diverse solutions spanning{" "}
+            <span className="text-primary font-semibold">cloud infrastructure</span>,{" "}
             <span className="text-primary font-semibold">full-stack applications</span>,{" "}
             <span className="text-blue-600 font-semibold">product development</span>, and{" "}
             <span className="text-primary font-semibold">startup MVPs</span>
@@ -142,6 +163,7 @@ export function Projects() {
         <div className="grid gap-8 lg:grid-cols-2 px-8">
           {projects.map((project, index) => {
             const StatusIcon = getStatusIcon(project.status);
+            const isArchitecture = "architecture" in project && project.architecture;
             return (
               <Card 
                 key={index} 
@@ -150,7 +172,21 @@ export function Projects() {
                 itemType="https://schema.org/CreativeWork"
               >
                 {/* Project Image */}
-                <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-muted/10 to-muted/30">
+                <div className={`relative overflow-hidden ${isArchitecture ? "bg-white" : "aspect-video bg-gradient-to-br from-muted/10 to-muted/30"}`}>
+                  {isArchitecture ? (
+                    <a href={project.image} target="_blank" rel="noopener noreferrer" aria-label="Open AWS landing zone architecture at full size">
+                      <Image
+                        src={project.image}
+                        alt="AWS landing zone architecture showing account isolation, security guardrails, centralized logging, networking, backup, and Dev, UAT, and Production workloads"
+                        width={1280}
+                        height={853}
+                        className="w-full h-auto"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        itemProp="image"
+                      />
+                    </a>
+                  ) : (
+                    <>
                   <Image
                     src={project.image}
                     alt={`${project.title} - ${project.description.slice(0, 50)}...`}
@@ -192,9 +228,18 @@ export function Projects() {
                       </div>
                     </div>
                   </div>
+                    </>
+                  )}
                 </div>
                 
                 <CardHeader className="space-y-4">
+                  {isArchitecture && (
+                    <div className="flex flex-wrap gap-2">
+                      <Badge className={`${getStatusColor(project.status)} text-white border-0`}>Delivered</Badge>
+                      <Badge variant="secondary">{project.category}</Badge>
+                      <Badge variant="outline">Dev / UAT / Prod</Badge>
+                    </div>
+                  )}
                   <div className="space-y-2">
                     <CardTitle className="text-xl group-hover:text-primary transition-colors" itemProp="name">
                       {project.title}
@@ -213,7 +258,7 @@ export function Projects() {
                       Key Achievements:
                     </h4>
                     <ul className="space-y-1" itemProp="achievements">
-                      {project.achievements.slice(0, 2).map((achievement, idx) => (
+                      {project.achievements.slice(0, isArchitecture ? project.achievements.length : 2).map((achievement, idx) => (
                         <li key={idx} className="text-xs text-muted-foreground flex items-start gap-2">
                           <span className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></span>
                           {achievement}
@@ -280,7 +325,15 @@ export function Projects() {
                         </a>
                       </Button>
                     )}
-                    {project.liveUrl === "#" && project.githubUrl === "#" && (
+                    {isArchitecture && (
+                      <Button variant="outline" className="flex-1 border-2" size="sm" asChild>
+                        <a href={project.image} target="_blank" rel="noopener noreferrer">
+                          <ExternalLinkIcon className="h-4 w-4" />
+                          View Architecture
+                        </a>
+                      </Button>
+                    )}
+                    {!isArchitecture && project.liveUrl === "#" && project.githubUrl === "#" && (
                       <Button 
                         variant="outline" 
                         className="flex-1 border-2" 
