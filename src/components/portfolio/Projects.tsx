@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLinkIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Star, Zap, Users, TrendingUp, Award, Shield, Code2 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -14,6 +15,8 @@ const projects = [
     githubUrl: "#",
     image: "/imgs/aws-landing-zone-architecture.png",
     architecture: true,
+    architectureAlt: "AWS landing zone architecture showing account isolation, security guardrails, centralized logging, networking, backup, and Dev, UAT, and Production workloads",
+    architectureTag: "Dev / UAT / Prod",
     status: "Delivered",
     stats: { stars: "Multi-Account", users: "Dev / UAT / Prod", growth: "Terraform" },
     category: "Cloud Infrastructure",
@@ -22,6 +25,101 @@ const projects = [
       "Provisioned isolated Dev, UAT, and Production environments using Terraform for consistent, repeatable infrastructure",
       "Applied security best practices through least-privilege access, centralized audit trails, configuration monitoring, and threat detection",
       "Implemented backup and disaster recovery foundations alongside centralized billing, budgets, tagging, and cost visibility"
+    ]
+  },
+  {
+    title: "OmniRoute - Homelab AI Gateway Stack",
+    description: "Built a personal AI gateway that connects coding assistants, chat interfaces, and agents to multiple free and low-cost model providers through one OpenAI-compatible endpoint. OmniRoute handles round-robin routing, provider abstraction, and quota-aware model switching, while Tailscale provides private remote access to the stack.",
+    technologies: ["OmniRoute", "LLM Gateway", "OpenAI-Compatible API", "Tailscale", "OpenRouter", "AgentRouter", "Claude Code", "Open WebUI", "OpenClaw", "Round-Robin Routing", "Failover", "Quota Management"],
+    liveUrl: "#",
+    githubUrl: "#",
+    image: "/imgs/ai-gateway-stack-architecture.png",
+    architecture: true,
+    architectureAlt: "Homelab AI gateway architecture: coding tools connect over Tailscale to OmniRoute for round-robin routing, model health and quota management across AgentRouter, OpenRouter, and other providers, with Open WebUI and OpenClaw sharing the backend",
+    architectureTag: "One API · Multiple Models",
+    status: "Homelab",
+    stats: { stars: "Unified API", users: "Multi-Provider", growth: "Smart Routing" },
+    category: "AI Infrastructure",
+    achievements: [
+      "Connected Claude Code through a custom endpoint and integrated Open WebUI and OpenClaw with the same OmniRoute backend",
+      "Distributed requests across providers and models with round-robin routing, failover, and model health and availability tracking",
+      "Managed rate limits and token quotas with automatic switching to available models as provider allowances are exhausted or reset",
+      "Centralized provider keys and usage visibility behind one gateway, with encrypted remote access over a private Tailscale network"
+    ]
+  },
+  {
+    title: "Security Scanner - Generic DevSecOps Pipeline",
+    description: "Built a reusable, Docker-based Jenkins pipeline that turns a Git repository URL into a consolidated security report. A custom Project Profiler detects languages, frameworks, and infrastructure, selects relevant scanners, and runs scans in parallel without project-specific pipeline configuration.",
+    technologies: ["Jenkins", "Docker", "Trivy", "Gitleaks", "Semgrep", "SonarQube", "Syft", "Grype", "Checkov", "Hadolint", "kube-linter", "SARIF", "SBOM"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/yashbhangale/security-scanner",
+    image: "/imgs/devsecops-pipeline-architecture.png",
+    imageHeight: 702,
+    architecture: true,
+    architectureAlt: "Security Scanner architecture: a repository URL flows through Jenkins and the Project Profiler into nine conditional security tools, then a result aggregator produces HTML, JSON, SARIF, and SBOM reports for Jenkins, email, and Slack",
+    architectureTag: "9 Tools · One Pipeline",
+    pipelineScreenshot: {
+      src: "/imgs/devsecops-jenkins-stage-view.png",
+      alt: "Jenkins Security Scanner stage view showing project profiling, conditional scanning stages, report generation, archiving, and notifications across pipeline runs",
+      width: 1280,
+      height: 641,
+      caption: "Jenkins pipeline runs — profiling, security scans, report generation, and delivery"
+    },
+    status: "Open Source",
+    stats: { stars: "9 Tools", users: "Auto Profiling", growth: "Unified Reports" },
+    category: "DevSecOps",
+    achievements: [
+      "Built a Project Profiler that maps Dockerfiles to Hadolint, Terraform to Checkov, and Kubernetes manifests to kube-linter",
+      "Combined Trivy and Gitleaks with conditional Semgrep / SonarQube analysis and Syft / Grype dependency scanning and SBOM generation",
+      "Orchestrated relevant scans in parallel and aggregated findings into a unified report instead of running every tool on every repository",
+      "Generated HTML dashboards, JSON, SARIF, and SBOM outputs, with Jenkins artifacts and email / Slack delivery",
+      "Containerized the scanner stack with Docker for repeatable setup across projects"
+    ]
+  },
+  {
+    title: "Kubernetes Homelab - A Laptop-Sized Datacenter",
+    description: "Repurposed an old gaming laptop into a self-hosted platform running a single-node K3s cluster on Ubuntu. Hosts personal cloud storage, media, local AI, home automation, and document services, with dedicated domains through Cloudflare Tunnel and private administration over Tailscale. A hands-on playground for DevOps, networking, and Kubernetes without rented cloud compute.",
+    technologies: ["Linux", "Ubuntu", "Kubernetes", "K3s", "Cloudflare Tunnel", "Tailscale", "ArgoCD", "GitOps", "Sealed Secrets", "Prometheus", "Grafana", "Nextcloud", "Jellyfin", "Open WebUI", "Home Assistant", "Paperless-ngx", "Kavita", "Kasm Workspaces", "Filebrowser"],
+    liveUrl: "#",
+    githubUrl: "https://lnkd.in/d5bJc-BE",
+    detailsUrl: "/homelab",
+    image: "/imgs/kubernetes-homelab-architecture.png",
+    imageHeight: 698,
+    architecture: true,
+    architectureAlt: "Single-node K3s homelab on an Ubuntu gaming laptop, with Cloudflare Tunnel ingress, Tailscale administrator access, ArgoCD GitOps, Sealed Secrets, application namespaces, and HostPath / PVC storage",
+    architectureTag: "Single Node · Self-Hosted",
+    status: "Homelab",
+    stats: { stars: "K3s", users: "Self-Hosted", growth: "GitOps" },
+    category: "Platform Engineering",
+    achievements: [
+      "Hosted Nextcloud, Jellyfin, Open WebUI with local LLMs, Home Assistant, Paperless-ngx, Kavita, Kasm Workspaces, and Filebrowser on one Kubernetes machine",
+      "Exposed services through individual domains using Cloudflare Tunnel while keeping administrative access behind Tailscale",
+      "Used ArgoCD to reconcile Kubernetes manifests from Git and Sealed Secrets to manage encrypted credentials",
+      "Configured HostPath and persistent volume claims for shared storage, with read-only or read-write mounts suited to each application",
+      "Added Prometheus and Grafana observability to support troubleshooting and experimentation across the self-hosted stack"
+    ]
+  },
+  {
+    title: "Karpenter - Workload-Driven Autoscaling for AI on EKS",
+    description: "Implemented Karpenter-based node autoscaling for bursty AI workloads on Amazon EKS. Provisions capacity when pods cannot be scheduled, selects instances to match workload resource requests, and consolidates underutilized nodes as demand drops. Combines runtime right-sizing and Spot capacity to reduce idle infrastructure spend.",
+    technologies: ["Amazon EKS", "Kubernetes", "Karpenter", "Amazon EC2", "Spot Instances", "Node Autoscaling", "Node Consolidation", "AI Infrastructure", "Cost Optimization"],
+    liveUrl: "#",
+    githubUrl: "#",
+    referenceUrl: "https://lnkd.in/dwzJ7sn5",
+    image: "/imgs/karpenter-autoscaling-architecture.png",
+    imageWidth: 800,
+    imageHeight: 358,
+    architecture: true,
+    architectureAlt: "Karpenter autoscaling flow showing pending and unschedulable pods, just-in-time node provisioning through the cloud provider API, and consolidation into optimized capacity based on pod resource requirements",
+    architectureTag: "On-Demand Capacity · Less Idle Spend",
+    status: "Featured",
+    stats: { stars: "Autoscaling", users: "AI Workloads", growth: "Right-Sizing" },
+    category: "Kubernetes Infrastructure",
+    achievements: [
+      "Provisioned nodes in response to unschedulable pods rather than keeping fixed node-group capacity running for intermittent AI jobs",
+      "Matched instance capacity to CPU, memory, and GPU requirements for training and inference workloads",
+      "Used Spot capacity where suitable to lower compute costs for interruption-tolerant workloads",
+      "Consolidated underutilized capacity and removed unneeded nodes as jobs completed or demand declined"
     ]
   },
   {
@@ -114,6 +212,7 @@ const projects = [
 const getStatusColor = (status: string) => {
   switch (status) {
     case "Featured": return "bg-gradient-to-r from-yellow-500 to-orange-500";
+    case "Homelab": return "bg-gradient-to-r from-violet-500 to-cyan-500";
     case "Delivered": return "bg-gradient-to-r from-orange-500 to-amber-500";
     case "Production": return "bg-gradient-to-r from-green-500 to-emerald-500";
     case "Sold": return "bg-gradient-to-r from-blue-500 to-pink-500";
@@ -125,6 +224,7 @@ const getStatusColor = (status: string) => {
 const getStatusIcon = (status: string) => {
   switch (status) {
     case "Featured": return Award;
+    case "Homelab": return Code2;
     case "Delivered": return Shield;
     case "Production": return Shield;
     case "Sold": return TrendingUp;
@@ -174,12 +274,12 @@ export function Projects() {
                 {/* Project Image */}
                 <div className={`relative overflow-hidden ${isArchitecture ? "bg-white" : "aspect-video bg-gradient-to-br from-muted/10 to-muted/30"}`}>
                   {isArchitecture ? (
-                    <a href={project.image} target="_blank" rel="noopener noreferrer" aria-label="Open AWS landing zone architecture at full size">
+                    <a href={project.image} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.title} architecture at full size`}>
                       <Image
                         src={project.image}
-                        alt="AWS landing zone architecture showing account isolation, security guardrails, centralized logging, networking, backup, and Dev, UAT, and Production workloads"
-                        width={1280}
-                        height={853}
+                        alt={project.architectureAlt}
+                        width={project.imageWidth ?? 1280}
+                        height={project.imageHeight ?? 853}
                         className="w-full h-auto"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                         itemProp="image"
@@ -235,9 +335,9 @@ export function Projects() {
                 <CardHeader className="space-y-4">
                   {isArchitecture && (
                     <div className="flex flex-wrap gap-2">
-                      <Badge className={`${getStatusColor(project.status)} text-white border-0`}>Delivered</Badge>
+                      <Badge className={`${getStatusColor(project.status)} text-white border-0`}>{project.status}</Badge>
                       <Badge variant="secondary">{project.category}</Badge>
-                      <Badge variant="outline">Dev / UAT / Prod</Badge>
+                      <Badge variant="outline">{project.architectureTag}</Badge>
                     </div>
                   )}
                   <div className="space-y-2">
@@ -267,6 +367,30 @@ export function Projects() {
                     </ul>
                   </div>
 
+                  {"pipelineScreenshot" in project && project.pipelineScreenshot && (
+                    <figure className="space-y-2">
+                      <a
+                        href={project.pipelineScreenshot.src}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open Jenkins Security Scanner stage view at full size"
+                        className="block overflow-hidden rounded-lg border focus-visible:outline-2 focus-visible:outline-ring"
+                      >
+                        <Image
+                          src={project.pipelineScreenshot.src}
+                          alt={project.pipelineScreenshot.alt}
+                          width={project.pipelineScreenshot.width}
+                          height={project.pipelineScreenshot.height}
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                          className="w-full h-auto"
+                        />
+                      </a>
+                      <figcaption className="text-xs text-muted-foreground">
+                        {project.pipelineScreenshot.caption}. Select image to view full size.
+                      </figcaption>
+                    </figure>
+                  )}
+
                   {/* Technologies */}
                   <div className="space-y-3">
                     <h4 className="font-semibold text-sm">Technologies:</h4>
@@ -284,6 +408,15 @@ export function Projects() {
                     </div>
                   </div>
                   
+                  {"detailsUrl" in project && project.detailsUrl && (
+                    <Button variant="outline" className="w-full border-2" size="sm" asChild>
+                      <Link href={project.detailsUrl}>
+                        <ExternalLinkIcon className="h-4 w-4" />
+                        Explore Homelab
+                      </Link>
+                    </Button>
+                  )}
+
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2">
                     {project.liveUrl !== "#" && (
@@ -325,9 +458,17 @@ export function Projects() {
                         </a>
                       </Button>
                     )}
+                    {"referenceUrl" in project && project.referenceUrl && (
+                      <Button variant="outline" className="flex-1 border-2" size="sm" asChild>
+                        <a href={project.referenceUrl} target="_blank" rel="noopener noreferrer" aria-label={`Read more about ${project.title}`}>
+                          <ExternalLinkIcon className="h-4 w-4" />
+                          Project Reference
+                        </a>
+                      </Button>
+                    )}
                     {isArchitecture && (
                       <Button variant="outline" className="flex-1 border-2" size="sm" asChild>
-                        <a href={project.image} target="_blank" rel="noopener noreferrer">
+                        <a href={project.image} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} architecture`}>
                           <ExternalLinkIcon className="h-4 w-4" />
                           View Architecture
                         </a>
