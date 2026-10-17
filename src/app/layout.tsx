@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Big_Shoulders, Public_Sans } from "next/font/google";
 import "./globals.css";
 import { ClientWrapper } from "@/components/ClientWrapper";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const publicSans = Public_Sans({ variable: "--font-public-sans", subsets: ["latin"], display: "swap" });
+const displayFont = Big_Shoulders({ variable: "--font-display", subsets: ["latin"], display: "swap", adjustFontFallback: false });
 
 export const metadata: Metadata = {
   title: {
@@ -153,11 +146,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://yashbhangale.site" />
+        <script dangerouslySetInnerHTML={{ __html: `try{document.documentElement.classList.toggle('dark',localStorage.getItem('portfolio-theme-v2')!=='light')}catch{}` }} />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#090b0d" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -183,7 +176,7 @@ export default function RootLayout({
         {/* Schema.org structured data will be added via JSON-LD in components */}
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${publicSans.variable} ${displayFont.variable} antialiased`}
       >
         <ClientWrapper>
           {children}

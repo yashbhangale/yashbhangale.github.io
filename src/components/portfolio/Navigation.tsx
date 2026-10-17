@@ -1,183 +1,62 @@
 "use client";
 
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { MoonIcon, SunIcon, MenuIcon } from "lucide-react";
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter, usePathname } from "next/navigation";
+import { useEffect, useState, useSyncExternalStore } from "react";
+import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+
+const resumeUrl = "https://drive.google.com/file/d/1n-1y_jhFgNIF7MCfV0ktf_QFfucBD5cX/view";
+const links = [
+  { label: "Work", href: "/projects" },
+  { label: "About", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Writing", href: "/blog" },
+  { label: "Ask AI", href: "/ask-ai" },
+];
+function subscribeTheme(callback: () => void) {
+  window.addEventListener("portfolio-theme", callback);
+  return () => window.removeEventListener("portfolio-theme", callback);
+}
+function themeSnapshot() { return document.documentElement.classList.contains("dark"); }
 
 export function Navigation() {
-  const [isDark, setIsDark] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
+  const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-
+  const isDark = useSyncExternalStore(subscribeTheme, themeSnapshot, () => true);
   useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains("dark");
-    setIsDark(isDarkMode);
+    try { document.documentElement.classList.toggle("dark", localStorage.getItem("portfolio-theme-v2") !== "light"); } catch { /* Use the default theme when storage is unavailable. */ }
+    window.dispatchEvent(new Event("portfolio-theme"));
   }, []);
-
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => { if (event.key === "Escape") setMenuOpen(false); };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, []);
   const toggleTheme = () => {
-    document.documentElement.classList.toggle("dark");
-    setIsDark(!isDark);
+    const dark = !document.documentElement.classList.contains("dark");
+    document.documentElement.classList.toggle("dark", dark);
+    try { localStorage.setItem("portfolio-theme-v2", dark ? "dark" : "light"); } catch { /* Theme still works for this visit. */ }
+    window.dispatchEvent(new Event("portfolio-theme"));
   };
-
-  const handleNavigation = (item: { id: string; label: string; href?: string; external?: boolean }) => {
-    if (item.href) {
-      if (item.external) {
-        // Open external links in new tab
-        window.open(item.href, '_blank', 'noopener,noreferrer');
-      } else {
-        router.push(item.href);
-      }
-    } else {
-      // If we're on a blog page or ask-ai page, navigate back to home with the section anchor
-      if (pathname.startsWith('/blog') || pathname.startsWith('/ask-ai')) {
-        router.push(`/#${item.id}`);
-      } else {
-        // If we're on the main page, scroll to the section
-        const element = document.getElementById(item.id);
-        element?.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-    setIsOpen(false); // Close mobile menu after navigation
-  };
-
-  const navItems = [
-    { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
-    { id: "projects", label: "Projects" },
-    { id: "experience", label: "Experience" },
-    { id: "blog", label: "Blog", href: "/blog" },
-    { id: "ask-ai", label: "Ask AI", href: "/ask-ai" },
-    { id: "notes", label: "Notes", href: "https://notes.yashbhangale.site", external: true },
-    { id: "resume", label: "Resume", href: "https://drive.google.com/file/d/1n-1y_jhFgNIF7MCfV0ktf_QFfucBD5cX/view", external: true },
-    { id: "contact", label: "Contact" },
-  ];
-
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <Link href="/" className="text-xl font-bold hover:text-primary transition-colors cursor-pointer">
-            Yash Bhangale
-          </Link>
+    <header className="site-header">
+      <nav className="site-width nav-layout" aria-label="Main navigation">
+        <Link className="wordmark" href="/" onClick={() => setMenuOpen(false)}>Yash Bhangale<span aria-hidden="true">.</span></Link>
+        <div className="nav-desktop">
+          {links.map(link => <Link key={link.href} href={link.href} aria-current={pathname === link.href ? "page" : undefined}>{link.label}</Link>)}
+          <a href={resumeUrl} target="_blank" rel="noopener noreferrer">Résumé <ArrowUpRight size={14} /></a>
         </div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:block">
-          <NavigationMenu>
-            <NavigationMenuList>
-              {navItems.map((item) => (
-                <NavigationMenuItem key={item.id}>
-                  <NavigationMenuLink
-                    className={`cursor-pointer px-4 py-2 text-sm font-medium transition-all duration-300 hover:text-primary ${
-                      item.id === 'resume' 
-                        ? 'text-blue-400 relative animate-pulse hover:animate-none bg-blue-400/10 rounded-lg border border-blue-400/30 hover:bg-blue-400/20 hover:border-blue-400/50 hover:scale-105 hover:shadow-lg hover:shadow-blue-400/25' 
-                        : ''
-                    }`}
-                    onClick={() => handleNavigation(item)}
-                  >
-                    {item.label}
-                    {item.id === 'resume' && (
-                      <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
-                      </span>
-                    )}
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+        <div className="nav-utilities">
+          <a className="nav-contact" href="mailto:yashbhangale9@gmail.com">Let’s talk <ArrowUpRight size={15} /></a>
+          <button className="icon-button" onClick={toggleTheme} aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}>{isDark ? <Sun size={18} /> : <Moon size={18} />}</button>
+          <button className="icon-button menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label={menuOpen ? "Close navigation" : "Open navigation"}>{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>
         </div>
-
-        {/* Desktop Theme Toggle */}
-        <div className="hidden md:block">
-          <Button variant="ghost" size="sm" onClick={toggleTheme}>
-            {isDark ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
-          </Button>
-        </div>
-
-        {/* Mobile Navigation */}
-        <div className="md:hidden flex items-center gap-2">
-          <Button variant="ghost" size="sm" onClick={toggleTheme}>
-            {isDark ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
-          </Button>
-          
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="sm">
-                <MenuIcon className="h-5 w-5" />
-                <span className="sr-only">Open menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] flex flex-col">
-              <SheetHeader className="flex-shrink-0">
-                <SheetTitle>Navigation</SheetTitle>
-              </SheetHeader>
-              <ScrollArea className="flex-1 -mx-6 px-6">
-                <div className="grid gap-4 py-6">
-                  {navItems.map((item) => (
-                    <Button
-                      key={item.id}
-                      variant="ghost"
-                      className={`justify-start h-12 text-lg font-medium transition-all duration-300 ${
-                        item.id === 'resume' 
-                          ? 'text-blue-400 bg-blue-400/10 border border-blue-400/30 hover:bg-blue-400/20 hover:border-blue-400/50 animate-pulse hover:animate-none relative' 
-                          : ''
-                      }`}
-                      onClick={() => handleNavigation(item)}
-                    >
-                      {item.label}
-                      {item.id === 'resume' && (
-                        <span className="absolute top-2 right-2 flex h-2 w-2">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                        </span>
-                      )}
-                    </Button>
-                  ))}
-                  <div className="border-t pt-4 mt-4">
-                    <p className="text-sm text-muted-foreground mb-4">Quick Actions</p>
-                    <div className="space-y-2">
-                      <Button
-                        variant="outline"
-                        className="w-full justify-start"
-                        onClick={() => handleNavigation({ id: "contact", label: "Contact" })}
-                      >
-                        Get in Touch
-                      </Button>
-                      <Button
-                        variant="outline"
-                        className="w-full justify-start"
-                        onClick={() => handleNavigation({ id: "projects", label: "Projects" })}
-                      >
-                        View Projects
-                      </Button>
-                      <Button
-                        variant="outline"
-                        className="w-full justify-start"
-                        onClick={() => handleNavigation({ id: "resume", label: "Resume", href: "https://drive.google.com/file/d/1n-1y_jhFgNIF7MCfV0ktf_QFfucBD5cX/view", external: true })}
-                      >
-                        My Resume
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </ScrollArea>
-            </SheetContent>
-          </Sheet>
-        </div>
-      </div>
-    </nav>
+        {menuOpen && <div id="mobile-navigation" className="mobile-navigation">
+          {[...links, { label: "Skills", href: "/#skills" }, { label: "Homelab", href: "/homelab" }, { label: "Contact", href: "/#contact" }].map(link => <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>{link.label}<ArrowUpRight size={16} /></Link>)}
+          <a href="https://notes.yashbhangale.site" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Notes <ArrowUpRight size={16} /></a>
+          <a href={resumeUrl} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Résumé <ArrowUpRight size={16} /></a>
+        </div>}
+      </nav>
+    </header>
   );
-} 
+}

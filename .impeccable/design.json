@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-17T08:43:43.398782+00:00",
+  "title": "Design System: Yash Bhangale",
+  "extensions": {
+    "colorMeta": {
+      "signal": {
+        "role": "primary",
+        "displayName": "Signal Amber"
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "Near Black"
+      },
+      "foreground": {
+        "role": "neutral",
+        "displayName": "Warm White"
+      },
+      "trace-pink": {
+        "role": "secondary",
+        "displayName": "Packet Pink"
+      },
+      "trace-teal": {
+        "role": "secondary",
+        "displayName": "Packet Teal"
+      },
+      "light-primary": {
+        "role": "primary",
+        "displayName": "Light-theme Amber Ink"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Condensed hero display",
+        "purpose": "Three-line uppercase Cloud / Code / Control; Big Shoulders successor family."
+      },
+      "headline": {
+        "displayName": "Section headline",
+        "purpose": "Large uppercase section hierarchy."
+      },
+      "title": {
+        "displayName": "Project title",
+        "purpose": "Selected-work rows; route-specific catalog sizing is documented in DESIGN.md."
+      },
+      "body": {
+        "displayName": "Reading text",
+        "purpose": "Public Sans explanations and technical context."
+      },
+      "label": {
+        "displayName": "Navigation and action",
+        "purpose": "Compact Public Sans interface text."
+      }
+    },
+    "shadows": [
+      {
+        "name": "flat-portfolio",
+        "value": "none",
+        "purpose": "Main content rows and dedicated AI chat."
+      },
+      {
+        "name": "utility-launcher",
+        "value": "0 4px 16px #00000014",
+        "purpose": "Optional retained floating AI launcher only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "intro-arrival",
+        "value": "650ms cubic-bezier(.16,1,.3,1); delays 0ms,70ms,140ms",
+        "purpose": "One-time 14px vertical/clip reveal; removed for reduced motion."
+      },
+      {
+        "name": "primary-action",
+        "value": "background 180ms, transform 180ms",
+        "purpose": "Amber hover fill and translateY(-2px)."
+      },
+      {
+        "name": "navigation-underline",
+        "value": "transform 180ms ease-out",
+        "purpose": "Left-origin underline on hover, focus, current route."
+      },
+      {
+        "name": "explorer-tab",
+        "value": "color 160ms, background 160ms",
+        "purpose": "Manual tab feedback; selection never auto-rotates."
+      },
+      {
+        "name": "packet-flow",
+        "value": "3.4s linear infinite; delays -1.1s and -2.2s; stroke-dashoffset -154",
+        "purpose": "Runs only when intersecting, document visible and not manually paused; reduced motion uses static undashed paths."
+      },
+      {
+        "name": "work-arrow",
+        "value": "200ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Translate(4px,-4px) on row hover or keyboard focus."
+      },
+      {
+        "name": "work-image",
+        "value": "350ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Scale(1.035) on hover."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation-duration:.01ms; animation-iteration-count:1; transition-duration:.01ms; scroll-behavior:auto",
+        "purpose": "Global CSS override; explorer loop and intro explicitly removed. Retained JS chat typing remains 30ms per character."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1050px"
+      },
+      {
+        "name": "mobile-navigation-and-ai-stack",
+        "value": "900px"
+      },
+      {
+        "name": "portfolio-stack",
+        "value": "800px"
+      },
+      {
+        "name": "floating-ai-visibility",
+        "value": "640px"
+      },
+      {
+        "name": "small-mobile",
+        "value": "540px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Amber hero action; fixed signal fill in either theme.",
+      "html": "<a class=\"ds-primary\" href=\"#projects\">Explore my work <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;gap:15px;background:var(--signal);color:var(--signal-ink);padding:13px 18px;border-radius:2px;font:650 13px var(--font-public-sans),sans-serif;text-decoration:none;transition:background 180ms,transform 180ms}.ds-primary:hover{background:#ffd34d;transform:translateY(-2px)}.ds-primary:focus-visible{outline:2px solid var(--ring);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Text action",
+      "kind": "button",
+      "refersTo": "text-action",
+      "description": "Inline route/source action with underline feedback.",
+      "html": "<a class=\"ds-text\" href=\"/ask-ai\">Ask my AI <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-text{display:inline-flex;align-items:center;gap:10px;color:var(--foreground);font:550 14px var(--font-public-sans),sans-serif;text-decoration:underline;text-underline-offset:5px;text-decoration-color:transparent;transition:text-decoration-color 180ms}.ds-text:hover{text-decoration-color:currentColor}.ds-text:focus-visible{outline:2px solid var(--ring);outline-offset:5px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Dark-first ruled header excerpt, including prominent Ask AI.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Example navigation\"><a class=\"ds-wordmark\" href=\"/\">Yash Bhangale.</a><a class=\"ds-navlink\" href=\"/projects\">Work</a><a class=\"ds-navlink ds-ai\" href=\"/ask-ai\" aria-current=\"page\">Ask AI</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:22px;min-height:78px;padding:0 18px;background:var(--background);color:var(--foreground);border-bottom:1px solid var(--border)}.ds-wordmark{font:800 28px var(--font-display),sans-serif;letter-spacing:-.015em;text-transform:uppercase;margin-right:auto;text-decoration:none;color:inherit}.ds-navlink{position:relative;font:13px var(--font-public-sans),sans-serif;color:inherit;text-decoration:none}.ds-ai{color:var(--primary)}.ds-navlink:after{content:\"\";position:absolute;height:1px;inset:auto 0 -8px;background:var(--signal);transform:scaleX(0);transform-origin:left;transition:transform 180ms ease-out}.ds-navlink:hover:after,.ds-navlink:focus-visible:after,.ds-navlink[aria-current]:after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:2px solid var(--ring);outline-offset:5px}"
+    },
+    {
+      "name": "Suggested question",
+      "kind": "chip",
+      "description": "Actual chat prompt styling; disabled while sending.",
+      "html": "<button class=\"ds-prompt\">Explain the AWS landing zone</button>",
+      "css": ".ds-prompt{font:11px var(--font-public-sans),sans-serif;text-align:left;color:var(--foreground);background:transparent;border:1px solid var(--border);padding:7px 9px;cursor:pointer;transition:background 160ms}.ds-prompt:hover:not(:disabled){background:var(--muted)}.ds-prompt:disabled{opacity:.5;cursor:wait}.ds-prompt:focus-visible{outline:2px solid var(--ring);outline-offset:5px}"
+    },
+    {
+      "name": "Chat question input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Retained compact input with explicit label and disabled/invalid states.",
+      "html": "<input class=\"ds-input\" aria-label=\"Your question about Yash\" placeholder=\"Ask me anything about Yash...\" />",
+      "css": ".ds-input{height:36px;width:100%;min-width:0;border:1px solid var(--border);border-radius:5px;background:transparent;color:var(--foreground);padding:4px 12px;font:14px var(--font-public-sans),sans-serif;transition:color 300ms,box-shadow 300ms}.ds-input::placeholder{color:var(--muted-foreground)}.ds-input:hover{border-color:var(--primary)}.ds-input:focus-visible{outline:2px solid var(--ring);outline-offset:5px;border-color:var(--ring);box-shadow:0 0 0 3px color-mix(in srgb,var(--ring) 50%,transparent)}.ds-input:disabled{opacity:.5;pointer-events:none}.ds-input[aria-invalid=\"true\"]{border-color:#b23a36}"
+    },
+    {
+      "name": "Architecture explorer",
+      "kind": "custom",
+      "refersTo": "explorer",
+      "description": "Visual excerpt only; shipping React component supplies manual selection, keyboard behavior and visibility-aware animation.",
+      "html": "<section class=\"ds-explorer\"><div class=\"ds-toolbar\">System explorer <span>Architecture overview</span></div><div class=\"ds-tabs\"><button class=\"ds-tab\" aria-pressed=\"true\">Cloud</button><button class=\"ds-tab\" aria-pressed=\"false\">Security</button><button class=\"ds-tab\" aria-pressed=\"false\">Autoscaling</button></div><div class=\"ds-map\"><div class=\"ds-node\">Organization<small>AWS control plane</small></div><svg viewBox=\"0 0 100 20\" aria-hidden=\"true\"><path class=\"ds-base\" d=\"M0 10H100\"/><path class=\"ds-flow\" d=\"M0 10H100\"/></svg><div class=\"ds-node\">Environments<small>Dev · UAT · Prod</small></div></div><p class=\"ds-readout\">One organization. Isolated environments. Security and audit controls built into the foundation.</p></section>",
+      "css": ".ds-explorer{background:var(--explorer-ground);color:var(--foreground);border:1px solid var(--border);font-family:var(--font-public-sans),sans-serif}.ds-toolbar{display:flex;justify-content:space-between;gap:12px;padding:12px 18px;border-bottom:1px solid var(--border);font-size:11px}.ds-toolbar span{color:var(--muted-foreground)}.ds-tabs{display:flex;padding:15px 18px 0}.ds-tab{padding:9px 18px;font-size:12px;background:transparent;color:inherit;border:1px solid var(--border);cursor:pointer;transition:color 160ms,background 160ms}.ds-tab[aria-pressed=\"true\"]{background:var(--signal);color:var(--signal-ink);border-color:var(--signal)}.ds-tab:hover:not([aria-pressed=\"true\"]){background:var(--muted)}.ds-tab:focus-visible{outline:2px solid var(--ring);outline-offset:5px}.ds-map{display:flex;align-items:center;justify-content:center;gap:0;padding:36px 18px}.ds-map svg{width:70px;flex-shrink:1}.ds-base,.ds-flow{fill:none;stroke:var(--trace-base);stroke-width:1}.ds-flow{stroke:var(--signal);stroke-width:2;stroke-dasharray:12 65}.ds-node{width:132px;padding:9px 6px;border:1px solid var(--primary);background:var(--node-ground);text-align:center;font-size:12px;font-weight:600}.ds-node small{display:block;margin-top:5px;font-size:10px;font-weight:400;color:var(--muted-foreground)}.ds-readout{margin:0;border-top:1px solid var(--border);padding:18px;font-size:13px;line-height:1.75}"
+    },
+    {
+      "name": "Chat surface",
+      "kind": "card",
+      "refersTo": "ai-chat",
+      "description": "Retained chat card, explicitly flat; message behavior remains in AIChatbot.",
+      "html": "<section class=\"ds-chat\"><header>Ask AI about Yash <span class=\"ds-badge\">Gemini</span></header><p>Hi, I’m Yash’s AI assistant. Ask me about his projects, cloud infrastructure work, skills, or experience.</p></section>",
+      "css": ".ds-chat{background:var(--card);color:var(--foreground);border:1px solid var(--border);border-radius:12px;box-shadow:none;overflow:hidden;font-family:var(--font-public-sans),sans-serif}.ds-chat header{display:flex;align-items:center;gap:8px;font-weight:600;padding:24px;border-bottom:1px solid var(--border)}.ds-badge{margin-left:auto;background:var(--secondary);border-radius:5px;padding:2px 8px;font-size:12px;font-weight:500}.ds-chat p{margin:16px;padding:12px 16px;background:var(--muted);border-radius:8px;font-size:14px;line-height:1.625}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Cloud, Code, Control",
+    "overview": "The user-pinned Slipstream gallery reference replaces the Engineering Manual direction. Near-black grounds, warm-white Big Shoulders display type, amber actions and animated real architecture create an expressive engineering identity. Public Sans carries explanations. Homepage, project collection, navigation/themes and dedicated AI surface are documented; blog and homelab retain incumbent interior compositions.",
+    "keyCharacteristics": [
+      "Oversized condensed display, readable compact prose",
+      "Default dark, persistent explicit light preference",
+      "Three manually selected real project architectures",
+      "Visible Ask AI navigation and dedicated chat",
+      "Flat rules, tonal surfaces and real architecture images"
+    ],
+    "rules": [
+      {
+        "name": "Evidence Rule",
+        "body": "Architecture illustrates real project relationships, never live telemetry or fabricated outcomes. Preserve sources and confidential-client wording.",
+        "section": "colors"
+      },
+      {
+        "name": "Motion Control",
+        "body": "Packet loops pause manually, offscreen and on hidden documents; reduced motion renders static relationships. All information remains available.",
+        "section": "elevation"
+      },
+      {
+        "name": "Theme Persistence",
+        "body": "The root defaults dark; only portfolio-theme-v2=light selects light. The explicit user toggle persists the choice.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do use Big Shoulders with Public Sans.",
+      "Do keep Ask AI prominent and preserve its dedicated route.",
+      "Do preserve keyboard focus, roving architecture tabs and motion controls.",
+      "Do retain real diagrams, source actions and all ten projects.",
+      "Do hide the retained floating AI launcher and widget below 640px; keep the dedicated AI route reachable through navigation, hero and footer."
+    ],
+    "donts": [
+      "Don’t restore the superseded Engineering Manual palette or light-first behavior.",
+      "Don’t fabricate telemetry, outcomes, testimonials or client identities.",
+      "Don’t auto-rotate architecture selection.",
+      "Don’t claim blog and homelab interiors were fully redesigned."
+    ]
+  }
+}

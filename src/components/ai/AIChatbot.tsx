@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { projects } from '@/data/projects'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -62,7 +63,7 @@ interface Message {
   id: string
   type: 'user' | 'ai'
   content: string
-  timestamp: Date
+  timestamp?: Date
   isTyping?: boolean
 }
 
@@ -71,8 +72,8 @@ export function AIChatbot() {
     {
       id: '1',
       type: 'ai',
-      content: "Hey there! 👋 I'm Yash's AI assistant, and I know him pretty well! Want to know about his projects? His experience with DevOps and cloud tech? His academic journey? Or maybe you're curious about his latest certifications? Just ask me anything - I'm here to help!",
-      timestamp: new Date()
+      content: "Hi, I’m Yash’s AI assistant. Ask me about his projects, cloud infrastructure work, skills, or experience.",
+      timestamp: undefined
     }
   ])
   const [input, setInput] = useState('')
@@ -84,7 +85,7 @@ export function AIChatbot() {
   const YASH_CONTEXT = `
 You are Yash Bhangale's AI assistant. Respond naturally and conversationally, but keep answers concise and focused. Only provide details specifically asked for.
 
-BASIC INFO: Yash Bhangale, DevOps Engineer & Full-Stack Developer, B.Tech AI & Data Science student (CGPA: 8.2, 12th: 83%, 10th: 73%), Maharashtra, India, 1+ years experience
+CURRENT PROJECT RECORD (use this when older details below conflict):\n${projects.map(project => `${project.shortTitle}: ${project.description} Links: ${project.githubUrl || project.detailsUrl || project.referenceUrl || "https://yashbhangale.site/projects#" + project.id}`).join("\n")}\n\nBASIC INFO: Yash Bhangale, DevOps Engineer & Full-Stack Developer, B.Tech AI & Data Science student (CGPA: 8.2, 12th: 83%, 10th: 73%), Maharashtra, India, 1+ years experience
 
 CONTACT:
 - Email: yashbhangale9@gmail.com, Phone: +91 8169362024
@@ -169,17 +170,17 @@ RESPONSE RULES:
   useEffect(() => {
     // Focus input after component mounts
     setTimeout(() => {
-      inputRef.current?.focus()
+      inputRef.current?.focus({ preventScroll: true })
     }, 100)
   }, [])
 
-  const sendMessage = async () => {
-    if (!input.trim() || isLoading) return
+  const sendMessage = async (question = input) => {
+    if (!question.trim() || isLoading) return
 
     const userMessage: Message = {
       id: Date.now().toString(),
       type: 'user',
-      content: input.trim(),
+      content: question.trim(),
       timestamp: new Date()
     }
 
@@ -238,7 +239,7 @@ RESPONSE RULES:
       await typeMessage(errorContent, errorMessageId)
     } finally {
       setIsLoading(false)
-      inputRef.current?.focus()
+      inputRef.current?.focus({ preventScroll: true })
     }
   }
 
@@ -252,17 +253,22 @@ RESPONSE RULES:
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: blinkKeyframes }} />
-      <Card className="w-full max-w-4xl mx-auto h-[70vh] max-h-[800px] min-h-[500px] flex flex-col overflow-hidden">
+      <Card className="ai-chat w-full max-w-4xl mx-auto h-[70vh] max-h-[800px] min-h-[500px] flex flex-col overflow-hidden">
       <CardHeader className="border-b flex-shrink-0">
         <CardTitle className="flex items-center gap-2">
           <BotIcon className="h-5 w-5 text-primary" />
           Ask AI about Yash
           <Badge variant="secondary" className="ml-auto">
-            Online
+            Gemini
           </Badge>
         </CardTitle>
       </CardHeader>
 
+      <div className="ai-suggestions" aria-label="Suggested questions">
+        {["Explain the AWS landing zone", "How does the security scanner work?", "What is in the homelab?"].map(question => (
+          <button key={question} onClick={() => sendMessage(question)} disabled={isLoading}>{question}</button>
+        ))}
+      </div>
       <CardContent className="flex-1 flex flex-col p-0 min-h-0">
         {/* Messages Area */}
         <ScrollArea className="flex-1 min-h-0" ref={scrollAreaRef}>
@@ -291,7 +297,7 @@ RESPONSE RULES:
                 )}
 
                 <div
-                  className={`max-w-[70%] rounded-lg px-4 py-3 transition-all duration-300 ${
+                  className={`max-w-[85%] sm:max-w-[70%] rounded-lg px-4 py-3 transition-all duration-300 ${
                     message.type === 'user'
                       ? 'bg-primary text-primary-foreground transform hover:scale-[1.02]'
                       : 'bg-muted hover:bg-muted/80'
@@ -306,7 +312,7 @@ RESPONSE RULES:
                     </div>
                   ) : null}
                   <span className="text-xs opacity-70 mt-2 block">
-                    {message.timestamp.toLocaleTimeString([], {
+                    {message.timestamp?.toLocaleTimeString([], {
                       hour: '2-digit',
                       minute: '2-digit'
                     })}
@@ -352,11 +358,13 @@ RESPONSE RULES:
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Ask me anything about Yash..."
+              aria-label="Your question about Yash"
               disabled={isLoading}
               className="flex-1 transition-all duration-300 focus:ring-2 focus:ring-primary/20 focus:border-primary hover:border-primary/50"
             />
             <Button 
-              onClick={sendMessage} 
+              onClick={() => sendMessage()}
+              aria-label="Send message"
               disabled={!input.trim() || isLoading}
               size="icon"
               className="transition-all duration-300 hover:scale-105 active:scale-95"

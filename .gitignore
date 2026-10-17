@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local design previews and captures
+.impeccable/review/
+.impeccable/questions/
+.impeccable/mocks/

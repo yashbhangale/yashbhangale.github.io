@@ -1,3 +1,4 @@
+import { HomelabShowcase } from "@/components/portfolio/HomelabShowcase";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
 import { Skills } from "@/components/portfolio/Skills";
@@ -218,14 +219,15 @@ export default function Home() {
       
       <AnchorHandler />
       <Navigation />
-      <main className="space-y-16 sm:space-y-24">
+      <main id="main-content">
         <Hero />
+        <Projects />
+        <HomelabShowcase />
         <About />
         <Skills />
-        <Projects />
         <Experience />
-        <Contact />
       </main>
+      <Contact />
       <AIWidget />
     </div>
   );

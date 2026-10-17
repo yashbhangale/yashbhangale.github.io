@@ -1,0 +1,224 @@
+{
+  "title": "A clearer portfolio, with an engineering point of view",
+  "question": "Use the Engineering Manual direction, choose a conventional portfolio, or steer the design.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Engineering Manual",
+      "kicker": "DESIGN DIRECTION",
+      "lineage": "Industrial equipment manuals and systems catalogs",
+      "thesis": "Your work presented with the directness and precision of a well-made engineering manual.",
+      "palette": [
+        "#f0cf56",
+        "#222c31",
+        "#f5f6f3",
+        "#52636b"
+      ],
+      "materials": [
+        "Solid yellow title field",
+        "Heavy sans-serif lettering",
+        "Open technical plates"
+      ],
+      "viewport": "An asymmetric yellow opening with your name, role, direct contact, and a real architecture plate; project summaries follow as open rows.",
+      "risk": "Deliberately utilitarian; the typography and real diagrams carry the character.",
+      "comp": ".impeccable/mocks/decision/assigned.webp",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {
+            "label": "Yash Bhangale / navigation",
+            "x": 0,
+            "y": 0,
+            "w": 12,
+            "h": 1
+          },
+          {
+            "label": "Name, role, contact",
+            "x": 0,
+            "y": 1,
+            "w": 7,
+            "h": 5,
+            "accent": true
+          },
+          {
+            "label": "Real architecture",
+            "x": 7,
+            "y": 1,
+            "w": 5,
+            "h": 5
+          },
+          {
+            "label": "Selected engineering work",
+            "x": 0,
+            "y": 7,
+            "w": 12,
+            "h": 3
+          }
+        ]
+      },
+      "raised": [
+        {
+          "from": "Print Editions",
+          "raise": "Give the architecture images real visual weight."
+        },
+        {
+          "from": "Reference Edition",
+          "raise": "Keep source links adjacent to their evidence."
+        },
+        {
+          "from": "Cathode Stack",
+          "raise": "Make selected and expanded states unmistakable."
+        },
+        {
+          "from": "Event Display",
+          "raise": "Make the opening reveal a real system immediately."
+        },
+        {
+          "from": "Color Counterpoint",
+          "raise": "Commit color to whole regions rather than scattered accents."
+        },
+        {
+          "from": "Provenance Ribbon",
+          "raise": "Keep career chronology attached to the work it explains."
+        }
+      ]
+    },
+    {
+      "id": "silkscreen",
+      "label": "Print Editions",
+      "verdict": "declined",
+      "thesis": "Repeated project images create editioned variations.",
+      "palette": [
+        "#f5f6f3",
+        "#222c31",
+        "#ed43a1"
+      ],
+      "materials": [
+        "Alternative visual system"
+      ],
+      "viewport": "Repeated project images create editioned variations.",
+      "risk": "Engineering projects are distinct systems, not variations of one subject.",
+      "case": "Declined on audience identification and product clarity: Engineering projects are distinct systems, not variations of one subject.",
+      "kept": "Give the architecture images real visual weight."
+    },
+    {
+      "id": "reference",
+      "label": "Reference Edition",
+      "verdict": "declined",
+      "thesis": "Two columns of technical evidence around a keyed navigation rail.",
+      "palette": [
+        "#f5f6f3",
+        "#222c31",
+        "#c7452d"
+      ],
+      "materials": [
+        "Alternative visual system"
+      ],
+      "viewport": "Two columns of technical evidence around a keyed navigation rail.",
+      "risk": "Dense scholarly reading delays the work and contact actions for both audiences.",
+      "case": "Declined on audience identification and product clarity: Dense scholarly reading delays the work and contact actions for both audiences.",
+      "kept": "Keep source links adjacent to their evidence."
+    },
+    {
+      "id": "cathode",
+      "label": "Cathode Stack",
+      "verdict": "declined",
+      "thesis": "A dark numeral-driven interface with layered glowing states.",
+      "palette": [
+        "#f5f6f3",
+        "#222c31",
+        "#e97428"
+      ],
+      "materials": [
+        "Alternative visual system"
+      ],
+      "viewport": "A dark numeral-driven interface with layered glowing states.",
+      "risk": "A control-panel metaphor obscures project discovery and repeats the current glow-heavy problem.",
+      "case": "Declined on audience identification and product clarity: A control-panel metaphor obscures project discovery and repeats the current glow-heavy problem.",
+      "kept": "Make selected and expanded states unmistakable."
+    },
+    {
+      "id": "collider",
+      "label": "Event Display",
+      "verdict": "declined",
+      "thesis": "Projects branch from a central event through concentric layers.",
+      "palette": [
+        "#f5f6f3",
+        "#222c31",
+        "#e2cd38"
+      ],
+      "materials": [
+        "Alternative visual system"
+      ],
+      "viewport": "Projects branch from a central event through concentric layers.",
+      "risk": "The radial instrument implies relationships the independent projects do not have.",
+      "case": "Declined on audience identification and product clarity: The radial instrument implies relationships the independent projects do not have.",
+      "kept": "Make the opening reveal a real system immediately."
+    },
+    {
+      "id": "canopy",
+      "label": "Color Counterpoint",
+      "verdict": "declined",
+      "thesis": "Translucent bands reveal overlapping engineering disciplines.",
+      "palette": [
+        "#f5f6f3",
+        "#222c31",
+        "#7c559d"
+      ],
+      "materials": [
+        "Alternative visual system"
+      ],
+      "viewport": "Translucent bands reveal overlapping engineering disciplines.",
+      "risk": "Color mixing offers little identification or clarity for infrastructure evaluation.",
+      "case": "Declined on audience identification and product clarity: Color mixing offers little identification or clarity for infrastructure evaluation.",
+      "kept": "Commit color to whole regions rather than scattered accents."
+    },
+    {
+      "id": "provenance",
+      "label": "Provenance Ribbon",
+      "verdict": "declined",
+      "thesis": "A dated line connects the evidence behind each build.",
+      "palette": [
+        "#f5f6f3",
+        "#222c31",
+        "#a73739"
+      ],
+      "materials": [
+        "Alternative visual system"
+      ],
+      "viewport": "A dated line connects the evidence behind each build.",
+      "risk": "A continuous ownership narrative misrepresents independent projects.",
+      "case": "Declined on audience identification and product clarity: A continuous ownership narrative misrepresents independent projects.",
+      "kept": "Keep career chronology attached to the work it explains."
+    }
+  ],
+  "buildPath": {
+    "value": "code",
+    "toggle": true
+  },
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "steer": true,
+  "canon": true,
+  "canonCard": {
+    "label": "Conventional portfolio",
+    "thesis": "A familiar personal portfolio with quieter styling and straightforward project cards.",
+    "palette": [
+      "#ffffff",
+      "#232c32",
+      "#366dc1"
+    ],
+    "materials": [
+      "Neutral surfaces",
+      "Familiar card grid"
+    ],
+    "viewport": "Name and introduction above a conventional grid of project previews.",
+    "risk": "Comfortable and familiar, with less distinctive identity.",
+    "comp": ".impeccable/mocks/decision/canon.webp"
+  }
+}

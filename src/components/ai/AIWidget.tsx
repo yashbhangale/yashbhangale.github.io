@@ -280,18 +280,17 @@ RULES: Keep responses short, provide links when relevant, suggest contacting for
 
   if (!isOpen) {
     return (
-      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999]">
+      <div className="hidden sm:block fixed bottom-6 right-6 z-[9999]">
         <Button
           onClick={() => setIsOpen(true)}
           size="lg"
-          className="h-12 px-4 sm:h-14 sm:px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 hover:scale-110 group whitespace-nowrap"
+          className="ai-launcher"
         >
           <div className="relative flex items-center gap-2">
-            <span className="text-xs sm:text-sm font-medium group-hover:scale-110 transition-transform">Ask AI</span>
+            <span className="text-xs font-medium">Ask AI</span>
             {hasNewMessage && (
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
             )}
-            <div className="absolute inset-0 rounded-full bg-white/20 animate-ping group-hover:animate-none"></div>
           </div>
         </Button>
       </div>
@@ -299,7 +298,7 @@ RULES: Keep responses short, provide links when relevant, suggest contacting for
   }
 
   return (
-    <>
+    <div className="hidden sm:block">
       <style dangerouslySetInnerHTML={{ __html: blinkKeyframes }} />
       
       {/* Backdrop overlay */}
@@ -442,6 +441,6 @@ RULES: Keep responses short, provide links when relevant, suggest contacting for
           )}
         </Card>
       </div>
-    </>
+    </div>
   )
 } 
