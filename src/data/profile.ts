@@ -1,6 +1,7 @@
 export const workExperience = [
   {
     company: "OneTure Technology",
+    logo: "/imgs/organizations/oneture.png",
     position: "Cloud / DevOps Engineer",
     period: "November 2025 – Present",
     location: "Remote",
@@ -31,6 +32,7 @@ export const workExperience = [
   },
   {
     company: "Asynk",
+    logo: "/imgs/organizations/asynk.png",
     position: "Software Engineer",
     period: "September 2024 – December 2024",
     location: "Mumbai",
@@ -45,6 +47,7 @@ export const workExperience = [
   },
   {
     company: "Scogo Networks",
+    logo: "/imgs/organizations/scogo.png",
     position: "DevOps Intern",
     period: "6 months",
     location: "Remote",
@@ -92,6 +95,7 @@ export const workExperience = [
   },
   {
     company: "Dattameghe College of Engineering",
+    logo: "/imgs/organizations/dmce.png",
     position: "B.Tech in Artificial Intelligence and Data Science",
     period: "2021 - 2025",
     location: "Maharashtra, India",
