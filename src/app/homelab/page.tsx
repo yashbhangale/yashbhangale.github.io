@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/imgs/homelab-public.svg",
+        url: "/imgs/arch.png",
         width: 1672,
         height: 941,
         alt: "Homelab architecture diagram",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Homelab Architecture | Yash Bhangale",
     description:
       "Interactive diagram and full breakdown of a single-node K3s homelab with zero-trust ingress and GitOps delivery.",
-    images: ["/imgs/homelab-public.svg"],
+    images: ["/imgs/arch.png"],
   },
 };
 
@@ -194,7 +194,7 @@ export default function HomelabPage() {
     description:
       "A single-node K3s homelab behind Cloudflare Tunnel and Tailscale, running eight self-hosted services with GitOps via ArgoCD and Sealed Secrets.",
     url: "https://yashbhangale.site/homelab",
-    image: "https://yashbhangale.site/imgs/homelab-public.svg",
+    image: "https://yashbhangale.site/imgs/arch.png",
     author: {
       "@type": "Person",
       name: "Yash Bhangale",
@@ -272,7 +272,7 @@ export default function HomelabPage() {
           {/* Actions */}
           <div className="flex flex-wrap gap-3 pt-1">
             <a
-              href="/imgs/homelab-public.svg"
+              href="/imgs/arch.png"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"

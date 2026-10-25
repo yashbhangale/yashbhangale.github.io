@@ -150,7 +150,7 @@ export function InteractiveDiagram({
           style={{ minWidth, aspectRatio: "1672 / 941" }}
         >
           <Image
-            src="/imgs/homelab-public.svg"
+            src="/imgs/arch.png"
             alt="Homelab architecture diagram: remote users reach the Cloudflare edge and tunnel into a single K3s node hosting eight self-hosted services, with admin access over Tailscale and GitOps via ArgoCD."
             fill
             priority={priority}
@@ -304,7 +304,7 @@ export function InteractiveDiagram({
           Select a component to explore its role
         </span>
         <a
-          href="/imgs/homelab-public.svg"
+          href="/imgs/arch.png"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 font-medium text-primary transition-opacity hover:opacity-80"
