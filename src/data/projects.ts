@@ -15,6 +15,7 @@ export interface Project {
   architectureAlt?: string;
   architectureTag?: string;
   achievements: string[];
+  caseStudy?: { heading: string; body: string }[];
   liveUrl?: string;
   githubUrl?: string;
   referenceUrl?: string;
@@ -31,11 +32,33 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "aws-landing-zone",
+    caseStudy: [
+      {
+            "heading": "Problem",
+            "body": "Create a consistent AWS foundation for enterprise workloads without mixing development, UAT, production, and security responsibilities in one account."
+      },
+      {
+            "heading": "Architecture & ownership",
+            "body": "Designed approximately 12 accounts across workload environments and shared security, logging, configuration, backup, and infrastructure functions. Terraform makes provisioning repeatable; Organizations and Control Tower establish the governance foundation."
+      },
+      {
+            "heading": "Engineering decisions",
+            "body": "Account boundaries separate environments and responsibilities. IAM Identity Center centralizes workforce access; SCPs set organization-wide limits. Central audit trails and configuration monitoring provide a shared view across accounts."
+      },
+      {
+            "heading": "Security & operational trade-offs",
+            "body": "Account isolation reduces the scope of failures and access mistakes, while adding cross-account IAM and networking complexity. Centralized logging, threat detection, backups, and cost visibility support operations across those boundaries."
+      },
+      {
+            "heading": "Results",
+            "body": "Delivered isolated Dev, UAT, and Production environments with centralized governance, security guardrails, audit visibility, and billing controls. Client identity, account IDs, and internal network details are withheld."
+      }
+],
     shortTitle: "AWS Landing Zone",
     summary: "A secure multi-account AWS foundation for one of India’s largest supermarket chains.",
-    impact: "Security guardrails, isolated environments, and centralized governance.",
+    impact: "Approximately 12 AWS accounts with security guardrails and centralized governance.",
     title: "Enterprise AWS Landing Zone",
-    description: "Designed and implemented an end-to-end AWS landing zone for one of India’s largest supermarket chains. Built a secure multi-account cloud foundation spanning security, centralized logging and configuration, backups, shared infrastructure, and isolated Dev, UAT, and Production workloads, with centralized cost and billing management.",
+    description: "Designed and implemented an approximately 12-account AWS landing zone for one of India’s largest supermarket chains. Built a secure multi-account cloud foundation spanning security, centralized logging and configuration, backups, shared infrastructure, and isolated Dev, UAT, and Production workloads, with centralized cost and billing management.",
     technologies: ["AWS", "Terraform", "AWS Organizations", "Control Tower", "IAM Identity Center", "SCPs", "CloudTrail", "AWS Config", "Security Hub", "GuardDuty", "AWS Backup", "Transit Gateway", "Cost Explorer", "AWS Budgets"],
     image: "/imgs/aws-landing-zone-architecture.png",
     architecture: true,
@@ -73,6 +96,24 @@ export const projects: Project[] = [
   },
   {
     id: "security-scanner",
+    caseStudy: [
+      {
+            "heading": "Problem",
+            "body": "Different repositories require different security tools. Maintaining a separate pipeline configuration for each stack makes coverage and reporting difficult to keep consistent."
+      },
+      {
+            "heading": "Architecture & decisions",
+            "body": "A repository URL enters Jenkins. The Project Profiler detects the stack, selects relevant scanners, and runs them in parallel inside Docker. An aggregator produces HTML, JSON, SARIF, and SBOM artifacts."
+      },
+      {
+            "heading": "Security & operational trade-offs",
+            "body": "Conditional scanning avoids irrelevant work, but profiler accuracy affects coverage. Findings still need triage: a unified report supports engineering decisions without treating every tool result as equally actionable."
+      },
+      {
+            "heading": "Results",
+            "body": "Delivered one reusable pipeline integrating nine security tools, with consolidated reporting and Jenkins artifacts. The linked source and pipeline stage view document the implementation."
+      }
+],
     shortTitle: "DevSecOps Security Scanner",
     summary: "One Jenkins pipeline that profiles a repository and selects the security scans it needs.",
     impact: "Nine security tools, automated selection, and unified reporting.",
@@ -112,8 +153,9 @@ export const projects: Project[] = [
     technologies: ["Linux", "Ubuntu", "Kubernetes", "K3s", "Cloudflare Tunnel", "Tailscale", "ArgoCD", "GitOps", "Sealed Secrets", "Prometheus", "Grafana", "Nextcloud", "Jellyfin", "Open WebUI", "Home Assistant", "Paperless-ngx", "Kavita", "Kasm Workspaces", "Filebrowser"],
     githubUrl: "https://lnkd.in/d5bJc-BE",
     detailsUrl: "/homelab",
-    image: "/imgs/kubernetes-homelab-architecture.png",
-    imageHeight: 698,
+    image: "/imgs/homelab-public.svg",
+    imageWidth: 1672,
+    imageHeight: 941,
     architecture: true,
     architectureAlt: "Single-node K3s homelab on an Ubuntu gaming laptop, with Cloudflare Tunnel ingress, Tailscale administrator access, ArgoCD GitOps, Sealed Secrets, application namespaces, and HostPath / PVC storage",
     architectureTag: "Single Node · Self-Hosted",
@@ -129,9 +171,31 @@ export const projects: Project[] = [
   },
   {
     id: "karpenter-autoscaling",
+    caseStudy: [
+      {
+            "heading": "Problem",
+            "body": "Intermittent AI workloads leave expensive GPU capacity idle between inference requests or jobs. The platform needs to meet workload resource requirements while reclaiming capacity as demand falls."
+      },
+      {
+            "heading": "Architecture & ownership",
+            "body": "Implemented Karpenter-driven node provisioning on Amazon EKS. Pending pods express resource requirements; Karpenter provisions suitable EC2 capacity, then consolidates underused nodes as workloads finish."
+      },
+      {
+            "heading": "Engineering decisions",
+            "body": "Selected workload-driven provisioning to match CPU, memory, and GPU requirements instead of holding fixed capacity for every peak. Used Spot where workloads tolerate interruptions and consolidation to reduce idle node time."
+      },
+      {
+            "heading": "Scheduling & availability trade-offs",
+            "body": "GPU resource requests constrain where inference pods can run. Capacity provisioning introduces startup delay; Spot interruptions and consolidation introduce disruption risk. Instance constraints and disruption settings must reflect model requirements and availability needs."
+      },
+      {
+            "heading": "Results & cost measurement",
+            "body": "GPU infrastructure billing fell by approximately 60% in this implementation. This is a workload-specific outcome, not a general savings guarantee. The comparison window, baseline spend, request volume, and detailed billing breakdown are not published here; contact me to discuss the measurement and workload context."
+      }
+],
     shortTitle: "AI Workload Autoscaling",
     summary: "Karpenter-powered capacity for bursty AI workloads on EKS, with right-sizing and Spot instances.",
-    impact: "Provision on demand and consolidate capacity as jobs finish.",
+    impact: "Approximately 60% lower GPU infrastructure billing with workload-driven capacity.",
     title: "Karpenter - Workload-Driven Autoscaling for AI on EKS",
     description: "Implemented Karpenter-based node autoscaling for bursty AI workloads on Amazon EKS. Provisions capacity when pods cannot be scheduled, selects instances to match workload resource requests, and consolidates underutilized nodes as demand drops. Combines runtime right-sizing and Spot capacity to reduce idle infrastructure spend.",
     technologies: ["Amazon EKS", "Kubernetes", "Karpenter", "Amazon EC2", "Spot Instances", "Node Autoscaling", "Node Consolidation", "AI Infrastructure", "Cost Optimization"],
@@ -145,6 +209,7 @@ export const projects: Project[] = [
     status: "Featured",
     category: "Kubernetes Infrastructure",
     achievements: [
+      "Reduced GPU infrastructure billing by approximately 60% through workload-driven scaling and capacity optimization",
       "Provisioned nodes in response to unschedulable pods rather than keeping fixed node-group capacity running for intermittent AI jobs",
       "Matched instance capacity to CPU, memory, and GPU requirements for training and inference workloads",
       "Used Spot capacity where suitable to lower compute costs for interruption-tolerant workloads",

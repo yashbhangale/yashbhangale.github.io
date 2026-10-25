@@ -8,10 +8,10 @@ const displayFont = Big_Shoulders({ variable: "--font-display", subsets: ["latin
 
 export const metadata: Metadata = {
   title: {
-    default: "Hire Yash Bhangale | Expert DevOps Engineer & Backend Developer",
+    default: "Yash Bhangale | Cloud / DevOps & AI Infrastructure Engineer",
     template: "%s | Yash Bhangale - DevOps & Cloud Specialist"
   },
-  description: "Hire Yash Bhangale, a skilled DevOps Engineer and Backend Developer specializing in Kubernetes, AWS, Azure, CI/CD pipelines, and cloud-native solutions. 1+ years experience with proven track record in infrastructure automation, monitoring, and scalable application development.",
+  description: "Cloud / DevOps Engineer building secure AWS landing zones, Kubernetes GPU platforms, and DevSecOps pipelines. Explore infrastructure case studies, measurable outcomes, and a GitOps homelab. Open to international remote roles.",
   keywords: [
     "hire devops engineer",
     "hire backend developer", 
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     type: "profile",
     locale: "en_US",
     url: "https://yashbhangale.site",
-    title: "Hire Yash Bhangale | Expert DevOps Engineer & Backend Developer",
+    title: "Yash Bhangale | Cloud / DevOps & AI Infrastructure Engineer",
     description: "Hire a skilled DevOps Engineer with 1+ years experience in Kubernetes, AWS, Azure, CI/CD pipelines, and infrastructure automation. Mumbai Hackathon winner available for remote work.",
     siteName: "Hire Yash Bhangale - DevOps & Cloud Specialist",
     firstName: "Yash",
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@yashbhangale",
     creator: "@yashbhangale",
-    title: "Hire Yash Bhangale | Expert DevOps Engineer & Backend Developer",
+    title: "Yash Bhangale | Cloud / DevOps & AI Infrastructure Engineer",
     description: "DevOps Engineer specializing in Kubernetes, AWS, Azure, CI/CD pipelines. Mumbai Hackathon winner. Available for hire.",
     images: {
       url: "/og-image.png",

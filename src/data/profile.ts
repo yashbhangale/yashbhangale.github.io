@@ -4,11 +4,12 @@ export const workExperience = [
     position: "Cloud / DevOps Engineer",
     period: "November 2025 – Present",
     location: "Remote",
-    description: "Working as a Cloud / DevOps Engineer focusing on AWS infrastructure and DevSecOps practices to ensure secure and scalable cloud deployments.",
+    description: "Design and automate AWS platforms, Kubernetes GPU infrastructure, and DevSecOps delivery, with technical ownership of ISO/IEC 27001 implementation activities.",
     achievements: [
-      "Managing and optimizing AWS cloud infrastructure for high availability and scalability",
-      "Implementing DevSecOps pipelines to integrate security into the CI/CD workflow",
-      "Automating infrastructure provisioning and deployment processes using Infrastructure as Code (IaC)"
+      "Designed an approximately 12-account AWS Landing Zone with isolated workloads, centralized audit logging, security guardrails, and cost governance",
+      "Engineered EKS GPU inference infrastructure and workload-driven autoscaling, reducing GPU infrastructure billing by approximately 60%",
+      "Own technical ISO/IEC 27001 implementation activities across infrastructure security controls, access management, and audit evidence",
+      "Built reusable DevSecOps pipelines and Terraform automation for consistent infrastructure provisioning and security scanning"
     ],
     technologies: ["AWS", "DevSecOps", "CI/CD", "Terraform", "Docker", "Kubernetes", "Security"],
     type: "work"
@@ -94,9 +95,9 @@ export const workExperience = [
     position: "B.Tech in Artificial Intelligence and Data Science",
     period: "2021 - 2025",
     location: "Maharashtra, India",
-    description: "Pursuing comprehensive education in AI, ML, and Data Science with strong focus on practical applications. Active participant in hackathons and technical competitions.",
+    description: "Graduated in 2025 with a B.Tech in Artificial Intelligence and Data Science. Applied AI and systems engineering through projects, hackathons, and technical competitions.",
     achievements: [
-      "Current CGPA: 8.2",
+      "Final CGPA: 8.3",
       "Mumbai Hacks - 1st Prize (World's largest Gen AI hackathon)",
       "Smart India Hackathon - Runner-up (National level)",
       "Winner of multiple intracollege competitions (AI Sparks, CSI Ideathon)"
@@ -114,30 +115,14 @@ export const certifications = [
 ];
 
 
-export const skillCategories = {
-  devops: [
-    "Kubernetes", "Docker", "ArgoCD", "Helm", "Jenkins", "GitHub Actions", 
-    "Trivy", "SigNoz", "Prometheus", "Grafana", "CI/CD", "Infrastructure as Code"
-  ],
-  cloud: [
-    "AWS", "Azure", "Terraform", "KVM", "Azure DevOps", "VM Templates", 
-    "Cloud Architecture", "Auto Scaling", "Load Balancing", "Monitoring"
-  ],
-  backend: [
-    "Node.js", "Python", "Java", "Shell Scripting", "PowerShell", "Bash", 
-    "REST APIs", "Microservices", "Linux Administration", "System Architecture"
-  ],
-  frontend: [
-    "React.js", "JavaScript", "HTML5", "CSS3", "Bootstrap", "Tailwind CSS", 
-    "TypeScript", "Responsive Design", "Web3 APIs", "Smart Contracts"
-  ],
-  databases: [
-    "MongoDB", "PostgreSQL", "Database Design", "Data Modeling", 
-    "Query Optimization", "Backup Strategies", "Performance Tuning"
-  ],
-  tools: [
-    "Git", "Postman", "VS Code", "Linux", "n8n", "Hoppscotch", 
-    "Mermaid", "Tactical RMM", "Moralis", "Infura", "KVM Virtualization"
-  ]
-};
+export const resumeUrl = "https://drive.google.com/file/d/1n-1y_jhFgNIF7MCfV0ktf_QFfucBD5cX/view";
+export const resumeDownloadUrl = "https://drive.google.com/uc?export=download&id=1n-1y_jhFgNIF7MCfV0ktf_QFfucBD5cX";
 
+export const skillCategories = {
+  cloud: ["AWS", "Terraform", "AWS Organizations", "Control Tower", "IAM Identity Center", "Azure"],
+  platform: ["Kubernetes", "Amazon EKS", "Karpenter", "Docker", "Helm", "Linux"],
+  security: ["DevSecOps", "IAM", "SCPs", "CloudTrail", "GuardDuty", "ISO/IEC 27001", "Trivy", "Checkov"],
+  delivery: ["ArgoCD", "GitOps", "Jenkins", "GitHub Actions", "SigNoz", "Prometheus", "Grafana"],
+  ai: ["GPU Inference", "Workload Autoscaling", "Spot Instances", "Cost Optimization", "LLM Gateways"],
+  engineering: ["Python", "Bash", "TypeScript", "Node.js", "React", "PostgreSQL"]
+};

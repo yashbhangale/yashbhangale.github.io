@@ -187,7 +187,7 @@ const BASE_NODES: HomelabNode[] = [
     color: "#38bdf8",
     subtitle: "Browser / mobile app",
     details: [
-      "Public visitors reach every app over HTTPS.",
+      "Application ingress uses HTTPS through the edge.",
       "All requests enter through the Cloudflare edge — nothing hits the home network directly.",
     ],
     tags: ["Public", "HTTPS"],
@@ -257,7 +257,7 @@ const BASE_NODES: HomelabNode[] = [
     color: "#8b5cf6",
     subtitle: "Zero-config mesh VPN",
     details: [
-      "Node Tailscale IP: 100.111.171.112",
+      "Private mesh access for authorized administrator devices.",
       "Secure path to the K3s control plane with no router port-forwarding.",
     ],
     tags: ["VPN", "Mesh"],
@@ -273,7 +273,7 @@ const BASE_NODES: HomelabNode[] = [
     subtitle: "cloudflared pod · hostname routing",
     details: [
       "Runs as a pod in the cloudflared namespace (survives node IP changes).",
-      "Tunnel ID: f5d445db-9f0b-47f0-90b8-e344cb5f3325",
+      "Outbound tunnel connection; deployment identifiers are withheld.",
       "Routes each hostname to an in-cluster service DNS name.",
     ],
     tags: ["Ingress", "Zero-trust"],
@@ -299,10 +299,9 @@ const BASE_NODES: HomelabNode[] = [
     name: "ArgoCD",
     icon: GitBranch,
     color: "#ef7b4d",
-    url: "https://argocd.yashbhangale.site",
     subtitle: "GitOps continuous delivery",
     details: [
-      "Namespace: argocd · Helm chart argo-cd-9.6.0 (app v3.4.4)",
+      "Declarative installation managed with Helm.",
       "Keeps the cluster in sync with the Git repo automatically.",
     ],
     tags: ["GitOps", "Helm"],
@@ -355,7 +354,6 @@ const BASE_NODES: HomelabNode[] = [
     name: "Home Assistant",
     icon: Home,
     color: "#41bdf5",
-    url: "https://ha.yashbhangale.site",
     subtitle: "Home automation",
     details: [
       "Namespace: homeassistant · Port 8123 · Storage 10Gi",
@@ -369,7 +367,6 @@ const BASE_NODES: HomelabNode[] = [
     name: "Nextcloud",
     icon: Cloud,
     color: "#0ea5e9",
-    url: "https://nextcloud.yashbhangale.site",
     subtitle: "Files, sync & sharing",
     details: [
       "Namespace: nextcloud · Port 8080",
@@ -384,7 +381,6 @@ const BASE_NODES: HomelabNode[] = [
     name: "Paperless-ngx",
     icon: FileText,
     color: "#22c55e",
-    url: "https://paperless.yashbhangale.site",
     subtitle: "Document management",
     details: [
       "Namespace: paperless · Port 8000",
@@ -399,7 +395,6 @@ const BASE_NODES: HomelabNode[] = [
     name: "Filebrowser",
     icon: FolderOpen,
     color: "#60a5fa",
-    url: "https://files.yashbhangale.site",
     subtitle: "Web file manager",
     details: [
       "Namespace: filebrowser · Port 80",
@@ -414,11 +409,10 @@ const BASE_NODES: HomelabNode[] = [
     name: "Open WebUI",
     icon: Bot,
     color: "#818cf8",
-    url: "https://openui.yashbhangale.site",
     subtitle: "Local LLM interface",
     details: [
       "Namespace: openwebui · Port 80 · Storage 10Gi",
-      "OLLAMA_BASE_URL=http://192.168.0.107:11434",
+      "Connects to a private Ollama backend; endpoint withheld.",
     ],
     tags: ["LLM", "Ollama"],
     hotspot: { left: 70.3, top: 61, width: 7.5, height: 16 },
@@ -428,7 +422,6 @@ const BASE_NODES: HomelabNode[] = [
     name: "Jellyfin",
     icon: Film,
     color: "#a855f7",
-    url: "https://jellyfin.yashbhangale.site",
     subtitle: "Movies · TV · music",
     details: [
       "Namespace: jellyfin · Port 8096",
@@ -442,7 +435,6 @@ const BASE_NODES: HomelabNode[] = [
     name: "Kavita",
     icon: BookOpen,
     color: "#f472b6",
-    url: "https://kavita.yashbhangale.site",
     subtitle: "Books · comics · manga",
     details: [
       "Namespace: kavita · Port 5000",
@@ -457,7 +449,6 @@ const BASE_NODES: HomelabNode[] = [
     name: "Kasm Workspaces",
     icon: Monitor,
     color: "#f43f5e",
-    url: "https://kasm.yashbhangale.site",
     subtitle: "Streaming desktops",
     details: [
       "Namespace: kasm · Port 443 (self-signed)",
@@ -500,9 +491,9 @@ export const NODE_BY_ID: Record<string, HomelabNode> = Object.fromEntries(
   NODES.map((n) => [n.id, n])
 );
 
-// Publicly reachable, live self-hosted services.
-export const LIVE_SERVICES = NODES.filter((n) =>
-  n.url?.includes("yashbhangale.site")
+// Self-hosted applications, documented without direct service endpoints.
+export const DOCUMENTED_SERVICES = NODES.filter(n =>
+  ["homeassistant", "nextcloud", "paperless", "filebrowser", "openwebui", "jellyfin", "kavita", "kasm"].includes(n.id)
 );
 
 // ---- Zone groupings (for the detailed /homelab analysis page) -------------
@@ -554,7 +545,7 @@ export const ZONES: Zone[] = [
     id: "apps",
     title: "Application Namespaces",
     summary:
-      "Nine self-hosted services, each isolated in its own namespace with dedicated storage.",
+      "Eight self-hosted services, each isolated in its own namespace with dedicated storage.",
     nodeIds: [
       "homeassistant",
       "nextcloud",

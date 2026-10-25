@@ -5,7 +5,7 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
-const resumeUrl = "https://drive.google.com/file/d/1n-1y_jhFgNIF7MCfV0ktf_QFfucBD5cX/view";
+import { resumeUrl } from "@/data/profile";
 const links = [
   { label: "Work", href: "/projects" },
   { label: "About", href: "/#about" },

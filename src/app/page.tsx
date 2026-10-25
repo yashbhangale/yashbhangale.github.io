@@ -29,7 +29,7 @@ export default function Home() {
       "contentUrl": "https://yashbhangale.site/yash-bhangale.mp4",
       "caption": "Yash Bhangale - Cloud / DevOps Engineer"
     },
-    "jobTitle": ["Cloud Engineer", "DevOps Engineer", "Software Engineer"],
+    "jobTitle": ["Cloud Engineer", "DevOps Engineer", "Platform Engineer"],
     "description": "Passionate Cloud / DevOps Engineer specializing in AWS infrastructure, DevSecOps pipelines, and automation. Mumbai Hackathon winner with 1+ years of hands-on experience building secure and scalable solutions.",
     "worksFor": {
       "@type": "Organization",
@@ -72,18 +72,18 @@ export default function Home() {
     "knowsAbout": [
       {
         "@type": "Thing",
-        "name": "Full-Stack Development",
-        "description": "End-to-end application development across frontend and backend"
+        "name": "AWS Landing Zones",
+        "description": "Multi-account cloud architecture, security guardrails, and governance"
       },
       {
         "@type": "Thing", 
-        "name": "Product Engineering",
-        "description": "Building scalable products from concept to market"
+        "name": "AI Infrastructure",
+        "description": "Kubernetes GPU inference infrastructure and cost optimization"
       },
       {
         "@type": "Thing",
-        "name": "Rapid Prototyping",
-        "description": "Fast iteration and MVP development for startups"
+        "name": "DevSecOps",
+        "description": "Automated security scanning and infrastructure delivery"
       },
       {
         "@type": "Thing",
@@ -100,7 +100,7 @@ export default function Home() {
       "@type": "EducationalOrganization",
       "name": "Dattameghe College of Engineering",
       "location": "Maharashtra, India",
-      "description": "B.Tech in Artificial Intelligence and Data Science (2021-2025, CGPA: 8.2)"
+      "description": "B.Tech in Artificial Intelligence and Data Science (2021-2025, Final CGPA: 8.3)"
     },
     "award": [
       {

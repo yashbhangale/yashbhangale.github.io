@@ -150,8 +150,8 @@ export function InteractiveDiagram({
           style={{ minWidth, aspectRatio: "1672 / 941" }}
         >
           <Image
-            src="/imgs/arch.png"
-            alt="Homelab architecture diagram: remote users reach the Cloudflare edge and tunnel into a single K3s node hosting nine self-hosted services, with admin access over Tailscale and GitOps via ArgoCD."
+            src="/imgs/homelab-public.svg"
+            alt="Homelab architecture diagram: remote users reach the Cloudflare edge and tunnel into a single K3s node hosting eight self-hosted services, with admin access over Tailscale and GitOps via ArgoCD."
             fill
             priority={priority}
             sizes="(max-width: 768px) 680px, (max-width: 1280px) 100vw, 1200px"
@@ -276,7 +276,7 @@ export function InteractiveDiagram({
                         style={{ backgroundColor: active.color }}
                       >
                         <ExternalLink className="h-3.5 w-3.5" />
-                        Open live service
+                        Open reference
                       </a>
                     ) : (
                       <div
@@ -284,7 +284,7 @@ export function InteractiveDiagram({
                         style={{ color: active.color }}
                       >
                         <ExternalLink className="h-3 w-3" />
-                        Click to open live service
+                        Click to view reference
                       </div>
                     ))}
                 </div>
@@ -301,16 +301,16 @@ export function InteractiveDiagram({
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-500 opacity-70" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500" />
           </span>
-          Pulsing dots are live services you can open
+          Select a component to explore its role
         </span>
         <a
-          href="/imgs/arch.png"
+          href="/imgs/homelab-public.svg"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 font-medium text-primary transition-opacity hover:opacity-80"
         >
           <ExternalLink className="h-3.5 w-3.5" />
-          View raw diagram
+          View public diagram
         </a>
       </div>
     </div>

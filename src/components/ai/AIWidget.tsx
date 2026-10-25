@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { projects } from '@/data/projects'
+import { workExperience, skillCategories } from '@/data/profile'
 import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -126,26 +128,15 @@ When users ask about blog topics, recommend relevant posts and explain concepts 
   const YASH_CONTEXT = `
 You are Yash Bhangale's AI assistant. Keep responses very brief for widget format. Only provide what's specifically asked.
 
-BASIC: Yash Bhangale, DevOps Engineer & Full-Stack Developer, B.Tech AI & Data Science (CGPA: 8.2, 12th: 83%, 10th: 73%), Maharashtra, India
-
-CONTACT:
-- Email: yashbhangale9@gmail.com, Phone: +91 8169362024
-- LinkedIn: [https://linkedin.com/in/yashbhangale](https://linkedin.com/in/yashbhangale)
-- GitHub: [https://github.com/yashbhangale](https://github.com/yashbhangale)
-- Portfolio: [https://yashbhangale.github.io](https://yashbhangale.github.io)
-
-SKILLS: Kubernetes, Docker, AWS, Azure (certified), Terraform, Jenkins, Python, React, Node.js, Linux
-
-EXPERIENCE: Scogo Networks (DevOps, 6mo), Raydium Labs (SDE, 2mo), Freelance projects
-
-ACHIEVEMENTS: Mumbai Hacks 2024 (1st), Smart India Hackathon 2024 (Runner-up)
-
+PROFILE: Yash Bhangale, Cloud / DevOps Engineer focused on AWS, Kubernetes, AI infrastructure, and DevSecOps. B.Tech AI & Data Science, graduated 2025, final CGPA 8.3. Based in Maharashtra, India; open to international remote roles.
+CONTACT: yashbhangale9@gmail.com · +91 8169362024 · https://linkedin.com/in/yashbhangale · https://github.com/yashbhangale · https://yashbhangale.site
+CURRENT EXPERIENCE:
+${workExperience.map(item => `${item.position} at ${item.company} (${item.period}): ${item.description} ${item.achievements.join("; ")}`).join("\n")}
+SKILLS: ${Object.values(skillCategories).flat().join(", ")}
 PROJECTS:
-1. Nanite Linux OS - [GitHub](https://github.com/yashbhangale/nanite-linux)
-2. Infrastructure Monitoring - [GitHub](https://github.com/yashbhangale/monitoring-stack)
-3. Cryptway wallet (sold to startup)
-4. Lenovo Vantage Linux - [GitHub](https://github.com/yashbhangale/lenovo-vantage-linux)${getBlogContext()}
-
+${projects.map(project => `${project.shortTitle}: ${project.description} ${project.achievements.join("; ")} Link: https://yashbhangale.site/projects#${project.id}`).join("\n")}
+Do not invent figures, client names, infrastructure addresses, certifications, or cost-comparison methodology. Refer detailed measurement questions to Yash.
+${getBlogContext()}
 RULES: Keep responses short, provide links when relevant, suggest contacting for details.
   `
 

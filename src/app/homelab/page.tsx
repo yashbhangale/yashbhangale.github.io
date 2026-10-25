@@ -20,7 +20,7 @@ import { AIWidget } from "@/components/ai/AIWidget";
 import { Badge } from "@/components/ui/badge";
 import { InteractiveDiagram } from "@/components/portfolio/homelab/InteractiveDiagram";
 import {
-  LIVE_SERVICES,
+  DOCUMENTED_SERVICES,
   NODE_BY_ID,
   ZONES,
   type HomelabNode,
@@ -29,7 +29,7 @@ import {
 export const metadata: Metadata = {
   title: "Homelab Architecture",
   description:
-    "A deep dive into Yash Bhangale's self-hosted homelab: a single K3s node behind Cloudflare Tunnel and Tailscale, running nine services with GitOps via ArgoCD and Sealed Secrets. Interactive diagram plus a full zone-by-zone breakdown.",
+    "A deep dive into Yash Bhangale's self-hosted homelab: a single K3s node behind Cloudflare Tunnel and Tailscale, running eight services with GitOps via ArgoCD and Sealed Secrets. Interactive diagram plus a full zone-by-zone breakdown.",
   keywords: [
     "homelab architecture",
     "k3s single node",
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Homelab Architecture | Yash Bhangale",
     description:
-      "Interactive diagram and full breakdown of a single-node K3s homelab: zero-trust ingress, VPN-only admin, GitOps delivery, and nine self-hosted services.",
+      "Interactive diagram and full breakdown of a single-node K3s homelab: zero-trust ingress, VPN-only admin, GitOps delivery, and eight self-hosted services.",
     url: "https://yashbhangale.site/homelab",
     siteName: "Hire Yash Bhangale - DevOps & Cloud Specialist",
     type: "website",
     images: [
       {
-        url: "/imgs/arch.png",
+        url: "/imgs/homelab-public.svg",
         width: 1672,
         height: 941,
         alt: "Homelab architecture diagram",
@@ -66,14 +66,14 @@ export const metadata: Metadata = {
     title: "Homelab Architecture | Yash Bhangale",
     description:
       "Interactive diagram and full breakdown of a single-node K3s homelab with zero-trust ingress and GitOps delivery.",
-    images: ["/imgs/arch.png"],
+    images: ["/imgs/homelab-public.svg"],
   },
 };
 
 const SPECS = [
   { icon: Server, label: "Single K3s node · Ubuntu host" },
   { icon: Cpu, label: "Ryzen 5 · 15.5 GB RAM" },
-  { icon: Boxes, label: "9 self-hosted services" },
+  { icon: Boxes, label: "8 self-hosted services" },
   { icon: Lock, label: "Admin via Tailscale" },
 ];
 
@@ -192,9 +192,9 @@ export default function HomelabPage() {
     "@type": "TechArticle",
     headline: "Homelab Architecture",
     description:
-      "A single-node K3s homelab behind Cloudflare Tunnel and Tailscale, running nine self-hosted services with GitOps via ArgoCD and Sealed Secrets.",
+      "A single-node K3s homelab behind Cloudflare Tunnel and Tailscale, running eight self-hosted services with GitOps via ArgoCD and Sealed Secrets.",
     url: "https://yashbhangale.site/homelab",
-    image: "https://yashbhangale.site/imgs/arch.png",
+    image: "https://yashbhangale.site/imgs/homelab-public.svg",
     author: {
       "@type": "Person",
       name: "Yash Bhangale",
@@ -238,7 +238,7 @@ export default function HomelabPage() {
             </h1>
             <Badge variant="secondary" className="text-xs">
               <span className="mr-2 h-2 w-2 animate-pulse rounded-full bg-blue-500" />
-              Self-hosted · Live
+              Self-hosted · Architecture
             </Badge>
           </div>
           <p className="max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
@@ -250,6 +250,8 @@ export default function HomelabPage() {
             ArgoCD. Explore the interactive diagram below, or dig into the full
             zone-by-zone breakdown.
           </p>
+
+          <p className="max-w-3xl text-sm text-muted-foreground">This public overview omits private addresses, tunnel identifiers, and direct application links. It documents the architecture; it is not a live service-status or access-control audit.</p>
 
           {/* Specs */}
           <div className="flex flex-wrap gap-2">
@@ -270,7 +272,7 @@ export default function HomelabPage() {
           {/* Actions */}
           <div className="flex flex-wrap gap-3 pt-1">
             <a
-              href="/imgs/arch.png"
+              href="/imgs/homelab-public.svg"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
@@ -285,7 +287,7 @@ export default function HomelabPage() {
               className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-colors hover:bg-muted"
             >
               <GitBranch className="h-4 w-4" />
-              GitOps repository
+              GitHub profile
             </a>
           </div>
         </header>
@@ -365,23 +367,20 @@ export default function HomelabPage() {
           </div>
         </section>
 
-        {/* Live services quick access */}
+        {/* Self-hosted applications quick access */}
         <section className="mt-14">
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-            Live services
+            Self-hosted applications
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            {LIVE_SERVICES.length} publicly reachable, self-hosted services.
+            {DOCUMENTED_SERVICES.length} documented services. Direct service endpoints are withheld.
           </p>
           <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {LIVE_SERVICES.map((s) => {
+            {DOCUMENTED_SERVICES.map((s) => {
               const Icon = s.icon;
               return (
-                <a
+                <div
                   key={s.id}
-                  href={s.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="group flex items-center gap-3 rounded-lg border bg-card/60 p-3 transition-all hover:-translate-y-0.5 hover:bg-card hover:shadow-md"
                   style={{ borderColor: `${s.color}33` }}
                 >
@@ -400,7 +399,7 @@ export default function HomelabPage() {
                     </span>
                   </span>
                   <ExternalLink className="h-4 w-4 shrink-0 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
-                </a>
+                </div>
               );
             })}
           </div>

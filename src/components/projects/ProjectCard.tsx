@@ -20,6 +20,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <summary>Read project details<span className="sr-only"> for {project.shortTitle}</span></summary>
           <div>
             <p>{project.description}</p>
+            {project.caseStudy?.map(section => <section key={section.heading}><h3>{section.heading}</h3><p>{section.body}</p></section>)}
             <h3>What I built</h3>
             <ul>{project.achievements.map(achievement => <li key={achievement}>{achievement}</li>)}</ul>
             {project.pipelineScreenshot && <figure className="pipeline-figure"><a href={project.pipelineScreenshot.src} target="_blank" rel="noopener noreferrer" aria-label="Open Jenkins pipeline stage view at full size"><Image src={project.pipelineScreenshot.src} alt={project.pipelineScreenshot.alt} width={project.pipelineScreenshot.width} height={project.pipelineScreenshot.height} sizes="(max-width: 800px) 100vw, 48vw" /></a><figcaption>{project.pipelineScreenshot.caption}. Select image to view full size.</figcaption></figure>}

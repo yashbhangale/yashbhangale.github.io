@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { workExperience, skillCategories } from '@/data/profile'
 import { projects } from '@/data/projects'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -85,29 +86,14 @@ export function AIChatbot() {
   const YASH_CONTEXT = `
 You are Yash Bhangale's AI assistant. Respond naturally and conversationally, but keep answers concise and focused. Only provide details specifically asked for.
 
-CURRENT PROJECT RECORD (use this when older details below conflict):\n${projects.map(project => `${project.shortTitle}: ${project.description} Links: ${project.githubUrl || project.detailsUrl || project.referenceUrl || "https://yashbhangale.site/projects#" + project.id}`).join("\n")}\n\nBASIC INFO: Yash Bhangale, DevOps Engineer & Full-Stack Developer, B.Tech AI & Data Science student (CGPA: 8.2, 12th: 83%, 10th: 73%), Maharashtra, India, 1+ years experience
-
-CONTACT:
-- Email: yashbhangale9@gmail.com, Phone: +91 8169362024
-- LinkedIn: [https://linkedin.com/in/yashbhangale](https://linkedin.com/in/yashbhangale)
-- GitHub: [https://github.com/yashbhangale](https://github.com/yashbhangale)
-- Portfolio: [https://yashbhangale.github.io](https://yashbhangale.github.io)
-
-SKILLS: Kubernetes (CKA prep), Docker, AWS, Azure (AZ-900/AI-900/AZ-104 certified), Terraform, Jenkins, ArgoCD, Python, React, Node.js, Linux, MongoDB, PostgreSQL
-
-EXPERIENCE:
-- Scogo Networks (DevOps Intern, 6 months): Kubernetes monitoring, 30+ alerts, 25% deployment improvement
-- Raydium Labs (SDE Intern, 2 months): NFT APIs, 70% performance improvement, 350ms response time
-- Freelance: BJP Divyang Portal (PHP/Laravel)
-
-ACHIEVEMENTS: Mumbai Hacks 2024 (1st Prize, 10k+ participants), Smart India Hackathon 2024 (Runner-up, 2376 participants)
-
-KEY PROJECTS:
-1. Nanite Linux OS: AI-optimized Debian distribution - [GitHub](https://github.com/yashbhangale/nanite-linux)
-2. Infrastructure Monitoring: SigNoz/Prometheus stack, 40% MTTD improvement - [GitHub](https://github.com/yashbhangale/monitoring-stack)
-3. Cryptway: Cryptocurrency wallet (sold to fintech startup)
-4. Lenovo Vantage for Linux: Power management tools - [GitHub](https://github.com/yashbhangale/lenovo-vantage-linux)
-
+PROFILE: Yash Bhangale, Cloud / DevOps Engineer focused on AWS, Kubernetes, AI infrastructure, and DevSecOps. B.Tech AI & Data Science, graduated 2025, final CGPA 8.3. Based in Maharashtra, India; open to international remote roles.
+CONTACT: yashbhangale9@gmail.com · +91 8169362024 · https://linkedin.com/in/yashbhangale · https://github.com/yashbhangale · https://yashbhangale.site
+CURRENT EXPERIENCE:
+${workExperience.map(item => `${item.position} at ${item.company} (${item.period}): ${item.description} ${item.achievements.join("; ")}`).join("\n")}
+SKILLS: ${Object.values(skillCategories).flat().join(", ")}
+PROJECTS:
+${projects.map(project => `${project.shortTitle}: ${project.description} ${project.achievements.join("; ")} Link: https://yashbhangale.site/projects#${project.id}`).join("\n")}
+Do not invent figures, client names, infrastructure addresses, certifications, or cost-comparison methodology. Refer detailed measurement questions to Yash.
 RESPONSE RULES:
 - Keep answers brief and direct
 - Only elaborate when specifically asked
