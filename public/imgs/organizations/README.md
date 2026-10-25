@@ -7,4 +7,4 @@ Downloaded on 2026-10-25 from the organizations’ official websites. Original b
 - Scogo: https://framerusercontent.com/images/SZQeCC4rhqdJCXb6u7aQrctAuko.png (apple-touch icon linked by https://scogo.ai/home)
 - Datta Meghe College of Engineering: https://dmce.ac.in/wp-content/uploads/2025/05/dmce.png (https://dmce.ac.in/)
 
-Trellin and Raydium Labs use neutral building icons until their brand identities can be verified. Freelance Projects uses a briefcase icon because it represents independent work rather than a company.
+Trellin (`T`) and Raydium Labs (`RL`) use locally authored typographic monograms requested by the portfolio owner. These are representative initials, not verified official brand assets. Freelance Projects uses a briefcase icon because it represents independent work rather than a company.

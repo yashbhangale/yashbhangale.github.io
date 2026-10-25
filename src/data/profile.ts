@@ -17,6 +17,7 @@ export const workExperience = [
   },
   {
     company: "Trellin (Stealth AI Startup, Sweden)",
+    logo: "/imgs/organizations/trellin.svg",
     position: "Founding Engineer (Contract)",
     period: "June 2025 – August 2025",
     location: "½ Remote",
@@ -66,6 +67,7 @@ export const workExperience = [
   },
   {
     company: "Raydium Labs",
+    logo: "/imgs/organizations/raydium-labs.svg",
     position: "SDE Intern",
     period: "2 months",
     location: "Remote",
