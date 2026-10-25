@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 64" width="80" height="64"><rect x="8" y="4" width="64" height="56" rx="8" fill="#184b43"/><text x="40" y="34" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#ffffff">T</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 64" width="80" height="64">
+  <title>Stealth startup</title>
+  <rect x="8" y="4" width="64" height="56" rx="8" fill="#171b20"/>
+  <g fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M27 29l5-14 8 4 8-4 5 14"/>
+    <path d="M21 30h38"/>
+    <circle cx="30" cy="43" r="7"/>
+    <circle cx="50" cy="43" r="7"/>
+    <path d="M37 42a5 5 0 0 1 6 0M23 41l-3-2m37 2 3-2"/>
+  </g>
+</svg>
