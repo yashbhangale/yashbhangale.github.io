@@ -1,0 +1,31 @@
+[
+  {
+    "name": "capacity-fulfillment-2026",
+    "url": "https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2026/11/04/ComputeBlog-2823-2.png",
+    "masks": [
+      [
+        48,
+        345,
+        101,
+        270
+      ]
+    ],
+    "note": "Workload labels covered. Public source percentages, CPU metrics, and dates retained; not client results.",
+    "page": "https://aws.amazon.com/blogs/compute/plan-and-measure-ec2-flexibility-with-amazon-ec2-capacity-manager/",
+    "sourcePublished": "2026-11-04",
+    "retrieved": "2026-11-07",
+    "sourceSha256": "eff2e35e03a670066bba96cb66117475159eafa4a45e7b9a9cee56296126f49f",
+    "outputSha256": "7d838a386bee05025a847ded6e98095ef053f4437d0b1b9f0e028a9fc6e22ab4"
+  },
+  {
+    "name": "capacity-supportability-2026",
+    "url": "https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2026/11/04/ComputeBlog-2823-5.png",
+    "masks": [],
+    "note": "No client identifiers present. Public CPU-instance choices and example confidence estimates retained; not GPU results.",
+    "page": "https://aws.amazon.com/blogs/compute/plan-and-measure-ec2-flexibility-with-amazon-ec2-capacity-manager/",
+    "sourcePublished": "2026-11-04",
+    "retrieved": "2026-11-07",
+    "sourceSha256": "56dd02252324537966082f5cb12c5f2dd4a1402e0d0763f01f1995bf310de641",
+    "outputSha256": "112c64ef320d352f164f344eccfc4cc827f4a45b02c08aee55f922fbaaa08c65"
+  }
+]
