@@ -3,6 +3,7 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { CalendarIcon, ClockIcon, UserIcon } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface BlogCardProps {
   post: BlogPost
@@ -12,6 +13,15 @@ export function BlogCard({ post }: BlogCardProps) {
   return (
     <Link href={`/blog/${post.slug}`}>
       <Card className="h-full cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+        {post.image && (
+          <Image
+            src={post.image}
+            alt={post.imageAlt || post.title}
+            width={post.imageWidth || 1200}
+            height={post.imageHeight || 630}
+            className="h-auto w-full rounded-t-xl"
+          />
+        )}
         <CardHeader>
           <div className="space-y-3">
             <CardTitle className="line-clamp-2 hover:text-primary transition-colors">

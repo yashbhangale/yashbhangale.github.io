@@ -6,8 +6,10 @@ updated: "2026-11-07"
 author: "Yash Bhangale"
 tags: ["AWS", "Landing Zone", "Control Tower", "Terraform", "IAM Identity Center", "Cloud Security"]
 category: "Cloud Infrastructure"
-image: "/blog/images/aws-landing-zone/cover.png"
-imageAlt: "AWS landing zone implementation guide with separate governance, network, and workload boundaries"
+image: "/blog/images/aws-landing-zone/architecture-cover.png"
+imageWidth: 1280
+imageHeight: 853
+imageAlt: "AWS landing zone reference architecture showing organizational units, IAM Identity Center, shared networking, security, logging, backups, and isolated workloads"
 ---
 
 The first decision in a landing zone is usually where to draw the boundaries. Who can touch production? Who owns the network? Where does the evidence go if a workload account is compromised?

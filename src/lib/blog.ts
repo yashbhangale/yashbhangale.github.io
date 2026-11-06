@@ -11,6 +11,8 @@ export interface BlogPost {
   updated: string
   image?: string
   imageAlt?: string
+  imageWidth?: number
+  imageHeight?: number
   category: string
   author: string
   tags: string[]
@@ -61,6 +63,8 @@ export function getBlogPost(slug: string): BlogPost | null {
       updated: data.updated ? format(new Date(data.updated), 'yyyy-MM-dd') : data.date ? format(new Date(data.date), 'yyyy-MM-dd') : format(new Date(), 'yyyy-MM-dd'),
       image: data.image,
       imageAlt: data.imageAlt,
+      imageWidth: data.imageWidth,
+      imageHeight: data.imageHeight,
       category: data.category || 'Technology',
       author: data.author || 'Yash',
       tags: data.tags || [],

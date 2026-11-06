@@ -52,8 +52,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       images: [
         {
           url: new URL(post.image || '/og-blog-post.png', siteUrl).href,
-          width: 1200,
-          height: 630,
+          width: post.imageWidth || 1200,
+          height: post.imageHeight || 630,
           alt: post.title,
         },
       ],
@@ -152,8 +152,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <Image
                   src={post.image}
                   alt={post.imageAlt || post.title}
-                  width={1200}
-                  height={630}
+                  width={post.imageWidth || 1200}
+                  height={post.imageHeight || 630}
                   className="h-auto w-full rounded-xl"
                   priority
                 />
