@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { getAllBlogPosts } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NETLIFY ? `https://${process.env.URL}` : 'https://yashbhangale.site'
+  const baseUrl = 'https://yashbhangale.site'
   
   // Get all blog posts
   const posts = getAllBlogPosts()
@@ -68,7 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic blog post pages
   const blogPages = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.updated),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }))

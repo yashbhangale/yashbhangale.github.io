@@ -8,6 +8,10 @@ export interface BlogPost {
   title: string
   description: string
   date: string
+  updated: string
+  image?: string
+  imageAlt?: string
+  category: string
   author: string
   tags: string[]
   content: string
@@ -54,6 +58,10 @@ export function getBlogPost(slug: string): BlogPost | null {
       title: data.title || 'Untitled',
       description: data.description || '',
       date: data.date ? format(new Date(data.date), 'yyyy-MM-dd') : format(new Date(), 'yyyy-MM-dd'),
+      updated: data.updated ? format(new Date(data.updated), 'yyyy-MM-dd') : data.date ? format(new Date(data.date), 'yyyy-MM-dd') : format(new Date(), 'yyyy-MM-dd'),
+      image: data.image,
+      imageAlt: data.imageAlt,
+      category: data.category || 'Technology',
       author: data.author || 'Yash',
       tags: data.tags || [],
       content,

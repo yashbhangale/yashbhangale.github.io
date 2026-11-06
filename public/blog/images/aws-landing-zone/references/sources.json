@@ -1,0 +1,805 @@
+[
+  {
+    "name": "control-tower-dashboard-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/publicsector/build-a-secure-aws-foundation-in-under-60-minutes-a-guide-for-public-sector-organizations/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2025/05/28/2-5.png",
+    "masks": [],
+    "note": "Public source deployment confirmation; displayed counts are not project results.",
+    "sourcePeriod": "2025–2026",
+    "appliedMasks": [],
+    "width": 936,
+    "height": 634,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "a7153a0abfc19357dbb6aa2f9351c503b17d18af8f6257553ce5f5b815416257",
+    "outputSha256": "04b607305c648ba87253ee8601293734b4c1241d754740fe0483dc6db76309b2",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  },
+  {
+    "name": "account-factory-create-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/publicsector/build-a-secure-aws-foundation-in-under-60-minutes-a-guide-for-public-sector-organizations/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2025/05/28/4-2.png",
+    "masks": [
+      [
+        816,
+        0,
+        120,
+        20
+      ],
+      [
+        161,
+        121,
+        400,
+        20
+      ],
+      [
+        162,
+        176,
+        400,
+        21
+      ],
+      [
+        162,
+        270,
+        400,
+        20
+      ],
+      [
+        161,
+        324,
+        370,
+        21
+      ],
+      [
+        545,
+        324,
+        372,
+        21
+      ],
+      [
+        161,
+        408,
+        410,
+        21
+      ]
+    ],
+    "note": "User identity, email, names, and OU identifiers masked. Native Control Tower Create account form, not Service Catalog.",
+    "sourcePeriod": "2025–2026",
+    "appliedMasks": [
+      [
+        816,
+        0,
+        120,
+        20
+      ],
+      [
+        161,
+        121,
+        400,
+        20
+      ],
+      [
+        162,
+        176,
+        400,
+        21
+      ],
+      [
+        162,
+        270,
+        400,
+        20
+      ],
+      [
+        161,
+        324,
+        370,
+        21
+      ],
+      [
+        545,
+        324,
+        372,
+        21
+      ],
+      [
+        161,
+        408,
+        410,
+        21
+      ]
+    ],
+    "width": 936,
+    "height": 494,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "83029e33dbf5ac0a19b5ab5f23987c12858e3d6f9088eaf6695da650ab80e3e7",
+    "outputSha256": "5577a40e1b6db7edfd531b42f546f5888abc3aca56a9f90d6f832664340a09e5",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  },
+  {
+    "name": "identity-dashboard-2026",
+    "year": 2026,
+    "page": "https://aws.amazon.com/blogs/big-data/using-amazon-sagemaker-unified-studio-identity-center-idc-and-iam-based-domains-together/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/02/05/BDB-5687-image-18.jpeg",
+    "masks": [
+      [
+        1862,
+        0,
+        186,
+        28
+      ],
+      [
+        14,
+        142,
+        220,
+        57
+      ],
+      [
+        1495,
+        501,
+        215,
+        24
+      ],
+      [
+        1498,
+        559,
+        474,
+        36
+      ],
+      [
+        1499,
+        626,
+        477,
+        29
+      ]
+    ],
+    "note": "Console identity, instance ID, organization ID, portal and issuer URLs masked. Source uses built-in directory; not evidence of the project identity source.",
+    "sourcePeriod": "2025–2026",
+    "maskBasisWidth": 2048,
+    "appliedMasks": [
+      [
+        3662,
+        0,
+        366,
+        55
+      ],
+      [
+        28,
+        279,
+        433,
+        112
+      ],
+      [
+        2940,
+        985,
+        423,
+        47
+      ],
+      [
+        2946,
+        1099,
+        932,
+        71
+      ],
+      [
+        2948,
+        1231,
+        938,
+        57
+      ]
+    ],
+    "width": 4028,
+    "height": 1958,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "322cb3c956549df3801ee434455a63d2d69b1222e291f4047e00b938d544c386",
+    "outputSha256": "e9065f1700ece646a4e0d8af740b46bcd3738d738a83331cfc97403b970ad877",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  },
+  {
+    "name": "identity-source-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/devops/accelerate-development-with-secure-access-to-amazon-q-developer-using-pingidentity/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2025/06/11/devops-16054-image-25.png",
+    "masks": [
+      [
+        376,
+        431,
+        325,
+        24
+      ],
+      [
+        963,
+        429,
+        225,
+        26
+      ],
+      [
+        377,
+        496,
+        483,
+        30
+      ]
+    ],
+    "note": "Portal, identity store ID, and issuer URL masked. Visible SAML and SCIM settings retained.",
+    "sourcePeriod": "2025–2026",
+    "appliedMasks": [
+      [
+        376,
+        431,
+        325,
+        24
+      ],
+      [
+        963,
+        429,
+        225,
+        26
+      ],
+      [
+        377,
+        496,
+        483,
+        30
+      ]
+    ],
+    "width": 1510,
+    "height": 650,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "cc38853edb2cc8a401ecb9c866acffdaf2ac0aa3b785b9c7d5285c18ae9989a0",
+    "outputSha256": "c051253aea3f7eb13d791e12118b65caeb3f35d72eca665d9c429f26157db411",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  },
+  {
+    "name": "identity-metadata-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/devops/accelerate-development-with-secure-access-to-amazon-q-developer-using-pingidentity/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2025/06/11/devops-16054-image-7.png",
+    "masks": [
+      [
+        386,
+        268,
+        310,
+        27
+      ],
+      [
+        386,
+        337,
+        755,
+        28
+      ],
+      [
+        386,
+        403,
+        523,
+        28
+      ]
+    ],
+    "note": "Full portal, ACS, and issuer URL values masked.",
+    "sourcePeriod": "2025–2026",
+    "appliedMasks": [
+      [
+        386,
+        268,
+        310,
+        27
+      ],
+      [
+        386,
+        337,
+        755,
+        28
+      ],
+      [
+        386,
+        403,
+        523,
+        28
+      ]
+    ],
+    "width": 1272,
+    "height": 557,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "ebfef64af557516375c9ee50e0b354216ae01c0c407cb43b0685332b651163e7",
+    "outputSha256": "5940e6ba7633f077823fdeb4803da30b30ec395dc5cf43379587b4915ea87624",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  },
+  {
+    "name": "identity-permission-set-2026",
+    "year": 2026,
+    "page": "https://aws.amazon.com/blogs/big-data/using-amazon-sagemaker-unified-studio-identity-center-idc-and-iam-based-domains-together/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/02/05/BDB-5687-image-3.jpeg",
+    "masks": [
+      [
+        333,
+        7,
+        308,
+        29
+      ],
+      [
+        296,
+        54,
+        346,
+        33
+      ],
+      [
+        315,
+        181,
+        228,
+        26
+      ],
+      [
+        340,
+        327,
+        527,
+        30
+      ]
+    ],
+    "note": "Permission-set names and full ARN value masked; original date, duration, and public demo status retained.",
+    "sourcePeriod": "2025–2026",
+    "maskBasisWidth": 2048,
+    "appliedMasks": [
+      [
+        666,
+        14,
+        616,
+        58
+      ],
+      [
+        592,
+        108,
+        692,
+        66
+      ],
+      [
+        630,
+        362,
+        456,
+        52
+      ],
+      [
+        680,
+        654,
+        1053,
+        60
+      ]
+    ],
+    "width": 4094,
+    "height": 1868,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "d893fbbeff8c4bc2ccebb9c8cb479cc894a6d35c9f4b1e639602a8a2d50192e4",
+    "outputSha256": "d2bfb17a6b43e27081a1b4ebc6a3f6ede01d652181beda362a7ab4e28e76fa1c",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  },
+  {
+    "name": "identity-account-assignment-2026",
+    "year": 2026,
+    "page": "https://aws.amazon.com/blogs/big-data/using-amazon-sagemaker-unified-studio-identity-center-idc-and-iam-based-domains-together/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/02/05/BDB-5687-image-5.jpeg",
+    "masks": [
+      [
+        24,
+        118,
+        190,
+        24
+      ],
+      [
+        447,
+        109,
+        218,
+        29
+      ],
+      [
+        392,
+        285,
+        100,
+        24
+      ],
+      [
+        402,
+        315,
+        356,
+        68
+      ],
+      [
+        1534,
+        335,
+        252,
+        26
+      ]
+    ],
+    "note": "Instance/organization/root identifiers, account name/email and permission-set name masked.",
+    "sourcePeriod": "2025–2026",
+    "maskBasisWidth": 2048,
+    "appliedMasks": [
+      [
+        48,
+        237,
+        381,
+        48
+      ],
+      [
+        897,
+        219,
+        437,
+        58
+      ],
+      [
+        787,
+        572,
+        201,
+        48
+      ],
+      [
+        807,
+        632,
+        714,
+        136
+      ],
+      [
+        3078,
+        672,
+        506,
+        52
+      ]
+    ],
+    "width": 4110,
+    "height": 1404,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "b5c566796a5c0a6890790e9227d53538025d0ed8d069247211acfee3f59f1d85",
+    "outputSha256": "1f9ee958694fb8a69b98af953b40a89c6cd9b1b35ce53f777e6ba4d10fc1fd33",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  },
+  {
+    "name": "identity-group-membership-2026",
+    "year": 2026,
+    "page": "https://aws.amazon.com/blogs/big-data/using-amazon-sagemaker-unified-studio-identity-center-idc-and-iam-based-domains-together/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/02/05/BDB-5687-image-7.png",
+    "masks": [
+      [
+        403,
+        13,
+        235,
+        43
+      ],
+      [
+        29,
+        112,
+        289,
+        28
+      ],
+      [
+        510,
+        505,
+        171,
+        37
+      ],
+      [
+        880,
+        505,
+        220,
+        37
+      ]
+    ],
+    "note": "Group name, instance ID, username, and display name masked; UI labels retained.",
+    "sourcePeriod": "2025–2026",
+    "appliedMasks": [
+      [
+        403,
+        13,
+        235,
+        43
+      ],
+      [
+        29,
+        112,
+        289,
+        28
+      ],
+      [
+        510,
+        505,
+        171,
+        37
+      ],
+      [
+        880,
+        505,
+        220,
+        37
+      ]
+    ],
+    "width": 1429,
+    "height": 651,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "54d72304c880efe6411c33e1c89976c9da954d7852cf363dc01fac8f188cbab5",
+    "outputSha256": "6d854e3eb001e620f13a3667b4bd5082f38f51241d51a2751a7bbe90fba987bc",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  },
+  {
+    "name": "identity-access-portal-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/publicsector/build-a-secure-aws-foundation-in-under-60-minutes-a-guide-for-public-sector-organizations/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2025/05/28/5-1.png",
+    "masks": [
+      [
+        307,
+        252,
+        360,
+        29
+      ],
+      [
+        307,
+        350,
+        360,
+        29
+      ],
+      [
+        307,
+        447,
+        360,
+        29
+      ]
+    ],
+    "note": "All example account identifier/email rows masked. Source permission labels retained; not permission recommendations.",
+    "sourcePeriod": "2025–2026",
+    "appliedMasks": [
+      [
+        307,
+        252,
+        360,
+        29
+      ],
+      [
+        307,
+        350,
+        360,
+        29
+      ],
+      [
+        307,
+        447,
+        360,
+        29
+      ]
+    ],
+    "width": 936,
+    "height": 612,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "7e1705e7827eba6e0a75edf49732a4bcd5be084ac84f827e75d9a44f5048ccd4",
+    "outputSha256": "ba0b8981128046a5e6b28b4e4450b262cdfab31138e9c7659f9023477e0e6d01",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  },
+  {
+    "name": "security-hub-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/publicsector/build-a-secure-aws-foundation-in-under-60-minutes-a-guide-for-public-sector-organizations/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2025/05/28/6-1.png",
+    "masks": [],
+    "note": "Public example security score and control counts are source data, not project outcomes.",
+    "sourcePeriod": "2025–2026",
+    "appliedMasks": [],
+    "width": 936,
+    "height": 618,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "5f1a9011a39d5e1c06fbc74514b38ae16447150f0069c7a951e7ec7de6068667",
+    "outputSha256": "6c9d4bd8c9993e7d02115fe64fab020bf76eb6617827c418a0646eee133d87a0",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  },
+  {
+    "name": "guardduty-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/publicsector/build-a-secure-aws-foundation-in-under-60-minutes-a-guide-for-public-sector-organizations/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2025/05/28/7.png",
+    "masks": [],
+    "note": "Public demo finding counts; no identifiers visible. Not evidence of project threat status.",
+    "sourcePeriod": "2025–2026",
+    "appliedMasks": [],
+    "width": 936,
+    "height": 664,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "7645da4ccfd76939c871df3f3d36ecdab4f5f7f4d30c24eb0faf2a8857ab7d19",
+    "outputSha256": "364a8dfb1498422fabe00bf4b143311d6d416c07e1fa38c604135b5d168cd5f9",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  },
+  {
+    "name": "backup-integration-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/storage/build-centralized-cross-region-backup-architecture-with-aws-control-tower/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/e1822db470e60d090affd0956d743cb0e7cdf113/2025/09/11/002-ST-1631-aws-backup-settings.png",
+    "masks": [],
+    "note": "Empty account/KMS input fields; no identifiers to redact. Optional integration reference.",
+    "sourcePeriod": "2025–2026",
+    "appliedMasks": [],
+    "width": 827,
+    "height": 664,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "634d680a5403955c08044608f1d46684da86b4352149cc26efef159b6e742b55",
+    "outputSha256": "41ec04ad513ceb30ec10275867c6f58ca42d98c3d246354343b867cc1e163d71",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  },
+  {
+    "name": "cloudtrail-attributes-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/aws/aws-cloudtrail-network-activity-events-for-vpc-endpoints-now-generally-available/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2025/01/23/01a-vpce-LaunchMarketingIntake-1442.png",
+    "masks": [
+      [
+        342,
+        200,
+        340,
+        25
+      ],
+      [
+        342,
+        463,
+        650,
+        24
+      ],
+      [
+        448,
+        491,
+        430,
+        20
+      ],
+      [
+        363,
+        708,
+        720,
+        24
+      ]
+    ],
+    "note": "Trail name, bucket/path containing account ID, and KMS selection masked. Organization scope is not selected in source; article describes the required organization setup separately.",
+    "sourcePeriod": "2025–2026",
+    "appliedMasks": [
+      [
+        342,
+        200,
+        340,
+        25
+      ],
+      [
+        342,
+        463,
+        650,
+        24
+      ],
+      [
+        448,
+        491,
+        430,
+        20
+      ],
+      [
+        363,
+        708,
+        720,
+        24
+      ]
+    ],
+    "width": 1675,
+    "height": 854,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "f14b7b67e0a10a723c4bf51faffbad3af1e3dd847f36b0913f28298e31687f06",
+    "outputSha256": "70ca2e2e3bedefa3888766e48db45c130d22eb64392bf7cc63946c5f45fcccc1",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  },
+  {
+    "name": "root-access-management-2026",
+    "year": 2026,
+    "page": "https://aws.amazon.com/blogs/mt/essential-security-controls-to-prevent-unauthorized-account-removal-in-aws-organizations/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/972a67c48192728a34979d9a35164c1295401b71/2026/03/16/Root-access-management.png",
+    "masks": [],
+    "note": "Optional centralized-root capability reference; no identifiers visible. Not claimed as project implementation.",
+    "sourcePeriod": "2025–2026",
+    "appliedMasks": [],
+    "width": 1430,
+    "height": 492,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "1aa3b0f1332d2f34aca72913716014be8df9f18161eb949b07ee1012342251cc",
+    "outputSha256": "13fc72d9033602936c6c514ece6e12b25f73d98f642a12d170da0bf406919136",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  },
+  {
+    "name": "scp-cloudtrail-audit-2026",
+    "year": 2026,
+    "page": "https://aws.amazon.com/blogs/infrastructure-and-automation/using-generative-ai-for-proactive-iac-code-generation-thats-compliant-with-service-control-policies-using-amazon-bedrock/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/b7eb6c689c037217079766fdb77c3bac3e51cb4c/2026/01/15/intauto-21-image2.png",
+    "masks": [
+      [
+        283,
+        76,
+        98,
+        16
+      ],
+      [
+        283,
+        104,
+        101,
+        17
+      ],
+      [
+        131,
+        265,
+        174,
+        18
+      ],
+      [
+        130,
+        309,
+        90,
+        19
+      ],
+      [
+        130,
+        332,
+        111,
+        18
+      ],
+      [
+        130,
+        375,
+        171,
+        20
+      ],
+      [
+        129,
+        418,
+        171,
+        19
+      ]
+    ],
+    "note": "Existing public source masks reinforced over usernames, event/request IDs, access key, and IP. Image uploaded in 2026 shows 2025 policy events.",
+    "sourcePeriod": "2025–2026",
+    "appliedMasks": [
+      [
+        283,
+        76,
+        98,
+        16
+      ],
+      [
+        283,
+        104,
+        101,
+        17
+      ],
+      [
+        131,
+        265,
+        174,
+        18
+      ],
+      [
+        130,
+        309,
+        90,
+        19
+      ],
+      [
+        130,
+        332,
+        111,
+        18
+      ],
+      [
+        130,
+        375,
+        171,
+        20
+      ],
+      [
+        129,
+        418,
+        171,
+        19
+      ]
+    ],
+    "width": 940,
+    "height": 537,
+    "retrieved": "2026-11-07",
+    "sourceSha256": "8ad7fac1cf5b7e6e4f401095fe180236dc0efa25958cd955e657bf2094191e46",
+    "outputSha256": "8d25d0700fd388a6903e46e656e8cdb7b5d9009b362f10476c96996fccb7e767",
+    "credit": "Screenshot: Amazon Web Services. Modified by cropping and/or opaque redaction only; attribution footer appended."
+  }
+]

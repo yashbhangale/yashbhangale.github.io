@@ -1,0 +1,420 @@
+[
+  {
+    "name": "control-tower-dashboard-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/publicsector/build-a-secure-aws-foundation-in-under-60-minutes-a-guide-for-public-sector-organizations/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2025/05/28/2-5.png",
+    "masks": [],
+    "note": "Public source deployment confirmation; displayed counts are not project results.",
+    "sourcePeriod": "2025\u20132026"
+  },
+  {
+    "name": "account-factory-create-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/publicsector/build-a-secure-aws-foundation-in-under-60-minutes-a-guide-for-public-sector-organizations/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2025/05/28/4-2.png",
+    "masks": [
+      [
+        816,
+        0,
+        120,
+        20
+      ],
+      [
+        161,
+        121,
+        400,
+        20
+      ],
+      [
+        162,
+        176,
+        400,
+        21
+      ],
+      [
+        162,
+        270,
+        400,
+        20
+      ],
+      [
+        161,
+        324,
+        370,
+        21
+      ],
+      [
+        545,
+        324,
+        372,
+        21
+      ],
+      [
+        161,
+        408,
+        410,
+        21
+      ]
+    ],
+    "note": "User identity, email, names, and OU identifiers masked. Native Control Tower Create account form, not Service Catalog.",
+    "sourcePeriod": "2025\u20132026"
+  },
+  {
+    "name": "identity-dashboard-2026",
+    "year": 2026,
+    "page": "https://aws.amazon.com/blogs/big-data/using-amazon-sagemaker-unified-studio-identity-center-idc-and-iam-based-domains-together/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/02/05/BDB-5687-image-18.jpeg",
+    "masks": [
+      [
+        1862,
+        0,
+        186,
+        28
+      ],
+      [
+        14,
+        142,
+        220,
+        57
+      ],
+      [
+        1495,
+        501,
+        215,
+        24
+      ],
+      [
+        1498,
+        559,
+        474,
+        36
+      ],
+      [
+        1499,
+        626,
+        477,
+        29
+      ]
+    ],
+    "note": "Console identity, instance ID, organization ID, portal and issuer URLs masked. Source uses built-in directory; not evidence of the project identity source.",
+    "sourcePeriod": "2025\u20132026",
+    "maskBasisWidth": 2048
+  },
+  {
+    "name": "identity-source-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/devops/accelerate-development-with-secure-access-to-amazon-q-developer-using-pingidentity/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2025/06/11/devops-16054-image-25.png",
+    "masks": [
+      [
+        376,
+        431,
+        325,
+        24
+      ],
+      [
+        963,
+        429,
+        225,
+        26
+      ],
+      [
+        377,
+        496,
+        483,
+        30
+      ]
+    ],
+    "note": "Portal, identity store ID, and issuer URL masked. Visible SAML and SCIM settings retained.",
+    "sourcePeriod": "2025\u20132026"
+  },
+  {
+    "name": "identity-metadata-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/devops/accelerate-development-with-secure-access-to-amazon-q-developer-using-pingidentity/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2025/06/11/devops-16054-image-7.png",
+    "masks": [
+      [
+        386,
+        268,
+        310,
+        27
+      ],
+      [
+        386,
+        337,
+        755,
+        28
+      ],
+      [
+        386,
+        403,
+        523,
+        28
+      ]
+    ],
+    "note": "Full portal, ACS, and issuer URL values masked.",
+    "sourcePeriod": "2025\u20132026"
+  },
+  {
+    "name": "identity-permission-set-2026",
+    "year": 2026,
+    "page": "https://aws.amazon.com/blogs/big-data/using-amazon-sagemaker-unified-studio-identity-center-idc-and-iam-based-domains-together/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/02/05/BDB-5687-image-3.jpeg",
+    "masks": [
+      [
+        333,
+        7,
+        308,
+        29
+      ],
+      [
+        296,
+        54,
+        346,
+        33
+      ],
+      [
+        315,
+        181,
+        228,
+        26
+      ],
+      [
+        340,
+        327,
+        527,
+        30
+      ]
+    ],
+    "note": "Permission-set names and full ARN value masked; original date, duration, and public demo status retained.",
+    "sourcePeriod": "2025\u20132026",
+    "maskBasisWidth": 2048
+  },
+  {
+    "name": "identity-account-assignment-2026",
+    "year": 2026,
+    "page": "https://aws.amazon.com/blogs/big-data/using-amazon-sagemaker-unified-studio-identity-center-idc-and-iam-based-domains-together/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/02/05/BDB-5687-image-5.jpeg",
+    "masks": [
+      [
+        24,
+        118,
+        190,
+        24
+      ],
+      [
+        447,
+        109,
+        218,
+        29
+      ],
+      [
+        392,
+        285,
+        100,
+        24
+      ],
+      [
+        402,
+        315,
+        356,
+        68
+      ],
+      [
+        1534,
+        335,
+        252,
+        26
+      ]
+    ],
+    "note": "Instance/organization/root identifiers, account name/email and permission-set name masked.",
+    "sourcePeriod": "2025\u20132026",
+    "maskBasisWidth": 2048
+  },
+  {
+    "name": "identity-group-membership-2026",
+    "year": 2026,
+    "page": "https://aws.amazon.com/blogs/big-data/using-amazon-sagemaker-unified-studio-identity-center-idc-and-iam-based-domains-together/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/02/05/BDB-5687-image-7.png",
+    "masks": [
+      [
+        403,
+        13,
+        235,
+        43
+      ],
+      [
+        29,
+        112,
+        289,
+        28
+      ],
+      [
+        510,
+        505,
+        171,
+        37
+      ],
+      [
+        880,
+        505,
+        220,
+        37
+      ]
+    ],
+    "note": "Group name, instance ID, username, and display name masked; UI labels retained.",
+    "sourcePeriod": "2025\u20132026"
+  },
+  {
+    "name": "identity-access-portal-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/publicsector/build-a-secure-aws-foundation-in-under-60-minutes-a-guide-for-public-sector-organizations/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2025/05/28/5-1.png",
+    "masks": [
+      [
+        307,
+        252,
+        360,
+        29
+      ],
+      [
+        307,
+        350,
+        360,
+        29
+      ],
+      [
+        307,
+        447,
+        360,
+        29
+      ]
+    ],
+    "note": "All example account identifier/email rows masked. Source permission labels retained; not permission recommendations.",
+    "sourcePeriod": "2025\u20132026"
+  },
+  {
+    "name": "security-hub-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/publicsector/build-a-secure-aws-foundation-in-under-60-minutes-a-guide-for-public-sector-organizations/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2025/05/28/6-1.png",
+    "masks": [],
+    "note": "Public example security score and control counts are source data, not project outcomes.",
+    "sourcePeriod": "2025\u20132026"
+  },
+  {
+    "name": "guardduty-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/publicsector/build-a-secure-aws-foundation-in-under-60-minutes-a-guide-for-public-sector-organizations/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2025/05/28/7.png",
+    "masks": [],
+    "note": "Public demo finding counts; no identifiers visible. Not evidence of project threat status.",
+    "sourcePeriod": "2025\u20132026"
+  },
+  {
+    "name": "backup-integration-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/storage/build-centralized-cross-region-backup-architecture-with-aws-control-tower/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/e1822db470e60d090affd0956d743cb0e7cdf113/2025/09/11/002-ST-1631-aws-backup-settings.png",
+    "masks": [],
+    "note": "Empty account/KMS input fields; no identifiers to redact. Optional integration reference.",
+    "sourcePeriod": "2025\u20132026"
+  },
+  {
+    "name": "cloudtrail-attributes-2025",
+    "year": 2025,
+    "page": "https://aws.amazon.com/blogs/aws/aws-cloudtrail-network-activity-events-for-vpc-endpoints-now-generally-available/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2025/01/23/01a-vpce-LaunchMarketingIntake-1442.png",
+    "masks": [
+      [
+        342,
+        200,
+        340,
+        25
+      ],
+      [
+        342,
+        463,
+        650,
+        24
+      ],
+      [
+        448,
+        491,
+        430,
+        20
+      ],
+      [
+        363,
+        708,
+        720,
+        24
+      ]
+    ],
+    "note": "Trail name, bucket/path containing account ID, and KMS selection masked. Organization scope is not selected in source; article describes the required organization setup separately.",
+    "sourcePeriod": "2025\u20132026"
+  },
+  {
+    "name": "root-access-management-2026",
+    "year": 2026,
+    "page": "https://aws.amazon.com/blogs/mt/essential-security-controls-to-prevent-unauthorized-account-removal-in-aws-organizations/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/972a67c48192728a34979d9a35164c1295401b71/2026/03/16/Root-access-management.png",
+    "masks": [],
+    "note": "Optional centralized-root capability reference; no identifiers visible. Not claimed as project implementation.",
+    "sourcePeriod": "2025\u20132026"
+  },
+  {
+    "name": "scp-cloudtrail-audit-2026",
+    "year": 2026,
+    "page": "https://aws.amazon.com/blogs/infrastructure-and-automation/using-generative-ai-for-proactive-iac-code-generation-thats-compliant-with-service-control-policies-using-amazon-bedrock/",
+    "url": "https://d2908q01vomqb2.cloudfront.net/b7eb6c689c037217079766fdb77c3bac3e51cb4c/2026/01/15/intauto-21-image2.png",
+    "masks": [
+      [
+        283,
+        76,
+        98,
+        16
+      ],
+      [
+        283,
+        104,
+        101,
+        17
+      ],
+      [
+        131,
+        265,
+        174,
+        18
+      ],
+      [
+        130,
+        309,
+        90,
+        19
+      ],
+      [
+        130,
+        332,
+        111,
+        18
+      ],
+      [
+        130,
+        375,
+        171,
+        20
+      ],
+      [
+        129,
+        418,
+        171,
+        19
+      ]
+    ],
+    "note": "Existing public source masks reinforced over usernames, event/request IDs, access key, and IP. Image uploaded in 2026 shows 2025 policy events.",
+    "sourcePeriod": "2025\u20132026"
+  }
+]

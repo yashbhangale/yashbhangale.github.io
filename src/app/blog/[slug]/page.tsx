@@ -6,8 +6,11 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
+
+const siteUrl = 'https://yashbhangale.site'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -33,25 +36,22 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 
   return {
-    title: `${post.title} | Yash Bhangale`,
+    title: post.title,
     description: post.description || `Read ${post.title} - a blog post by ${post.author} about ${post.tags.join(', ')}.`,
     keywords: [
       ...post.tags,
       post.author,
-      "blog post",
-      "tutorial",
-      "web development",
-      "programming",
+      post.category,
     ],
     authors: [{ name: post.author }],
     openGraph: {
       title: post.title,
       description: post.description || `Read ${post.title} - a blog post by ${post.author}`,
-      url: `https://yashbhangale.github.io/blog/${slug}`,
+      url: `${siteUrl}/blog/${slug}`,
       siteName: "Yash Bhangale Portfolio",
       images: [
         {
-          url: "/og-blog-post.png",
+          url: new URL(post.image || '/og-blog-post.png', siteUrl).href,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -59,6 +59,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       ],
       type: "article",
       publishedTime: post.date,
+      modifiedTime: post.updated,
       authors: [post.author],
       tags: post.tags,
     },
@@ -66,11 +67,11 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       card: "summary_large_image",
       title: post.title,
       description: post.description || `Read ${post.title} - a blog post by ${post.author}`,
-      images: ["/og-blog-post.png"],
+      images: [new URL(post.image || '/og-blog-post.png', siteUrl).href],
       creator: "@yashbhangale",
     },
     alternates: {
-      canonical: `https://yashbhangale.github.io/blog/${slug}`,
+      canonical: `${siteUrl}/blog/${slug}`,
     },
   }
 }
@@ -88,26 +89,28 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.description,
-    "image": "https://yashbhangale.github.io/og-blog-post.png",
-    "url": `https://yashbhangale.github.io/blog/${slug}`,
+    "image": new URL(post.image || '/og-blog-post.png', siteUrl).href,
+    "url": `${siteUrl}/blog/${slug}`,
     "datePublished": post.date,
-    "dateModified": post.date,
+    "dateModified": post.updated,
     "author": {
       "@type": "Person",
       "name": post.author,
-      "url": "https://yashbhangale.github.io"
+      "url": siteUrl
     },
     "publisher": {
       "@type": "Person", 
       "name": "Yash Bhangale",
-      "url": "https://yashbhangale.github.io"
+      "url": siteUrl
     },
     "keywords": post.tags.join(", "),
-    "articleSection": "Technology",
+    "articleSection": post.category,
+    "wordCount": post.content.split(/\s+/).length,
+    "timeRequired": `PT${post.readTime}M`,
     "inLanguage": "en-US",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://yashbhangale.github.io/blog/${slug}`
+      "@id": `${siteUrl}/blog/${slug}`
     }
   };
 
@@ -116,7 +119,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
+          __html: JSON.stringify(structuredData).replace(/</g, '\\u003c'),
         }}
       />
       <Navigation />
@@ -143,6 +146,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <p className="text-xl text-muted-foreground leading-relaxed">
                   {post.description}
                 </p>
+              )}
+
+              {post.image && (
+                <Image
+                  src={post.image}
+                  alt={post.imageAlt || post.title}
+                  width={1200}
+                  height={630}
+                  className="h-auto w-full rounded-xl"
+                  priority
+                />
               )}
 
               {/* Meta Information */}
