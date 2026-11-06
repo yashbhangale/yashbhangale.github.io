@@ -1,0 +1,47 @@
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import sharp from 'sharp'
+
+// Original explanatory diagram; this is not a cloud console screenshot.
+const output = path.join(process.cwd(), 'public/blog/images/ai-compliance')
+await fs.mkdir(output, { recursive: true })
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#213047" stroke-width="1"/></pattern>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="none" stroke="#5eead4" stroke-width="1.5"/></marker>
+</defs>
+<rect width="1600" height="900" fill="#0b1220"/>
+<rect width="1600" height="900" fill="url(#grid)" opacity=".45"/>
+<g font-family="Segoe UI, Arial, sans-serif">
+<text x="88" y="105" fill="#5eead4" font-size="23" font-weight="700" letter-spacing="3">CLOUD SECURITY / FIELD NOTES</text>
+<text x="88" y="192" fill="#f1f5f9" font-size="62" font-weight="700">From cloud configuration</text>
+<text x="88" y="267" fill="#f1f5f9" font-size="62" font-weight="700">to evidence you can review.</text>
+<text x="88" y="323" fill="#a7b8ce" font-size="26">My AI-assisted audit preparation workflow</text>
+<g fill="#111f32" stroke="#34475e" stroke-width="2">
+<rect x="88" y="399" width="410" height="190" rx="16"/>
+<rect x="596" y="399" width="410" height="190" rx="16"/>
+<rect x="1104" y="399" width="408" height="190" rx="16"/>
+</g>
+<g fill="#5eead4" font-size="19" font-weight="700" letter-spacing="2">
+<text x="118" y="441">01 / COLLECT</text><text x="626" y="441">02 / CHECK</text><text x="1134" y="441">03 / DRAFT</text>
+</g>
+<g fill="#f1f5f9" font-size="31" font-weight="600">
+<text x="118" y="491">AWS APIs + Boto3</text><text x="626" y="491">Rules + snapshots</text><text x="1134" y="491">AI-assisted writing</text>
+</g>
+<g fill="#a7b8ce" font-size="22">
+<text x="118" y="534">Read-only configuration evidence</text><text x="118" y="565">Scoped access • dated records</text>
+<text x="626" y="534">Control validation + state drift</text><text x="626" y="565">Keep errors and gaps visible</text>
+<text x="1134" y="534">Explain findings • link evidence</text><text x="1134" y="565">Drafts remain subject to review</text>
+</g>
+<g fill="none" stroke="#5eead4" stroke-width="3" marker-end="url(#arrow)">
+<path d="M510 494H580"/><path d="M1018 494H1088"/><path d="M1310 604V652"/>
+</g>
+<rect x="88" y="674" width="1424" height="110" rx="16" fill="#102c2c" stroke="#2f7069" stroke-width="2"/>
+<text x="120" y="720" fill="#99f6e4" font-size="24" font-weight="700">HUMAN REVIEW</text>
+<text x="120" y="759" fill="#d9e7ed" font-size="25">Verify scope, evidence, exceptions, and conclusions before sharing the report.</text>
+<text x="88" y="847" fill="#91a3bb" font-size="20">Yash Bhangale</text>
+<text x="1512" y="847" text-anchor="end" fill="#91a3bb" font-size="20">Conceptual workflow diagram</text>
+</g></svg>`
+await fs.writeFile(path.join(output, 'cover.svg'), svg)
+await sharp(Buffer.from(svg)).png().toFile(path.join(output, 'cover.png'))
+console.log('Generated original compliance workflow cover (1600 × 900).')
