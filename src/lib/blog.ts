@@ -9,6 +9,7 @@ export interface BlogPost {
   description: string
   date: string
   updated: string
+  pinOrder?: number
   image?: string
   imageAlt?: string
   imageWidth?: number
@@ -36,13 +37,16 @@ export function getAllBlogPosts(): BlogPost[] {
     })
     .filter(Boolean) as BlogPost[]
 
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1))
+  return allPostsData.sort((a, b) => {
+    const pinDifference = (a.pinOrder ?? Number.MAX_SAFE_INTEGER) - (b.pinOrder ?? Number.MAX_SAFE_INTEGER)
+    return pinDifference || b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug)
+  })
 }
 
 export function getBlogPost(slug: string): BlogPost | null {
   try {
     const fullPath = path.join(blogDirectory, `${slug}.md`)
-    
+
     if (!fs.existsSync(fullPath)) {
       return null
     }
@@ -61,6 +65,7 @@ export function getBlogPost(slug: string): BlogPost | null {
       description: data.description || '',
       date: data.date ? format(new Date(data.date), 'yyyy-MM-dd') : format(new Date(), 'yyyy-MM-dd'),
       updated: data.updated ? format(new Date(data.updated), 'yyyy-MM-dd') : data.date ? format(new Date(data.date), 'yyyy-MM-dd') : format(new Date(), 'yyyy-MM-dd'),
+      pinOrder: typeof data.pinOrder === 'number' && Number.isFinite(data.pinOrder) && data.pinOrder >= 0 ? data.pinOrder : undefined,
       image: data.image,
       imageAlt: data.imageAlt,
       imageWidth: data.imageWidth,
@@ -86,4 +91,4 @@ export function getBlogSlugs(): string[] {
   return fileNames
     .filter(fileName => fileName.endsWith('.md'))
     .map(fileName => fileName.replace(/\.md$/, ''))
-} 
+}

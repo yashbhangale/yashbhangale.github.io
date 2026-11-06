@@ -1,7 +1,7 @@
 import { BlogPost } from '@/lib/blog'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { CalendarIcon, ClockIcon, UserIcon } from 'lucide-react'
+import { CalendarIcon, ClockIcon, PinIcon, UserIcon } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -24,10 +24,16 @@ export function BlogCard({ post }: BlogCardProps) {
         )}
         <CardHeader>
           <div className="space-y-3">
+            {post.pinOrder !== undefined && (
+              <Badge variant="outline" className="gap-1">
+                <PinIcon className="h-3 w-3" aria-hidden="true" />
+                Pinned
+              </Badge>
+            )}
             <CardTitle className="line-clamp-2 hover:text-primary transition-colors">
               {post.title}
             </CardTitle>
-            
+
             {post.description && (
               <CardDescription className="line-clamp-3">
                 {post.description}
@@ -40,12 +46,12 @@ export function BlogCard({ post }: BlogCardProps) {
                 <UserIcon className="h-3 w-3" />
                 <span>{post.author}</span>
               </div>
-              
+
               <div className="flex items-center gap-1">
                 <CalendarIcon className="h-3 w-3" />
                 <span>{new Date(post.date).toLocaleDateString()}</span>
               </div>
-              
+
               <div className="flex items-center gap-1">
                 <ClockIcon className="h-3 w-3" />
                 <span>{post.readTime} min</span>
@@ -73,4 +79,4 @@ export function BlogCard({ post }: BlogCardProps) {
       </Card>
     </Link>
   )
-} 
+}

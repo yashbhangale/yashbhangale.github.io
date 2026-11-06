@@ -6,6 +6,7 @@ updated: "2026-11-07"
 author: "Yash Bhangale"
 tags: ["Amazon EKS", "SageMaker", "Karpenter", "GPU Time-Slicing", "Prometheus", "HPA", "Cost Optimization", "MLOps"]
 category: "Kubernetes Infrastructure"
+pinOrder: 2
 image: "/blog/images/karpenter-eks/cover.png"
 imageWidth: 1600
 imageHeight: 900

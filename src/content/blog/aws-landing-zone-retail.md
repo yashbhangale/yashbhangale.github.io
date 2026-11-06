@@ -6,6 +6,7 @@ updated: "2026-11-07"
 author: "Yash Bhangale"
 tags: ["AWS", "Landing Zone", "Control Tower", "Terraform", "IAM Identity Center", "Cloud Security"]
 category: "Cloud Infrastructure"
+pinOrder: 1
 image: "/blog/images/aws-landing-zone/architecture-cover.png"
 imageWidth: 1280
 imageHeight: 853
